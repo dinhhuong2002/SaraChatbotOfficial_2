@@ -1,0 +1,157 @@
+version: "3.1"
+
+intents:
+  - hello
+  - fine_thanks
+  - goodbye
+  - deny
+  - agree
+  - thanks
+  - mood_great
+  - mood_unhappy
+  - what_is_bot
+  - sign_in
+  - sign_up
+  - sign_up_student
+  - sign_up_parents
+  - sign_up_teacher
+  - sign_up_school
+  - sign_up_Education_Department
+  - add_GO
+  - add_GO_the_game
+  - add_GO_chuyen_khoan
+  - add_GO_vi_dien_tu
+  - link_parents_student
+  - school_acc_can_do
+
+responses:
+  utter_hello:
+    - text: "Tiếp  tục trò chuyện với mình nhé!"
+    - text: "Hey! How are you?"
+    - text: "Xin chào bạn. Tiếp tục trò chuyện với mình nhé!"
+    - text: "Rất vui được trò chuyện cùng bạn. Mình có thể giúp gì cho bạn?"
+      buttons:
+        - title: "Đăng ký tài khoản"
+          payload: "/sign_up"
+        - title: "Đăng nhập"
+          payload: "/sign_in"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://th.bing.com/th?id=OIP.ITE_hb7gnEVU-vW_8UP58AAAAA&w=208&h=300&c=8&rs=1&qlt=90&o=6&dpr=2.5&pid=3.1&rm=2"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_goodbye:
+    - text: "Tạm biệt, hy vọng bạn hài lòng với sự giúp đỡ của mình!"
+    - text: "Bye"
+    - text: "Goodbye. See you soon!"
+    - text: "I'm so glad to talk with you. See you again!"
+    - text: "Bye. Have a nice day!"
+    - text: "Chúc bạn một ngày tốt lành. Hẹn gặp lại bạn!"
+
+  utter_deny:
+    - text: "Oh, tell me more."
+    - text: "Oh, cho mình biết thêm về vấn đề của bạn nhé!"
+    - text: "Mình luôn ở đây để giúp bạn."
+
+  utter_agree:
+    - text: "Oke. Tiếp tục trò chuyện cùng mình nhé!"
+    - text: "Keep going on!"
+    - text: "Cùng trò chuyện tiếp nhé!"
+    - text: "Yeah, bạn cần mình giúp gì nữa không nào?"
+    - text: "Great, carry on!"
+    - text: "Được rồi, tiếp tục trò chuyện cùng mình nhé!"
+
+  utter_fine_thanks:
+    - text: "Tiếp tục trò chuyện cùng mình nhé!"
+
+  utter_thanks:
+    - text: "Oke. Tiếp tục trò chuyện cùng mình nhé!"
+    - text: "Không có gì đâu, chuyện nhỏ ấy mà!"
+    - text: "Mình rất vui vì đã giúp được bạn."
+    - text: "Hihi, không có gì. Bạn còn cần mình giúp gì nữa không nào?"
+    - text: "Great, carry on!"
+    - text: "My pleasure!"
+    - text: "Hy vọng đã giúp bạn giải quyết được vấn đề. Mình luôn có mặt để giúp đỡ bạn!"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by VTC Online."
+    - text: "Tôi là iTalk. Một chatbot được phát triển bởi VTC Online."
+    - text: "Mình là iTalk. Trợ lý ảo được đào tạo để hỗ trợ bạn. Đừng ngần ngại, mình luôn sẵn sàng giúp đỡ bạn!"
+    - text: "Luôn sẵn sàng giúp đỡ bạn, mình là trợ lý ảo của bạn!"
+
+  utter_sign_in:
+    - text: "Hãy click vào link sau để đăng nhập nhé: [login](https://ioe.vn/oauth/login?client_id=a402e57987f74cc1&redirect_uri=https://ioe.vn/sso&state=eyJpZCI6bnVsbCwidXJpIjoiaHR0cHM6Ly9pb2Uudm4vdHJhbmctY2h1Iiwic3QiOiI2Mzg1MjA3MzYwOTU4Mjc1OTkiLCJydCI6ImxvZ2luIn0) \nChú ý điền đúng thông tin Tên đăng nhập và mật khẩu để có thể đăng nhập nha!\nNếu bạn chưa có tài khoản, hãy đăng ký tài khoản."
+      buttons:
+        - title: "Đăng ký tài khoản"
+          payload: "/sign_up"
+
+  utter_sign_up:
+    - text: "Chọn tài khoản bạn muốn đăng ký: "
+      buttons:
+        - title: "Tài khoản Học sinh"
+          payload: "/sin_up_student"
+        - title: "Tài khoản Phụ huynh"
+          payload: "/sign_up_parents"
+        - title: "Tài khoản Giáo viên lớp"
+          payload: "/sign_up_teacher"
+        - title: "Tài khoản Nhà trường"
+          payload: "/sign_up_school"
+        - title: "Tài khoản Phòng/Sở Giáo dục"
+          payload: "/sign_up_Education_Department"
+
+  utter_sign_up_student:
+    - text: "Để đăng ký tài khoản học sinh, bạn làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\" nhé. \n\tBước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản học sinh\". \n\tBước 5: Bạn điền các thông tin giáo dục cho học sinh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \n\tBước 6: Sau khi điền thông tin giáo dục, bạn cần đăng ký số điện thoại xác thực cho tài khoản. Hãy làm theo hướng dẫn trên trang xác thực để hoàn thành đăng ký tài khoản.\nChúc bạn đăng ký tài khoản thành công! "
+
+  utter_sign_up_parents:
+    - text: "Để đăng ký tài khoản dành cho phụ huynh, bạn làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\". \n\tBước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Sau khi bạn tạo tài khoản thành công, bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản phụ huynh\". \n\tBước 5: Bạn điền các thông tin ph huynh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \nTrên màn hình, có hiển thị dãy 10 chữ số là ID của phụ huynh. ID phụ huynh sẽ được dùng để liên kết tài với tài khoản của con. Bạn có muốn liên kết với tài khoản của con mình?"
+  utter_sign_up_teacher:
+    - text: "Tài khoản giáo viên quản lý lớp dành cho tất cả các giáo viên giảng dạy Tiếng Anh có nhu cầu quản lý lớp học, giao bài cho học sinh, tạo kỳ thi riêng, tạo bài kiểm tra cho học sinh của trường mình  trên nền tảng trực tuyến của IOE.\nĐể đăng ký tài khoản cho giáo viên, thầy/cô làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, thầy/cô điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\" nhé. \n\tBước 3: Sau đó, thầy cô điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Tiếp theo, thầy cô cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Giáo viên lớp\". \n\tBước 5: Thầy cô đăng ký số điện thoại xác thực bằng cách làm theo hướng dẫn trên màn hình rồi click \"Xác nhận\". \n\tBước 6: Sau khi hoàn tất xác thực tài khoản, thầy/cô nhập thông tin cá nhân theo form trên màn hình và chọn \"Gửi yêu cầu\" để được tài khoản Giáo viên quản trị cấp trường phê duyệt. \nChúc thầy cô đăng ký tài khoản thành công!"
+
+  utter_sign_up_school:
+    - text: "Để đăng ký tài khoản Giáo viên quản trị cấp Trường, bạn làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\" nhé. \n\tBước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Giáo viên quản trị Trường\". \n\tBước 5: Sau đó, bạn cần đăng ký số điện thoại xác thực bằng cách làm theo hướng dẫn trên màn hình rồi click \"Xác nhận\". \n\tBước 6: Tiếp theo, bạn cần cập nhật đầy đủ, chính xác tất cả thông tin cần thiết trên màn hình rồi click \"Xác nhận\". \n\tBước 7: bạn cần tải công văn theo mẫu tổ chức quy định, điền đầy đủ thông tin rồi upload file theo như hướng dẫn trên màn hình! \nChúc bạn đăng ký tài khoản thành công! "
+
+  utter_sign_up_Education_Department:
+    - text: "Để đăng ký tài khoản học sinh, bạn làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\" nhé. \n\tBước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản học sinh\". \n\tBước 5: Bạn điền các thông tin giáo dục cho học sinh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \n\tBước 6: Sau khi điền thông tin giáo dục, bạn cần đăng ký số điện thoại xác thực cho tài khoản. Hãy làm theo hướng dẫn trên trang xác thực để hoàn thành đăng ký tài khoản.\nChúc bạn đăng ký tài khoản thành công! "
+
+  utter_add_GO:
+    - text: "Để nạp GO, có 3 cách sau: \n\t - Nạp GO qua thẻ game.\n\t - Nạp GO qua chuyển khoản ngân hàng.\n\t - Nạp GO qua ví điện tử.\n Vui lòng lựa chọn cách bạn muốn nạp GO:  "
+      buttons:
+        - title: "Thẻ game"
+          payload: "/add_GO_the_game"
+        - title: "Chuyển khoản"
+          payload: "/add_GO_chuyen_khoan"
+        - title: "Ví điện tử"
+          payload: "/add_GO_vi_dien_tu"
+
+  utter_add_GO_the_game:
+    - text: "Để nạp GO bằng thẻ game, bạn hãy làm theo hướng dẫn sau: \n\tBước 1: Bạn đăng nhập vào tài khoản IOE, click vào \"Đổi gói dịch vụ IOE\" ở phía bên phải, dưới bảng thông tin cá nhân. \n\tBước 2: Màn hình hiển thị thông tin các Gói dịch vụ IOE cung cấp, bạn chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút \"Thêm\". \n\tBước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.\n\tBước 4: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.\n\tBước 5: Bạn tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.\n\tBước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Thẻ game”.\n\tBước 7:  Bạn chọn loại thẻ Game, điền chính xác mã thẻ, số seri vào các ô trống tương ứng trong ảnh dưới đây  sau đó click vào “Xác nhận” để hoàn thành nạp Go qua thẻ game.\n\tBước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.\n\tBước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.\n Chúc bạn đổi GO thành công và luyện tập tốt!"
+
+  utter_add_GO_chuyen_khoan:
+    - text: "Để nạp GO bằng chuyển khoản ngân hàng, bạn hãy làm theo hướng dẫn sau: \n\tBước 1: Bạn đăng nhập vào tài khoản IOE, click vào \"Đổi gói dịch vụ IOE\" ở phía bên phải, dưới bảng thông tin cá nhân. \n\tBước 2: Màn hình hiển thị thông tin các Gói dịch vụ IOE cung cấp, bạn chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút \"Thêm\". \n\tBước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.\n\tBước 4: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.\n\tBước 5: Bạn tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.\n\tBước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Chuyển khoản ngân hàng”.\n\tBước 7:  Bạn lựa chọn ngân hàng bạn muốn chuyển tới công ty VTC Online trong số danh sách các ngân hàng được liệt kê trong ảnh trên đây để nhận nội dung và làm theo các bước hướng dẫn chuyển khoản hiển thị trên màn hình.\n\tBước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.\n\tBước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.\n Chúc bạn đổi GO thành công và luyện tập tốt!"
+
+  utter_add_GO_vi_dien_tu:
+    - text: "Để nạp GO bằng Ví điện tử, bạn hãy làm theo hướng dẫn sau: \n\tBước 1: Bạn đăng nhập vào tài khoản IOE, click vào \"Đổi gói dịch vụ IOE\" ở phía bên phải, dưới bảng thông tin cá nhân. \n\tBước 2: Màn hình hiển thị thông tin các Gói dịch vụ IOE cung cấp, bạn chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút \"Thêm\". \n\tBước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.\n\tBước 4: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.\n\tBước 5: Bạn tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.\n\tBước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Thẻ game”.\n\tBước 7:  Bạn chọn loại thẻ Game, điền chính xác mã thẻ, số seri vào các ô trống tương ứng trong ảnh dưới đây  sau đó click vào “Xác nhận” để hoàn thành nạp Go qua thẻ game.\n\tBước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.\n\tBước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.\n Chúc bạn đổi GO thành công và luyện tập tốt!"
+
+  utter_link_parents_student:
+    - text: "Để liên kết tài khoản của phụ huynh với tài khoản của con, bạn hãy làm theo hướng dẫn sau: \n\tBước 1: Đăng nhập tài khoản phụ huynh, điền ID  tài khoản con, sau đó bấm chọn \"Thêm Tài khoản của con\". Như vậy bạn đã thực hiện thêm tài khoản của con thành công. \n\tBước 2: Đăng nhập vào tài khonar của con, tại tài khoản học viên của con chọn mục \"Thông tin giáo dục\", tiếp tục chọn \"Tài khoản liên kết\". \n\tBước 3: Tại mục Tài khoản liên kết sẽ hiển thị ID của phụ huynh, học sinh bấm “Xác nhận” để hoàn tất quá trình liên kết. \nChúc bạn thực hiện liên kết thành công!"
+
+  utter_school_acc_can_do:
+    - text: "Trên tài khoản này, Giáo viên quản trị có thể:\n\t1. Thống kê và quản lý số học sinh tham gia IOE của Nhà trường: \n\t\t- Xem và tải danh sách học sinh toàn trường. \n\t\t- Theo dõi tiến độ luyện tập, kết quả học tập của học sinh. \n\t\t- Xem và tải danh sách giáo viên quản trị các trường.  \n\t2. Quản trị thi các cấp IOE trên địa bàn: \n\t\t- Đăng ký tổ chức thi IOE các cấp. \n\t\t- Đăng ký danh sách học sinh thi IOE các cấp. \n\t\t- Tải và nộp Biên bản thi các cấp cho BTC.\n\t\t- Xem và tải danh sách học sinh đăng ký thi IOE các cấp.\n\t\t- Tra cứu kết quả thi IOE các cấp. \n\t3. Tổng hợp, thống kê kết quả thi IOE các cấp của Nhà trường: \n\t\t- Xem và tải toàn bộ kết quả thi IOE các cấp. \n\t\t- Xem và tải Giấy chứng nhận cho học sinh đạt giải IOE."
+
+entities:
+  - student
+  - parents
+  - teacher
+  - school
+  - Education_Department
+
+
+actions:
+  - action_greet_user
+
+session_config:
+  session_expiration_time: 60       #time for one session, minutes
+  carry_over_slots_to_new_session: true     #save session

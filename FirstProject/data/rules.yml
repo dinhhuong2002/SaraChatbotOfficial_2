@@ -1,0 +1,46 @@
+version: "3.1"
+
+rules:
+  - rule: Greet user at the start of the conversation
+    steps:
+      - intent: session_start
+      - action: action_greet_user
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: continue sesion when user say ok
+    steps:
+      - intent: agree
+      - action: utter_agree
+
+  - rule: how are you? fine thanks
+    steps:
+      - intent: fine_thanks
+      - action: utter_fine_thanks
+
+  - rule: say "you're welcome" when user say thanks
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: what_is_bot
+      - action: utter_iamabot
+
+  - rule: sign up help
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+
+  - rule: sign in help
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+  - rule: add_GO
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO

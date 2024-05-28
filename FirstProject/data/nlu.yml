@@ -1,0 +1,286 @@
+version: "3.1"
+
+nlu:
+  - intent: hello
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+      - let's go
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - xin chào
+      - chào
+      - chào buổi sáng
+      - hiiiiiiiiii
+
+  - intent: fine_thanks
+    examples: |
+      - fine
+      - i'm fine
+      - good
+      - i'm good
+      - fine, thanks
+      - i'm fine. Thanks
+      - very good
+      - tôi khỏe
+      - tôi ổn
+      - tốt
+      - tôi khỏe, cảm ơn bạn
+      
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: deny
+    examples: |
+      - no
+      - không
+      - không bao giờ
+      - I don't think so
+      - don't like that
+      - không phải
+      - not
+      - tôi không
+      - tôi không thấy vậy
+      - n
+
+  - intent: agree
+    examples: |
+      - có
+      - đúng vậy
+      - đúng
+      - I think so
+      - ok
+      - oke
+      - yes
+      - tôi có
+      - yep
+      - oki
+      - tuyệt
+      - tuyệt vời
+      - yeah
+      - tôi đồng ý
+      - đồng ý
+      - cóooooo
+
+
+  - intent: thanks
+    examples: |
+      - thanks
+      - thank
+      - thank you
+      - cảm ơn bạn
+      - cảm ơn rất nhiều
+      - cảm ơn bạn
+      - cảm ơn nha
+      - thank a lot
+      - thank you so much
+      - tuyệt, cảm ơn nha
+      - xiaxia
+      - tks
+      - thanksssss
+      - fine thanks
+
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: what_is_bot
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - What is your name?
+      - Tên bạn là gì?
+      - Your name?
+      - bạn tên là gì?
+      - bạn là con người hả?
+      - bạn tên là gì?
+
+  - intent: sign_in
+    examples: |
+      - Tôi muốn đăng nhập vào ioe
+      - đăng nhập
+      - sign in
+      - login
+      - đăng nhập tài khoản
+      - giúp tôi đăng nhập tài khoản
+      - giúp tôi đăng nhập
+      - i want to sign in
+      - cho tôi đăng nhập
+
+  - intent: sign_up
+    examples: |
+      - Tôi muốn đăng ký tài khoản
+      - Đăng ký tài khoản
+      - i want to sign up
+      - Đăng ký
+      - sign up
+      - giúp tôi đăng ký tài khoản
+      - giúp tôi đăng ký
+      - đăng kí
+      - đăng kí tài khoản
+      - tài khoản
+      - dki tai khoan
+      - đăng kí tài khoản ioe
+
+  - intent: sign_up_student
+    examples: |
+      - Tôi muốn đăng ký tài khoản dành cho [student](học sinh)
+      - Đăng kí tài khoản [student](học sinh)
+      - [student](học sinh)
+      - sign up with student account
+      - đăng ký tài khoản [student](học sinh)
+      - tài khoản [student](học sinh)
+
+  - intent: sign_up_parents
+    examples: |
+      - đăng ký tài khoản [parents](phụ huynh)
+      - tôi muốn đăng ký tài khoản [parents](phụ huynh)
+      - [parents](phụ huynh)
+      - account for parents
+      - sign up with parents account
+      - parents
+      - tài khoản [parents](phụ huynh)
+      - tài khoản dành cho [parents](phụ huynh)
+
+  - intent: sign_up_teacher
+    examples: |
+      - Tôi muốn đăng ký tài khoản dành cho [teacher](giáo viên)
+      - Đăng kí tài khoản [teacher](giáo viên)
+      - [teacher](giáo viên)
+      - sign up with [teacher](teacher) account
+      - đăng ký tài khoản [teacher](giáo viên)
+      - tài khoản cho [teacher](giáo viên)
+      - teacher
+
+  - intent: sign_up_school
+    examples: |
+      - Tôi muốn đăng ký tài khoản dành cho [school](nhà trường)
+      - Đăng kí tài khoản cấp [school](trường)
+      - [school](nhà trường)
+      - sign up with school account
+      - đăng ký tài khoản [school](trường học)
+      - tài khoản cho [school](nhà trường)
+      - [school](school)
+
+  - intent: sign_up_Education_Department
+    examples: |
+      - Tôi muốn đăng ký tài khoản dành cho [Education_Department](Phòng giáo dục)
+      - Đăng kí tài khoản [Education_Department](sở giáo dục)
+      - [Education_Department](Phòng giáo dục)
+      - đăng ký tài khoản [Education_Department](sở giáo dục)
+      - đăng ký tài khoản [Education_Department](Phòng giáo dục)
+      - tài khoản cho [Education_Department](phòng/sở giáo dục)
+      - sở giáo dục và đào tạo
+      - Phòng giáo dục và đào tạo
+
+  - intent: add_GO
+    examples: |
+      - Hướng dẫn nạp go
+      - nạp go như thế nào?
+      - Tôi muốn nạp go
+      - mình muốn nạp go
+      - nạp go
+      - giúp tôi nạp go
+
+  - intent: add_GO_the_game
+    examples: |
+      - tôi muốn nạp GO qua thẻ game
+      - nạp GO qua thẻ game
+      - thẻ game
+      - Nạp go bằng thẻ game
+      - hướng dẫn tôi nạp GO bằng thẻ game
+
+  - intent: add_GO_chuyen_khoan
+    examples: |
+      - tôi muốn chuyển khoản
+      - nạp GO bằng cách chuyển khoản
+      - chuyển khoản ngân hàng
+      - Nạp go bằng chuyển khoản ngân hàng
+      - chuyển khoản
+      - giúp tôi chuyển khoản
+
+  - intent: add_GO_vi_dien_tu
+    examples: |
+      - tôi muốn nạp GO qua ví điện tử
+      - ví điện tử
+      - tôi muốn ví điện tử
+      - vnpay
+      - nạp GO bằng ví điện tử
+      - ví điện tử nhé
+      - nạp go qua ví điện tử
+      - hướng dẫn tôi nạp qua ví điện tử
+
+  - intent: link_parents_student #link tk phụ huynh với tài khoản của con
+    examples: |
+      - tôi muốn liên kết tài khoản của mình với tài khoản của con
+      - liên kết tài khoản của con
+      - liên kết tài khoản
+      - liên kết tài khoản cha mẹ với con
+      - tôi muốn liên kết tài khoản
+      - giúp tôi liên kết tài khoản
+      - Tôi có thể liên kết tài khoản của mình với con bằng cách nào
+      - Hướng dẫn liên kết tài khoản
+
+
+
+  - intent: school_acc_can_do  #tài khoản nhà trường có thể làm gì?
+    examples: |
+      - quyền của tài khoản nhà trường
+      - quyền của tài khoản giáo viên quản trị cấp trường
+      - giáo viên quản trị có thể?
+      - giáo viên quản trị có quyền
+      - quyển của giáo viên quản trị
+      - quyền hạn của giáo viên quản trị
+      - chức trách của giáo viên quản trị
+      - quyền lợi của giáo viên quản trị cấp trường?
+      - quyển lời của tài khoản này
+      

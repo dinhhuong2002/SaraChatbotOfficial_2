@@ -1,0 +1,113 @@
+version: "3.1"
+
+stories:
+
+  - story: happy path
+    steps:
+      - intent: hello
+      - action: utter_hello
+      - intent: mood_great
+      - action: utter_agree
+
+  - story: sad path 1
+    steps:
+      - intent: hello
+      - action: utter_hello
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: agree
+      - action: utter_agree
+
+  - story: sad path 2
+    steps:
+      - intent: hello
+      - action: utter_hello
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: đăng ký tài khoản student
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_student
+      - action: utter_sign_up_student
+
+  - story: đăng ký tài khoản phụ huynh
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_parents
+      - action: utter_sign_up_parents
+
+  - story: liên kết tài khoản phụ huynh với tài khoản của con sau khi đăng kí  tài khoản phụ huynh
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_parents
+      - action: utter_sign_up_parents
+      - intent: agree
+      - action: utter_link_parents_student
+
+  - story: không liên kết tài khoản phụ huynh với tài khoản của con sau khi đăng kí  tài khoản phụ huynh
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_parents
+      - action: utter_sign_up_parents
+      - intent: deny
+      - action: utter_agree
+
+  - story: đăng ký tài khoản giáo viên lớp
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_teacher
+      - action: utter_sign_up_teacher
+
+  - story: đăng ký tài khoản nhà trường
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_school
+      - action: utter_sign_up_school
+
+  - story: đăng ký tài khoản sở giáo dục
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_Education_Department
+      - action: utter_sign_up_Education_Department
+
+  - story: đăng nhập khi chưa có tài khoản
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+      - intent: sign_up
+      - action: utter_sign_up
+
+  - story: nạp GO bằng thẻ game
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_the_game
+      - action: utter_add_GO_the_game
+
+  - story: nạp GO bằng chuyển khoản ngân hàng
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_chuyen_khoan
+      - action: utter_add_GO_chuyen_khoan
+
+  - story: nạp GO bằng ví điện tử
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_vi_dien_tu
+      - action: utter_add_GO_vi_dien_tu
+
+
