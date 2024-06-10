@@ -18,6 +18,23 @@ nlu:
       - chào buổi sáng
       - hiiiiiiiiii
 
+
+  - intent: ask_for_help
+    examples: |
+      - can you help me
+      - help me
+      - helpppp
+      - giúp mình với
+      - bạn có thể giúp mình không?
+      - bạn ơi, cạn có thể giúp mình không?
+      - giúp với
+      - help me, please
+      - giúp tôi 
+      - giúp tôi với
+      - bạn có thể giúp tôi không
+      - hãy giúp tôi
+      - giúp tôi nhé
+      - giúp mình đi
   - intent: fine_thanks
     examples: |
       - fine
@@ -77,7 +94,6 @@ nlu:
       - tôi đồng ý
       - đồng ý
       - cóooooo
-
 
   - intent: thanks
     examples: |
@@ -143,6 +159,115 @@ nlu:
       - bạn tên là gì?
       - bạn là con người hả?
       - bạn tên là gì?
+      - bạn hay giới thiệu một chút veef bản thân
+      - giới thiệu về bản thân
+      - bạn giới thiệu về mình đi
+      - tự giới thiệu về bản thân 
+
+
+  - intent: about_ioe
+    examples: |
+      - ioe là gì
+      - what is ioe?
+      - can u tell me some thing about ioe?
+      - ioe
+      - about ioe
+      - nói cho tôi về ioe
+      - nói vài điều về ioe
+      - giới thiệu về ioe
+      - giới thiệu một chút về ioe
+      - thi tiếng anh trên internet
+      - ioe là cuộc thi gì
+      - ioe là
+      - something about ioe
+
+
+  - intent: doi_tuong_tham_gia
+    examples: |
+      - đối tượng tham gia thi ioe
+      - đối tượng thi ioe
+      - ai có thể thi ioe
+      - ai có thể thi ioe?
+      - học sinh lớp mấy có thể thi ioe?
+      - đại học có th thi ioe không
+      - đối tượng có thể thi ioe
+      - ai có thể tha gia ioe
+      - học sinh lớp mấy có thể tham gia ioe
+      - học sinh khối mấy có thể tham gia thi ioe
+      - lớp 1 có thể tham gia thi ioe không?
+      - lớp mấy là có thể tham gia thi ioe
+      - tôi muốn tham gia thi ioe
+      - điều kiện để tham gia thi ioe
+
+  - intent: thanh_tich_ioe
+    examples: |
+      - nêu thành tích của ioe
+      - thành tích
+      - thành tựu của ioe
+      - thảnh quả ioe đạt được
+      - ioe đã đạt được những thành tích gì?
+      - ioe đã đạt được những thành tựu gì?
+      - những kết quả mà ioe đạt được
+      - những thành tích mà ioe đạt được
+      - kể ra một số thành tích của ioe
+      - kể ra một số thành tựu của ioe
+      - liệt kê thành tích của ioe
+      - liệt kê thành tích của ioe.vn
+      - ioe đã có những thành tựu gì?
+
+### Câu hỏi, intent liên quan đến tài khoản IOE.
+  - intent: so_acc_max
+    examples: |
+      - mỗi thí sinh có thể đăng ký tối đa bao nhiêu tài khoản
+      - số tài khoản tối đa mỗi học sinh có thể đăng ký
+      - 1 học sinh có tối đa bao nhiêu tài khoản
+      - 1 học sinh có nhiều nhất bao nhiêu tài khoản
+      - số tài khoản 1 học sinh có thể đăng ký?
+      - số tài khoản 1 học sinh có thể đăng kí là bao nhiêu
+      - max account for 1 student
+      - số tài khoản tối đa cho 1 học sinh
+      - 1 học sinh tối đa bao nhiêu tài khoản
+      - 1 thí sinh có tối đa bao nhiêu tài khoản?
+      
+
+  - intent: one_tel_use_max_acc   # 1 sđt đăng kí tối đa bao nhiêu tài khoản
+    examples: |
+      - mọt số điện thoại được đăng ký tối đa bao nhiêu tài khoản
+      - 1 sđt được đăng ký cho bao nhiêu tài khoản?
+      - 1 sđt tối đa bao nhiêu tài khoản
+      - có thể sử dụng 1 sđt cho tối da bao nhiêu tài khoản
+      - có thể sử dụng 1 số điện thoại cho bao nhiêu tài khoản
+      - tối đa có thể đăng kí bao nhiêu tài khoản với 1 số điện thoại
+      - 1 sđt tối đa số tài khoản đăng ký
+      - bao nhiêu tài khoản có thể đăng kí với cùng 1 sđt?
+      - bao nhiêu tài khoản có thể đăng kí với cùng 1 số điện thoại?
+  
+
+  - intent: what_is_ID
+    examples: |
+      - ID là gì
+      - id là gì
+      - id tài khoản là gì?
+      - what is ID?
+      - mã ID là gì?
+      - ID dùng đề làm gì?
+      - ID dùng để 
+
+  - intent: forget_password
+    examples: |
+      - 
+      - 
+
+  - intent: change_password
+    examples: |
+      - 
+      - 
+
+  - intent: verify_acc
+    examples: |
+      - 
+      - 
+
 
   - intent: sign_in
     examples: |
@@ -173,55 +298,101 @@ nlu:
 
   - intent: sign_up_student
     examples: |
-      - Tôi muốn đăng ký tài khoản dành cho [student](học sinh)
-      - Đăng kí tài khoản [student](học sinh)
-      - [student](học sinh)
+      - Tôi muốn đăng ký tài khoản dành cho học sinh
+      - Đăng kí tài khoản học sinh
+      - học sinh
       - sign up with student account
-      - đăng ký tài khoản [student](học sinh)
-      - tài khoản [student](học sinh)
+      - đăng ký tài khoản học sinh
+      - tài khoản học sinh
+      - student
+      - giúp tôi đăng ký tài khoản học sinh
 
   - intent: sign_up_parents
     examples: |
-      - đăng ký tài khoản [parents](phụ huynh)
-      - tôi muốn đăng ký tài khoản [parents](phụ huynh)
-      - [parents](phụ huynh)
+      - đăng ký tài khoản phụ huynh
+      - tôi muốn đăng ký tài khoản phụ huynh
+      - phụ huynh
       - account for parents
       - sign up with parents account
       - parents
-      - tài khoản [parents](phụ huynh)
-      - tài khoản dành cho [parents](phụ huynh)
+      - tài khoản phụ huynh
+      - tài khoản dành cho phụ huynh
+      - giúp ti đăng ký tài khoản phụ huynh
+      - tôi muốn đăng ký tài khoản phụ huynh
 
   - intent: sign_up_teacher
     examples: |
-      - Tôi muốn đăng ký tài khoản dành cho [teacher](giáo viên)
-      - Đăng kí tài khoản [teacher](giáo viên)
-      - [teacher](giáo viên)
-      - sign up with [teacher](teacher) account
-      - đăng ký tài khoản [teacher](giáo viên)
-      - tài khoản cho [teacher](giáo viên)
-      - teacher
+      - Tôi muốn đăng ký tài khoản dành cho giáo viên
+      - Đăng kí tài khoản giáo viên
+      - giáo viên
+      - sign up with teacher account
+      - đăng ký tài khoản giáo viên
+      - tài khoản cho giáo viên
+      - đăng kí giáo viên
+      - giúp ti đăng ký tài khoản giáo viên
+      - tài khoản giáo viên
 
   - intent: sign_up_school
     examples: |
-      - Tôi muốn đăng ký tài khoản dành cho [school](nhà trường)
-      - Đăng kí tài khoản cấp [school](trường)
-      - [school](nhà trường)
+      - Tôi muốn đăng ký tài khoản dành cho nhà trường
+      - Đăng kí tài khoản cấp nhà trường
+      - nhà trường
       - sign up with school account
-      - đăng ký tài khoản [school](trường học)
-      - tài khoản cho [school](nhà trường)
-      - [school](school)
+      - đăng ký tài khoản quản trị cấp trường
+      - tài khoản cho nhà trường
+      - school
+      - tài khoản giáo viên quản lý cấp trường
+      - quản trị cấp trường
+      - tài khoản quản trị cấp trường
+      - cấp trường
 
   - intent: sign_up_Education_Department
     examples: |
-      - Tôi muốn đăng ký tài khoản dành cho [Education_Department](Phòng giáo dục)
-      - Đăng kí tài khoản [Education_Department](sở giáo dục)
-      - [Education_Department](Phòng giáo dục)
-      - đăng ký tài khoản [Education_Department](sở giáo dục)
-      - đăng ký tài khoản [Education_Department](Phòng giáo dục)
-      - tài khoản cho [Education_Department](phòng/sở giáo dục)
+      - Tôi muốn đăng ký tài khoản dành cho Phòng giáo dục
+      - Đăng kí tài khoản Phòng giáo dục
+      - Phòng giáo dục
+      - đăng ký tài khoản Phòng giáo dục
+      - đăng ký tài khoản Phòng giáo dục
+      - tài khoản cho Phòng giáo dục
       - sở giáo dục và đào tạo
       - Phòng giáo dục và đào tạo
+      - sở giáo dục
+      - phòng/sở
+      - sở đào tạo
+      - phòng đào tạo
 
+  - intent: link_parents_student #link tk phụ huynh với tài khoản của con
+    examples: |
+      - tôi muốn liên kết tài khoản của mình với tài khoản của con
+      - liên kết tài khoản của con
+      - liên kết tài khoản
+      - liên kết tài khoản cha mẹ với con
+      - tôi muốn liên kết tài khoản
+      - giúp tôi liên kết tài khoản
+      - Tôi có thể liên kết tài khoản của mình với con bằng cách nào
+      - Hướng dẫn liên kết tài khoản
+
+  - intent: school_acc_can_do  #tài khoản nhà trường có thể làm gì?
+    examples: |
+      - quyền của tài khoản nhà trường
+      - quyền của tài khoản giáo viên quản trị cấp trường
+      - giáo viên quản trị có thể?
+      - giáo viên quản trị có quyền
+      - quyển của giáo viên quản trị
+      - quyền hạn của giáo viên quản trị
+      - chức trách của giáo viên quản trị
+      - quyền lợi của giáo viên quản trị cấp trường?
+      - quyển lời của tài khoản này
+      - tài khoản cấp trường có thể làm gì
+      - tôi có thể làm gì với tài khoản cấp trường?
+      - nhiệm vụ của tài khoản cấp trường
+  
+  
+  
+  
+  
+
+### Câu hỏi, intent về nạp GO
   - intent: add_GO
     examples: |
       - Hướng dẫn nạp go
@@ -231,13 +402,13 @@ nlu:
       - nạp go
       - giúp tôi nạp go
 
-  - intent: add_GO_the_game
-    examples: |
-      - tôi muốn nạp GO qua thẻ game
-      - nạp GO qua thẻ game
-      - thẻ game
-      - Nạp go bằng thẻ game
-      - hướng dẫn tôi nạp GO bằng thẻ game
+#  - intent: add_GO_the_game
+#    examples: |
+#      - tôi muốn nạp GO qua thẻ game
+#      - nạp GO qua thẻ game
+#      - thẻ game
+#      - Nạp go bằng thẻ game
+#      - hướng dẫn tôi nạp GO bằng thẻ game
 
   - intent: add_GO_chuyen_khoan
     examples: |
@@ -259,28 +430,93 @@ nlu:
       - nạp go qua ví điện tử
       - hướng dẫn tôi nạp qua ví điện tử
 
-  - intent: link_parents_student #link tk phụ huynh với tài khoản của con
+  - intent: hoan_tra_GO
     examples: |
-      - tôi muốn liên kết tài khoản của mình với tài khoản của con
-      - liên kết tài khoản của con
-      - liên kết tài khoản
-      - liên kết tài khoản cha mẹ với con
-      - tôi muốn liên kết tài khoản
-      - giúp tôi liên kết tài khoản
-      - Tôi có thể liên kết tài khoản của mình với con bằng cách nào
-      - Hướng dẫn liên kết tài khoản
+      - tôi có thể hoàn trả GO đã nạp không?
+      - hoàn trả GO
+      - hoàn go
+      - trả lại Go đã nạp
+      - trả lại go đã nạp được không?
+      - tôi muốn trả lại go đã nạp?
+      - tôi trả lại GO đã nạp
+      - hoàn go đã nạp được không?
+      - giúp tôi hoàn lại go đã nạp
+      - GO đã nạp có hoàn trả được không?
+      - 
 
 
 
-  - intent: school_acc_can_do  #tài khoản nhà trường có thể làm gì?
+  - intent: how_to_use_GO # đổi GO sang các gói dịch vụ của ioe
+
+
+### Các intent, câu hỏi về điều khoản, dịch vụ, quy định, quy chế, thể lệ
+  - intent: dieu_khoan_dich_vu
     examples: |
-      - quyền của tài khoản nhà trường
-      - quyền của tài khoản giáo viên quản trị cấp trường
-      - giáo viên quản trị có thể?
-      - giáo viên quản trị có quyền
-      - quyển của giáo viên quản trị
-      - quyền hạn của giáo viên quản trị
-      - chức trách của giáo viên quản trị
-      - quyền lợi của giáo viên quản trị cấp trường?
-      - quyển lời của tài khoản này
+      - điều khoản sử dụng tài khoản goedu
+      - quy định sử dụng tài khoản ioe
+      - quy định sử dụng tài khoản
+      - dịch vụ của ioe
+      - điều khoản sử dụng tài khoản ioe
+      - QUY ĐỊNH VỀ ĐĂNG KÝ, ĐĂNG NHẬP
+      - QUYỀN VÀ TRÁCH NHIỆM
+      - Quyền của chủ tài khoản
+      - Quyền của VTC ONLINE
+      - GIỚI HẠN TRÁCH NHIỆM VÀ TỪ CHỐI ĐẢM BẢO
+      - 
+
+  - intent: chinh_sach_bao_mat
+    examples: |
+      - chinh sách bảo mật của cuộc thi
+      - chinh sách bảo mật của ioe?
+      - chính sách bảo mật
+      - Chính sách bảo mật thông tin cá nhân
+      - bảo mật thông tin
+      - quy định bảo mật thông tin
+      - quy định về chính sách bảo mật thông tin
+      - quy định về chính sách bảo mật thông tin cá nhân
+      - chính sách thu thập thông tin cá nhân
       
+
+  - intent: the_le
+    examples: |
+      - 
+      - 
+
+  - intent:
+    examples: |
+      - 
+      - 
+
+  - intent:
+    examples: |
+      - 
+      - 
+
+  - intent:
+    examples: |
+      - 
+      - 
+
+
+###Câu hỏi hướng dẫn, help, others
+  - intent: thi_vuot_cap
+    examples: |
+      - 
+      - 
+
+
+  - intent: dang_ky_to_chuc_thi
+    examples: |
+      - 
+      - 
+
+
+  - intent: change_infor
+    examples: |
+      - 
+      - 
+
+  - intent:
+    examples: |
+      - 
+      - 

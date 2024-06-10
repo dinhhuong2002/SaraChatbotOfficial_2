@@ -1,20 +1,30 @@
 version: "3.1"
 
 rules:
-  - rule: Greet user at the start of the conversation
-    steps:
-      - intent: session_start
-      - action: action_greet_user
+#  - rule: Greet user at the start of the conversation
+#    steps:
+#      - intent: session_start
+#      - action: action_greet_user
 
   - rule: Say goodbye anytime the user says goodbye
     steps:
       - intent: goodbye
       - action: utter_goodbye
 
-  - rule: continue sesion when user say ok
+  - rule: Say some help when user ask for help
     steps:
-      - intent: agree
-      - action: utter_agree
+      - intent: ask_for_help
+      - action: utter_deny
+
+#  - rule: Predicting default action with intent session_start
+#    steps:
+#      - intent: session_start
+#      - action: action_session_start
+
+#  - rule: continue session when user say ok
+#    steps:
+#      - intent: agree
+#      - action: utter_agree
 
   - rule: how are you? fine thanks
     steps:
@@ -44,3 +54,82 @@ rules:
     steps:
       - intent: add_GO
       - action: utter_add_GO
+
+  - rule: hoàn trả GO được không?
+    steps:
+      - intent: hoan_tra_GO
+      - action: utter_hoan_tra_GO
+
+  - rule: cách sử dụng GO đổi gói dịch vụ
+    steps:
+      - intent: how_to_use_GO
+      - action: utter_how_to_use_GO
+
+  - rule: liên kết tài khoản phụ huynh vói tài khoản con
+    steps:
+      - intent: link_parents_student
+      - action: utter_link_parents_student
+
+  - rule: acc_school can do what, quyền của tài khoản nhà trường
+    steps:
+      - intent: school_acc_can_do
+      - action: utter_school_acc_can_do
+
+  - rule: giới thiệu về ioe
+    steps:
+      - intent: about_ioe
+      - action: utter_about_ioe
+
+  - rule: đối tượng tham gia thi ioe
+    steps:
+      - intent: doi_tuong_tham_gia
+      - action: utter_doi_tuong_tham_gia
+
+  - rule: nêu ra thành tích của ioe khi được hỏi
+    steps:
+      - intent: thanh_tich_ioe
+      - action: utter_thanh_tich_ioe
+
+  - rule: đưa ra số acc max với mỗi học sinh
+    steps:
+      - intent: so_acc_max
+      - action: utter_so_acc_max
+
+  - rule: thể lệ cuộc thi
+    steps:
+      - intent: the_le
+      - action: utter_the_le
+  - rule: trả lời ID tài khoản là gì? xem ở đâu?
+    steps:
+      - intent: what_is_ID
+      - action: utter_what_is_ID
+
+  - rule: cách xử lý khi quên mật khẩu đăng nhập
+    steps:
+      - intent: forget_password
+      - action: utter_forget_password
+
+  - rule: có thể thi vượt cấp
+    steps:
+      - intent: thi_vuot_cap
+      - action: utter_thi_vuot_cap
+
+  - rule: hướng dẫn thay đổi password
+    steps:
+      - intent: change_password
+      - action: utter_change_password
+
+  - rule: 1 sđt đăng kí được tối đa bao nhiêu tài khoản
+    steps:
+      - intent: one_tel_use_max_acc
+      - action: utter_one_tel_use_max_acc
+
+  - rule: thay đổi thông tin cá nhân
+    steps:
+      - intent: change_infor
+      - action: utter_change_infor
+
+  - rule: Xác thực tài khoản như thế nào?
+    steps:
+      - intent: verify_acc
+      - action: utter_verify_acc

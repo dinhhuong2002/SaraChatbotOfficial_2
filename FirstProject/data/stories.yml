@@ -2,6 +2,11 @@ version: "3.1"
 
 stories:
 
+  - story: continue session when user say ok
+    steps:
+      - intent: agree
+      - action: utter_agree
+
   - story: happy path
     steps:
       - intent: hello
@@ -52,14 +57,14 @@ stories:
       - intent: agree
       - action: utter_link_parents_student
 
-  - story: không liên kết tài khoản phụ huynh với tài khoản của con sau khi đăng kí  tài khoản phụ huynh
+  - story: không liên kết tài khoản phụ huynh với tài khoản của con sau khi đăng kí tài khoản phụ huynh
     steps:
       - intent: sign_up
       - action: utter_sign_up
       - intent: sign_up_parents
       - action: utter_sign_up_parents
       - intent: deny
-      - action: utter_agree
+      - action: utter_deny
 
   - story: đăng ký tài khoản giáo viên lớp
     steps:
@@ -89,25 +94,52 @@ stories:
       - intent: sign_up
       - action: utter_sign_up
 
-  - story: nạp GO bằng thẻ game
-    steps:
-      - intent: add_GO
-      - action: utter_add_GO
-      - intent: add_GO_the_game
-      - action: utter_add_GO_the_game
+#  - story: nạp GO bằng thẻ game
+#    steps:
+#      - intent: add_GO
+#      - action: utter_add_GO
+#      - intent: add_GO_the_game
+#      - action: utter_add_GO_the_game
 
-  - story: nạp GO bằng chuyển khoản ngân hàng
+  - story: nạp GO bằng chuyển khoản ngân hàng; có hoàn GO được không?
     steps:
       - intent: add_GO
       - action: utter_add_GO
       - intent: add_GO_chuyen_khoan
       - action: utter_add_GO_chuyen_khoan
+      - intent: hoan_tra_GO
+      - action: utter_hoan_tra_GO
 
-  - story: nạp GO bằng ví điện tử
+  - story: nạp GO bằng ví điện tử; có hoàn GO được không?
     steps:
       - intent: add_GO
       - action: utter_add_GO
       - intent: add_GO_vi_dien_tu
       - action: utter_add_GO_vi_dien_tu
+      - intent: hoan_tra_GO
+      - action: utter_hoan_tra_GO
 
+  - story: sau khi nạp GO có được hoàn trả GO hay không?
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: hoan_tra_GO
+      - action: utter_hoan_tra_GO
 
+  - story: nạp GO bằng chuyển khoản ngân hàng; hướng dẫn đổi GO
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_chuyen_khoan
+      - action: utter_add_GO_chuyen_khoan
+      - intent: how_to_use_GO
+      - action: utter_how_to_use_GO
+
+  - story: nạp GO bằng ví điện tử; hướng dẫn đổi GO
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_vi_dien_tu
+      - action: utter_add_GO_vi_dien_tu
+      - intent: how_to_use_GO
+      - action: utter_how_to_use_GO
