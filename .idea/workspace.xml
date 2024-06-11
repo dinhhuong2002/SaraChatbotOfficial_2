@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eaa7c4c-b1a1-404c-a893-d4775ba90173" name="Changes" comment="add: fine_thanks, add_GO, sign_up, link_parents_student, school_acc_can_do completed">
+    <list default="true" id="7eaa7c4c-b1a1-404c-a893-d4775ba90173" name="Changes" comment="remember: add stories for ID ( cách tìm ID tài khoản)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/.rasa/cache/cache.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/nlu.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/rules.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/stories.yml" afterDir="false" />
@@ -56,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716885342813</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="remember: add stories for ID ( cách tìm ID tài khoản)">
+      <created>1718016429342</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718016429342</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,6 +77,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add: fine_thanks, add_GO, sign_up, link_parents_student, school_acc_can_do completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: fine_thanks, add_GO, sign_up, link_parents_student, school_acc_can_do completed" />
+    <MESSAGE value="remember: add stories for ID ( cách tìm ID tài khoản)" />
+    <option name="LAST_COMMIT_MESSAGE" value="remember: add stories for ID ( cách tìm ID tài khoản)" />
   </component>
 </project>

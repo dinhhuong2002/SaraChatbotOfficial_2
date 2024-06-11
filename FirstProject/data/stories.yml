@@ -143,3 +143,24 @@ stories:
       - action: utter_add_GO_vi_dien_tu
       - intent: how_to_use_GO
       - action: utter_how_to_use_GO
+
+  - story: ID là gì? tôi có thể lấy id ở đâu?
+    steps:
+      - intent: what_is_ID
+      - action: utter_what_is_ID
+      - intent: where_id
+      - action: utter_where_id
+
+  - story: Lấy lại mật khẩu bằng cách sử dụng ID nhưng chưa biết ID?
+    steps:
+      - intent: forget_password
+      - action: utter_forget_password
+      - intent: where_id
+      - action: utter_where_id
+
+  - story: Muốn thay đổi mật khẩu nhưng quên MKC2
+    steps:
+      - intent: change_password
+      - action: utter_change_password
+      - intent: forget_MKC2
+      - action: utter_forget_MKC2

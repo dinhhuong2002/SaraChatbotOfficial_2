@@ -133,3 +133,29 @@ rules:
     steps:
       - intent: verify_acc
       - action: utter_verify_acc
+
+  - rule: cách xem, lấy ID tài khoản học sinh
+    steps:
+      - intent: where_id_student
+      - action: utter_where_id_student
+
+  - rule: cách xem, lấy ID tài khoản phụ huynh
+    steps:
+      - intent: where_id_parents
+      - action: utter_where_id_parents
+
+  - rule: cách xem, lấy ID tài khoản giáo viên
+    steps:
+      - intent: where_id_teacher
+      - action: utter_where_id_teacher
+
+  - rule: cách xem, lấy ID tài khoản nhà trường
+    steps:
+      - intent: where_id_school
+      - action: utter_where_id_school
+
+  - rule: cách xem, lấy ID tài khoản Phòng/Sở
+    steps:
+      - intent: where_id_Education_Department
+      - action: utter_where_id_Education_Department
+

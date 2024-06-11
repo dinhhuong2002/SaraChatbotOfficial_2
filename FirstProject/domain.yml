@@ -18,6 +18,12 @@ intents:
   - so_acc_max
   - one_tel_use_max_acc
   - what_is_ID
+  - where_id
+  - where_id_student
+  - where_id_parents
+  - where_id_teacher
+  - where_id_school
+  - where_id_Education_Department
   - forget_password
   - change_password
   - verify_acc
@@ -43,6 +49,9 @@ intents:
   - thi_vuot_cap
   - dang_ky_to_chuc_thi
   - change_infor
+  - huy_lien_ket_sdt
+  - forget_MKC2
+  - thi_tu_do
 
 
 responses:
@@ -89,6 +98,7 @@ responses:
 
   utter_fine_thanks:
     - text: "Tiếp tục trò chuyện cùng mình nhé!"
+    - text: "I'm so happy to hear that."
 
   utter_thanks:
     - text: "Oke. Tiếp tục trò chuyện cùng mình nhé!"
@@ -123,15 +133,45 @@ responses:
     - text: "Hiện tại, theo quy định thì 1 số điện thoại có thể xác thực cho tối đa 05 tài khoản.\nĐể kiểm tra danh sách tài khoản đã xác thực với số điện thoại của bạn, hãy soạn tin nhắn: \"GO\" gửi 8100. "
 
   utter_what_is_ID:
-    - text: "Mã tài khoản (Còn gọi là ID của tài khoản): là 1 dãy số gồm 10 số. Mỗi người dùng IOE sẽ có 1 số ID riêng không giống nhau. Sau khi bạn đăng nhập vào tài khoản, bạn có thể nhìn thấy ID của mình ở phía bên phải."
-#      image:
+    - text: "Mã tài khoản (Còn gọi là ID của tài khoản): là 1 dãy số gồm 10 số. Mỗi người dùng IOE sẽ có 1 số ID riêng không giống nhau. Sau khi bạn đăng nhập vào tài khoản, bạn có thể nhìn thấy ID của mình ở phía bên phải, trong khung thông tin cá nhân của bạn."
 
+  utter_where_id:
+    - text: "Tài khoản của bạn là tài khoản nào?"
+      buttons:
+        - title: "Học sinh"
+          payload: "/where_id_student"
+        - title: "Phụ huynh"
+          payload: "/where_id_parents"
+        - title: "Giáo viên"
+          payload: "/where_id_teacher"
+        - title: "Nhà trường"
+          payload: "/where_id_school"
+        - title: "Phòng/Sở"
+          payload: "/where_id_Education_Department"
+
+  utter_where_id_student:
+    - text: "Với tài khoản học sinh, bạn đăng nhập vào tài khoản rồi chọn MyIOE, vị trí ID của bạn hiển thị như hình bên dưới:"
+      image: "https://lh3.googleusercontent.com/c6fKPnSjvIvDDLHB21GSBCRiwNxVCwN8Slz0poTms8jv9ZWcb5ieyqaQQMBYvPZTBLNx8-kV-m5RxJB9e1cvVGWO7DzmARMEj1sr0AnirFjO-vXAh7RY6KxUFmtqspW77uS3HXwJjZuIvnC3pGTfTc800NM7VCJtTUBgzcrRz0JmG3MEFc0tOXSQuw"
+
+  utter_where_id_parents:
+    - text: "Với tài khoản phụ huynh, phụ huynh thực hiện đăng nhập vào tài khoản, chọn MyIOE và màn hình sẽ hiện như sau, khu vực bảng xanh hiển thị thông tin tài khoản bao gồm họ tên, mã ID, tên đăng nhập: "
+      image: "https://lh4.googleusercontent.com/whT2YqehnrQF0d6ok0-_cqDYTV1CuFW6qlRQu6xgYJ_zWUefh5vD2Y79EKSOubir46Dc9-PmL8HLuaQJ3acBr7xZ4l2Pug-Ni5lb530F8zzsY7KaAHzVr0lYvm4tMLP3_5X0B2thtanHgmQ3OtxjALxuOjb2dMm7T3wDMN00RhympxXpsOL9KdV3Og"
+
+  utter_where_id_teacher:
+    - text: "Thầy cô hãy đăng nhập vào tài khoản của mình để xem ID tài khoản."
+
+  utter_where_id_school:
+    - text: "Với tài khoản quản trị Trường, thầy cô đăng nhập vào tài khoản quản trị của mình và chọn \"Thông tin giáo dục\", màn hình sẽ hiển thị như sau:"
+      image: "https://static.ioe.vn/ioenews/EOlympic/news/2023/6/ID_GV%202.jpg"
+
+  utter_where_id_Education_Department:
+    - text: "Với tài khoản quản lý cấp Phòng/Sở Giáo dục, thầy cô đăng nhập vào tài khoản quản lý của mình và chọn \"Thông tin giáo dục\", trên màn hình bên trái sẽ hiển thị thông tin tài khoản bao gồm cả mã ID thầy cô cần tìm."
 
   utter_forget_password:
-    - text: ""
+    - text: "Bạn chỉ có thể khôi phục mật khẩu nếu tài khoản đã được xác thực (đăng ký số điện thoại bảo mật).\nĐể lấy lại mật khẩu, bạn thực hiện: \n\t- Soạn GO MK [MA MKC2] gửi 8100. Sau bước này sẽ có SMS trả về mã là MẬT KHẨU cho tài khoản. \n\t- Nếu bạn quên mật khẩu cấp 2 (MKC2), soạn tin nhắn với cú pháp: GO MKC2 129xxxxxx gửi 8100. Trong đó 129xxxxxx là ID tài khoản IOE của bạn. Sau bước này hệ thống sẽ gửi về SMS có mã MKC2.\n\t- Nếu bạn quên ID của tài khoản, soạn tin nhắn với cú pháp sau: GO gửi 8100. Thông tin tài khoản sẽ được trả về qua SMS.\nSau khi đã lấy lại mật khẩu, bạn có thể đăng nhập và thay đổi MẬT KHẨU theo ý."
 
   utter_change_password:
-    - text: ""
+    - text: "Để thay đổi mật khẩu tài khoản, hãy đảm bảo tài khoản của bạn đã đươc xác thực (đăng ký số điện thoại bảo mật). Hướng dẫn thay đổi mật khẩu: \n\t- Bước 1: Đăng nhập vào tài khoản và chọn \"Bảo mật\".\n\t- Bước 2: Chọn \"Đổi mật khẩu\" và thực hiện điền các thông tin hệ thông yêu cầu rồi ấn \"Xác nhận\".\nTham khảo: video hướng dẫn thay đổi mật khẩu: https://youtu.be/DN1z7MYZZok."
 
   utter_verify_acc:
     - text: ""
@@ -199,11 +239,13 @@ responses:
       buttons:
         - title: "Đổi GO"
           payload: "/utter_how_to_use_GO"
+
   utter_add_GO_vi_dien_tu:
     - text: "Để nạp GO bằng Ví điện tử, bạn hãy làm theo hướng dẫn sau: \n\tBước 1: Bạn đăng nhập vào tài khoản IOE, click vào \"Đổi gói dịch vụ IOE\" ở phía bên phải, dưới bảng thông tin cá nhân. \n\tBước 2: Màn hình hiển thị thông tin các Gói dịch vụ IOE cung cấp, bạn chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút \"Thêm\". \n\tBước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.\n\tBước 4: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.\n\tBước 5: Bạn tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.\n\tBước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Thẻ game”.\n\tBước 7:  Bạn chọn loại thẻ Game, điền chính xác mã thẻ, số seri vào các ô trống tương ứng trong ảnh dưới đây  sau đó click vào “Xác nhận” để hoàn thành nạp Go qua thẻ game.\n\tBước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.\n\tBước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.\n Chúc bạn đổi GO thành công và luyện tập tốt!"
       buttons:
         - title: "Đổi GO"
           payload: "/utter_how_to_use_GO"
+
   utter_hoan_tra_GO:
     - text: "Theo quy định tại https://edu.go.vn/policy/terms-of-use : Thẻ/mã thẻ GO đã mua, GO đã nạp không được trả lại trong bất kỳ trường hợp nào."
 
@@ -230,6 +272,14 @@ responses:
   utter_change_infor:
     - text: ""
 
+  utter_huy_lien_ket_sdt:
+    - text: ""
+
+  utter_forget_MKC2:
+    - text: "Bạn quên MKC2 và cần cấp lại vui lòng soạn SMS bằng số điện thoại đã xác thực theo hướng dẫn sau: GO MKC2 129xxxxxx gửi 8100. \nTrong đó, 129xxxxxx là mã ID của bạn."
+
+  utter_thi_tu_do:
+    - text: "Kỳ thi chính thức của IOE không có hình thức thi tự do.\nHọc sinh bắt buộc phải được giáo viên quản trị trường đăng ký dự thi và tham gia thi theo Hội đồng thi.\nTuy nhiên, học sinh không được đăng ký dự thi chính thức vẫn có thể tham gia 35 vòng tự luyện, thi trải nghiệm, sử dụng các gói dịch vụ Thi thử và Học cùng IOE."
 
 
 actions:

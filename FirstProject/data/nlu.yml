@@ -215,6 +215,7 @@ nlu:
       - liệt kê thành tích của ioe.vn
       - ioe đã có những thành tựu gì?
 
+
 ### Câu hỏi, intent liên quan đến tài khoản IOE.
   - intent: so_acc_max
     examples: |
@@ -230,6 +231,7 @@ nlu:
       - 1 thí sinh có tối đa bao nhiêu tài khoản?
       
 
+
   - intent: one_tel_use_max_acc   # 1 sđt đăng kí tối đa bao nhiêu tài khoản
     examples: |
       - mọt số điện thoại được đăng ký tối đa bao nhiêu tài khoản
@@ -243,6 +245,7 @@ nlu:
       - bao nhiêu tài khoản có thể đăng kí với cùng 1 số điện thoại?
   
 
+
   - intent: what_is_ID
     examples: |
       - ID là gì
@@ -252,16 +255,126 @@ nlu:
       - mã ID là gì?
       - ID dùng đề làm gì?
       - ID dùng để 
+      - ID là
+      - id là?
+      
+
+
+  - intent: where_id
+    examples: |
+      - xem id ở đâu
+      - tìm id ở đâu
+      - tôi có thể lấy id ở đâu?
+      - tôi không tìm thấy id
+      - tôi không tìm thấy id của mình
+      - giúp tôi lấy id của mình
+      - tôi có thê lấy id ở đâu
+      - xem id tài khoản ở chỗ nào
+      - cách tìm id tài khoản
+      - how can i get my ID?
+      - where can i get ID?
+      - can i get my ID?
+      - ID nằm ở vị trí nào?
+
+
+  - intent: where_id_student
+    examples: |
+      - id của học sinh
+      - id của tài khoản học sinh
+      - id của tài khoản học sinh xem ở đâu?
+      - id tài khoản học sinh xem ở đâu
+      - lấy id của tài khoản học sinh
+      - cách lấy id của tài khoản học sinh
+      - xem id của tài khoản học sinh ở đâu
+      - tôi muốn lấy id của tài khoản học sinh
+      - giúp tôi lấy id của tài khoản học sinh
+
+
+  - intent: where_id_parents
+    examples: |
+      - id của phụ huynh
+      - id của tài khoản phụ huynh
+      - tôi muốn tìm id của tài khoản phụ huynh
+      - tìm id tài khoản phụ huynh ở đâu
+      - xem id tài khoản phụ huynh
+      - cách xem id tài khoản phụ huynh
+      - xem ID phụ huynh
+
+
+  - intent: where_id_teacher
+    examples: |
+      - id của giáo vên
+      - id của tài khoản giáo viên
+      - tài khoản giáo viên 
+      - tìm id của tài khoản giáo viên
+      - cách xem id tài khoản giáo viên
+      - id tài khoản giáo viên 
+      - id giáo viên lớp
+      - tìm id của giáo viên lớp
+
+
+  - intent: where_id_school
+    examples: |
+      - id của trường
+      - id của tài khoản nhà trường
+      - cách xem id của tài khoản nhà trường
+      - tìm kiếm id tài khoản quản trị cấp trường
+      - id tài khoản quản trị cấp trường
+      - tôi không tìm thấy id tài khoản quản trị cấp trường
+      - id tài khoản nhà trường
+      - id tài khoản quản trị
+      - id tài khoản quản trị cấp trường có thể xem ở đâu?
+
+
+  - intent: where_id_Education_Department
+    examples: |
+      - id của phòng giáo dục
+      - id của sở giáo dục
+      - id của tài khoản quản lý
+      - tìm id của phòng giáo dục
+      - xem id tài khoản sở giáo dục
+      - xem id tài khoản quản lý sở giáo dục/ phòng giáo dục
+      - cách xem id tài khoản phòng giáo dục
+      - cách xem id tài khoản sở giáo dục
+
 
   - intent: forget_password
     examples: |
-      - 
-      - 
+      - tôi quên mật khẩu tài khoản
+      - tôi phải làm gì khi quên mật khẩu
+      - hướng dẫn lấy lại mật khẩu tài khoản
+      - lấy lại mật khẩu
+      - quên mật khẩu
+      - quên mật khẩu tài khoản
+      - lấy lại mật khẩu tài khoản
+      - quên mất mật khẩu
+      - forget password
+      - forgot password
+      - quên mật khẩu tài khoản thì làm gì
+      - giúp tôi lấy lại mật khẩu tài khoản
+      - tôi quên mật khẩu tài khoản mất rồi
+      - mình quên mật khẩu
+      
+
+
 
   - intent: change_password
     examples: |
-      - 
-      - 
+      - tôi muốn thay đổi mật khẩu tài khoản
+      - hướng dẫn thay đổi mật khẩu
+      - i want to change my password
+      - can i change password
+      - how can i change password
+      - thay đổi mật khẩu kiểu gì
+      - cách thay đổi mật khẩu
+      - tôi muốn thay đổi mật khẩu
+      - thay đổi mật khẩu
+      - đổi mật khẩu tài khoản
+      - giúp tôi đổi mật khẩu
+      - help me change password
+
+
+
 
   - intent: verify_acc
     examples: |
@@ -447,6 +560,13 @@ nlu:
 
 
   - intent: how_to_use_GO # đổi GO sang các gói dịch vụ của ioe
+    examples: |
+      - 
+      - 
+      -
+      -
+      -
+      -
 
 
 ### Các intent, câu hỏi về điều khoản, dịch vụ, quy định, quy chế, thể lệ
@@ -463,6 +583,7 @@ nlu:
       - Quyền của VTC ONLINE
       - GIỚI HẠN TRÁCH NHIỆM VÀ TỪ CHỐI ĐẢM BẢO
       - 
+
 
   - intent: chinh_sach_bao_mat
     examples: |
@@ -516,7 +637,40 @@ nlu:
       - 
       - 
 
-  - intent:
+  - intent: huy_lien_ket_sdt
     examples: |
       - 
       - 
+
+  - intent: forget_MKC2
+    examples: |
+      - tôi quên mật khẩu cấp 2
+      - lấy lại mật khẩu cấp 2
+      - tôi quên mkc2
+      - mình quên mkc2
+      - cách lấy lại mkc2
+      - cách lấy lại MKC2
+      - tôi không nhớ mật khẩu cấp 2
+      - tôi không nhớ mkc2
+      - tôi muốn lấy lại mật khẩu cấp 2
+      - tôi muốn lấy lại mkc2
+      - giúp tôi khôi phụ mkc2
+      - giúp tôi khôi phục mật khẩu cấp 2
+
+
+
+  - intent: thi_tu_do
+    examples: |
+      - ioe có hình thức thi tự do không?
+      - có thể thi tự do không
+      - có thể đăng kí thi tự do không?
+      - ioe có thí sinh tự do không?
+      - thí sinh tự do có được dự thi?
+      - ioe có thi tự do được không?
+      - có hình thức thi tự do không?
+      - thi tự do
+      - thí sinh tự do có ự đăng ký thi chính thức không?
+      - thi tự do được không?
+      
+
+###Update bổ sung, sửa theo thời gian
