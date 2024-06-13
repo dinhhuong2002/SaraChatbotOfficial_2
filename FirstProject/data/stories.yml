@@ -151,10 +151,26 @@ stories:
       - intent: where_id
       - action: utter_where_id
 
-  - story: Lấy lại mật khẩu bằng cách sử dụng ID nhưng chưa biết ID?
+  - story: 01_Lấy lại mật khẩu bằng cách sử dụng ID nhưng chưa biết ID?
     steps:
       - intent: forget_password
       - action: utter_forget_password
+      - intent: where_id
+      - action: utter_where_id
+
+  - story: 02_Lấy lại mật khẩu, quên mkc2
+    steps:
+      - intent: forget_password
+      - action: utter_forget_password
+      - intent: forget_MKC2
+      - action: utter_forget_MKC2
+
+  - story: 03_Lấy lại mật khẩu, quên mkc2, quên id
+    steps:
+      - intent: forget_password
+      - action: utter_forget_password
+      - intent: forget_MKC2
+      - action: utter_forget_MKC2
       - intent: where_id
       - action: utter_where_id
 
@@ -164,3 +180,67 @@ stories:
       - action: utter_change_password
       - intent: forget_MKC2
       - action: utter_forget_MKC2
+
+  - story: đổi gói dịch vụ IOE nhưng thiếu GO
+    steps:
+      - intent: how_to_use_GO
+      - action: utter_how_to_use_GO
+      - intent: add_GO
+      - action: utter_add_GO
+
+  - story: hủy liên kết số điện thoại nhưng quên MKC2
+    steps:
+      - intent: huy_lien_ket_sdt
+      - action: utter_huy_lien_ket_sdt
+      - intent: forget_MKC2
+      - action: utter_forget_MKC2
+
+  - story: 01_hỏi cách tìm id tài khoản, các tài khoản
+    steps:
+      - intent: what_is_ID
+      - action: utter_what_is_ID
+      - intent: where_id
+      - action: utter_where_id
+      - intent: where_id_student
+      - action: utter_where_id_student
+      - intent: where_id_parents
+      - action: utter_where_id_parents
+      - intent: where_id_teacher
+      - action: utter_where_id_teacher
+
+  - story: 02_hỏi cách tìm id tài khoản, các tài khoản
+    steps:
+      - intent: what_is_ID
+      - action: utter_what_is_ID
+      - intent: where_id
+      - action: utter_where_id
+      - intent: where_id_student
+      - action: utter_where_id_student
+      - intent: where_id_teacher
+      - action: utter_where_id_teacher
+      - intent: where_id_parents
+      - action: utter_where_id_parents
+
+  - story: 03_hỏi cách tìm id tài khoản, các tài khoản
+    steps:
+      - intent: what_is_ID
+      - action: utter_what_is_ID
+      - intent: where_id
+      - action: utter_where_id
+      - intent: where_id_teacher
+      - action: utter_where_id_teacher
+      - intent: where_id_parents
+      - action: utter_where_id_parents
+      - intent: where_id_student
+      - action: utter_where_id_student
+      - intent: where_id_school
+      - action: utter_where_id_school
+      - intent: where_id_Education_Department
+      - action: utter_where_id_Education_Department
+
+  - story: số tài khoản tối đa --> cách xác tực tài khoản _01
+    steps:
+      - intent: one_tel_use_max_acc
+      - action: utter_one_tel_use_max_acc
+      - intent: verify_acc
+      - action: utter_verify_acc

@@ -243,7 +243,10 @@ nlu:
       - 1 sđt tối đa số tài khoản đăng ký
       - bao nhiêu tài khoản có thể đăng kí với cùng 1 sđt?
       - bao nhiêu tài khoản có thể đăng kí với cùng 1 số điện thoại?
-  
+      - 1 sddt xác thực cho bao nhiêu tài khoản
+      - 1 sđt xc thực cho bao nhiêu tài khoản
+      - 1 số điện thoại có thể xác thực cho bao nhiêu tài khoản
+      - số tài khoản tối đa sử dụng 1 số điện thoại
 
 
   - intent: what_is_ID
@@ -275,6 +278,8 @@ nlu:
       - where can i get ID?
       - can i get my ID?
       - ID nằm ở vị trí nào?
+      - quên id
+      - quên id tài khoản
 
 
   - intent: where_id_student
@@ -288,6 +293,10 @@ nlu:
       - xem id của tài khoản học sinh ở đâu
       - tôi muốn lấy id của tài khoản học sinh
       - giúp tôi lấy id của tài khoản học sinh
+      - id tài khoản học sinh thì sao
+      - học sinh thì sao
+      - id tài khoản học sinh
+      - còn id tài khoản học sinh thì sao
 
 
   - intent: where_id_parents
@@ -299,18 +308,29 @@ nlu:
       - xem id tài khoản phụ huynh
       - cách xem id tài khoản phụ huynh
       - xem ID phụ huynh
+      - id tài khoản phụ huynh thì sao
+      - tài khoản phụ huynh thì sao
+      - còn id tài khoản phụ huynh thì sao
+      - id tài khoản phụ huynh thì sao
+      - còn tài khoản phụ huynh?
+      
 
 
   - intent: where_id_teacher
     examples: |
       - id của giáo vên
       - id của tài khoản giáo viên
-      - tài khoản giáo viên 
+      - id tài khoản giáo viên 
       - tìm id của tài khoản giáo viên
       - cách xem id tài khoản giáo viên
       - id tài khoản giáo viên 
       - id giáo viên lớp
       - tìm id của giáo viên lớp
+      - tài khoản giáo viên thì sao
+      - tài khoản giáo viên  
+      - còn tài khoản giáo viên thì sao
+      - còn id tài khoản giáo viên thì sao?
+      - id tài khoản giáo viên
 
 
   - intent: where_id_school
@@ -378,9 +398,21 @@ nlu:
 
   - intent: verify_acc
     examples: |
-      - 
-      - 
-
+      - cho tôi biết cách xác tực tài khoản
+      - các bươc xác thực tài khoản
+      - hướng dân xác thực tài khoản
+      - xác thực tài khoản bằng cách nào
+      - cách xác thực tài khoản
+      - tôi muốn xác thực tài khoản
+      - giúp tôi xác thực tài khoản
+      - cách xác thực tài khoản ioe
+      - xác thực tài khoản ioe
+      - làm sao để xác thực tài khoản
+      - làm sao để xác thực tài khoản ioe
+      - hướng dẫn cách xác thực tài khoản ioe
+      - xác thực tài khoản
+      - help me how to verify account
+      - verify account
 
   - intent: sign_in
     examples: |
@@ -561,12 +593,18 @@ nlu:
 
   - intent: how_to_use_GO # đổi GO sang các gói dịch vụ của ioe
     examples: |
-      - 
-      - 
-      -
-      -
-      -
-      -
+      - tôi muốn đổi GO
+      - hướng dẫn đổi gói dịch vụ IOE
+      - tôi muốn đổi gói dịch vụ IOE
+      - tôi muốn dùng GO để thi thử
+      - Đổi GO để THI thử
+      - đổi go để học cùng ioe
+      - hướng dẫn sử dụng GO
+      - Tôi có thể dùng GO để làm gì?
+      - đổi gói dịch vụ IOE
+      - GO được dùng để làm gì
+      - go có thể đổi dịch vụ gì
+      - đổi go đổi go đổi go
 
 
 ### Các intent, câu hỏi về điều khoản, dịch vụ, quy định, quy chế, thể lệ
@@ -600,47 +638,87 @@ nlu:
 
   - intent: the_le
     examples: |
-      - 
-      - 
+      - thể lệ cuộc thi
+      - chi tiết thể lệ cuộc thi
+      - tôi muốn biết thể lệ cuộc thi
+      - chi tiết thể lệ
+      - thể lệ
+      - thể lệ cuộc thi ioe
+      - thể lệ của cuộc thi ioe là gì?
+      - quy định cuộc thi
+      - quy định cuộc thi ioe
+      - quy định
+      - các vòng thi IOE
+      - thể lệ cuộc thi ioe là gì?
 
-  - intent:
-    examples: |
-      - 
-      - 
-
-  - intent:
-    examples: |
-      - 
-      - 
-
-  - intent:
-    examples: |
-      - 
-      - 
+#  - intent:
+#    examples: |
+#      -
+#      -
 
 
 ###Câu hỏi hướng dẫn, help, others
   - intent: thi_vuot_cap
     examples: |
-      - 
-      - 
+      - có thể thi vượt cấp không
+      - em có tể đăng kí tham gia thi vượt cấp không?
+      - đăng kí thi vượt cấp
+      - có thể thi vượt cấp được không?
+      - quy định về thi vượt cấp
+      - em có thể thi vượt cấp được không?
+      - có thể thi vượt cấp như thế nào?
+      - thi vượt cấp
+      - thi hai khối lớp
+      - 1 học sinh có thể thi hai khối lớp không
+      - 1 học sinh có thể thi ở mấy khối lớp?
+      - em có thể đăng kí thi ở 2 khối lớp không?
+      - em muốn đăng kí thi vượt cấp
 
 
   - intent: dang_ky_to_chuc_thi
     examples: |
-      - 
-      - 
+      - sở giáo dục đăng kí tổ chức thi
+      - sở giáo dục muốn đăng kí tổ chức thi ioe cho học sinh
+      - sở giáo dục tôi muốn đăng ký tổ chức thi ioe cho học sinh
+      - sở giáo dục muốn tổ chức thi ioe cho học sinh
+      - sở giáo dục muốn đăng kí tổ chức thi ioe cho học sinh
+      - đăng ký tổ chức thi ioe cho học sinh
+      - đăng kí tổ chức cuộc thi ioe cho học sinh
+      - giúp đăng kí tổ chức thi ioe cho học sinh trong sở giáo dục
+      
 
 
-  - intent: change_infor
+  - intent: change_infor_student_acc
     examples: |
-      - 
-      - 
+      - tôi muốn thay đổi thông tin cá nhân
+      - hướng dẫn thay đổi thông tin cá nhân
+      - thay đổi thông tin cá nhân
+      - thay đổi thông tin tài khoản
+      - thay đổi thông tin cá nhân của mình
+      - hướng dẫn thay đổi thông tin cá nhân
+      - làm sao để thay đổi thông tin tài khoản
+      - tôi muốn thay đổi thông tin tài khoản của mình
+      - thay đổi thông tin
+      - help me change my information
+      - change my information
+      - các bước thay đổi thông tin cá nhân
+      
 
   - intent: huy_lien_ket_sdt
     examples: |
-      - 
-      - 
+      - hủy liên kết số điện thoại xác thực tài khoản ioe
+      - hướng dẫn hủy liên hết số điện thoại
+      - hủy liên kết số điện thoại
+      - hủy liên kết số điện thoại xác thực tài khoản
+      - đổi số điện thoại xác thực tài khoản ioe
+      - đổi số điện thoại liên kết tài khoản ioe
+      - tôi muốn hủy số điện thoại liên kết tài khoản
+      - hủy số điện thoại liên kết với tài khoản
+      - hủy sdt lien kết tài khoản ioe
+      - hủy sđt liên kết
+      - hủy sđt liên kết tài khoản ioe
+      - hủy sđt liên hết ioe
+      - hủy liên kết sđt xác thực tài khoản ioe
 
   - intent: forget_MKC2
     examples: |
@@ -672,5 +750,18 @@ nlu:
       - thí sinh tự do có ự đăng ký thi chính thức không?
       - thi tự do được không?
       
+
+  - intent: help_ioe
+    examples: |
+      - ban hỗ trợ ioe
+      - liên hệ ioe
+      - số diện thoại liên hệ ioe
+      - số điện thoại ban tổ chức
+      - số điện thoại liên hệ của ban tổ chứ
+      - tôi muốn liên hệ với ban tổ chức
+      - thông tin liên hệ ban tổ chức
+      - thông tin liên hệ
+      - thông tin liên kết hỗ trợ
+      - thông tin liên hệ giúp đỡ
 
 ###Update bổ sung, sửa theo thời gian

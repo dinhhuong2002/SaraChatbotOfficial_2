@@ -126,8 +126,8 @@ rules:
 
   - rule: thay đổi thông tin cá nhân
     steps:
-      - intent: change_infor
-      - action: utter_change_infor
+      - intent: change_infor_student_acc
+      - action: utter_change_infor_student_acc
 
   - rule: Xác thực tài khoản như thế nào?
     steps:
@@ -158,4 +158,37 @@ rules:
     steps:
       - intent: where_id_Education_Department
       - action: utter_where_id_Education_Department
+
+
+  ### Các intent, câu hỏi về điều khoản, dịch vụ, quy định, quy chế, thể lệ
+  - rule: chính sách bảo mật
+    steps:
+      - intent: chinh_sach_bao_mat
+      - action: utter_chinh_sach_bao_mat
+
+  - rule: điều khoản dịch vụ
+    steps:
+      - intent: dieu_khoan_dich_vu
+      - action: utter_dieu_khoan_dich_vu
+
+  ###Câu hỏi hướng dẫn, help, others
+  - rule: sở giáo dục đăng kí tổ chức cuộc thi
+    steps:
+      - intent: dang_ky_to_chuc_thi
+      - action: utter_dang_ky_to_chuc_thi
+
+  - rule: huỷ liên kết số điện thoại
+    steps:
+      - intent: huy_lien_ket_sdt
+      - action: utter_huy_lien_ket_sdt
+
+  - rule: có thí sinh tự do không?
+    steps:
+      - intent: thi_tu_do
+      - action: utter_thi_tu_do
+
+  - rule: Hỏi thông tin liên hệ ban tổ chức
+    steps:
+      - intent: help_ioe
+      - action: utter_help_ioe
 
