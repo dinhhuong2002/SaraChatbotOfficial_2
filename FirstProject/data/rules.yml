@@ -16,10 +16,10 @@ rules:
       - intent: ask_for_help
       - action: utter_deny
 
-#  - rule: Predicting default action with intent session_start
-#    steps:
-#      - intent: session_start
-#      - action: action_session_start
+  - rule: Predicting default action with intent session_start
+    steps:
+      - intent: session_start
+      - action: action_session_start
 
 #  - rule: continue session when user say ok
 #    steps:

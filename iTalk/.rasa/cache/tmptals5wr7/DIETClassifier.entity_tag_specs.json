@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-học sinh",
+      "2": "I-học sinh",
+      "3": "L-học sinh",
+      "4": "U-học sinh",
+      "5": "B-phụ huynh",
+      "6": "I-phụ huynh",
+      "7": "L-phụ huynh",
+      "8": "U-phụ huynh",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-học sinh": 1,
+      "I-học sinh": 2,
+      "L-học sinh": 3,
+      "U-học sinh": 4,
+      "B-phụ huynh": 5,
+      "I-phụ huynh": 6,
+      "L-phụ huynh": 7,
+      "U-phụ huynh": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

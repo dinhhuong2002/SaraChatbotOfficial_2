@@ -108,30 +108,40 @@ responses:
     - text: "Hihi, không có gì. Bạn còn cần mình giúp gì nữa không nào?"
     - text: "Great, carry on!"
     - text: "My pleasure!"
-    - text: "Hy vọng đã giúp bạn giải quyết được vấn đề. Mình luôn có mặt để giúp đỡ bạn!"
+    - text: "Hy vọng đã giúp bạn giải quyết được vấn đề. Mình luôn có mặt để giúp bạn!"
 
   utter_iamabot:
     - text: "I am a bot, powered by VTC Online."
     - text: "Tôi là iTalk. Một chatbot được phát triển bởi VTC Online."
-    - text: "Mình là iTalk. Trợ lý ảo được đào tạo để hỗ trợ bạn. Đừng ngần ngại, mình luôn sẵn sàng giúp đỡ bạn!"
+    - text: "Mình là iTalk. Mình luôn sẵn sàng giúp đỡ bạn!"
     - text: "Luôn sẵn sàng giúp đỡ bạn, mình là trợ lý ảo của bạn!"
 
   utter_about_ioe:
     - text: "Olympic tiếng Anh trên Internet - Internet Olympiads of English (IOE) là sân chơi giúp khơi dậy niềm yêu thích tiếng Anh của các em học sinh trên khắp Việt Nam, từ đó có thể ứng dụng và sử dụng tiếng Anh vào các lĩnh vực khác nhau trong cuộc sống."
-    - text: "IOE - Hấp dẫn - Mê say - Thấy ngay kết quả là cuộc thi Tiếng Anh trên Internet được triển khai từ năm học 2010-2011 theo sự chỉ đạo của Bộ Giáo dục và Đào tạo (Bộ GD&ĐT) và Công ty Cổ phần VTC Truyền thông Trực tuyến (VTC Online) thuộc Tổng Công ty VTC truyền thông đa phương tiện là đơn vị trực tiếp triển khai cuộc thi qua việc xây dựng nền tảng kỹ thuật, xây dựng nội dung. Các đơn vị giáo dục và học sinh có thể lựa chọn IOE như một sân chơi tự nguyện và một kênh đánh giá năng lực tiếng Anh của học sinh."
+    - text: "IOE - Hấp dẫn - Mê say - Thấy ngay kết quả là cuộc thi Tiếng Anh trên Internet được triển khai từ năm học 2010-2011 theo sự chỉ đạo của Bộ Giáo dục và Đào tạo. Các đơn vị giáo dục và học sinh có thể lựa chọn IOE như một sân chơi tự nguyện và một kênh đánh giá năng lực tiếng Anh của học sinh."
     - text: "IOE, viết tắt của Internet Olympiads of English, là một cuộc thi tiếng Anh trên Internet được tổ chức bởi Bộ Giáo dục và Đào tạo dành cho học sinh từ lớp 3 đến lớp 12 trên toàn quốc. Mục tiêu chính của cuộc thi là khuyến khích sự học tập và rèn luyện tiếng Anh cho học sinh."
 
   utter_doi_tuong_tham_gia:
     - text: "Học sinh phổ thông từ lớp 3 đến lớp 12 trên toàn quốc, nếu có điều kiện truy cập Internet và có nguyện vọng tham gia Olympic Tiếng Anh trực tuyến, đều có thể đăng ký dự thi IOE."
 
   utter_thanh_tich_ioe:
-    - text: "IOE đã nhận được sự hưởng ứng tham gia của 30,2 triệu học sinh đến từ hơn 26.000 nhà trường, phủ rộng khắp 705 quận huyện của 63 tỉnh thành trên toàn quốc. Với nỗ lực không ngừng, IOE tự hào với những thành tựu và kết quả tích cực đóng góp cho sự phát triển của giáo dục Việt Nam: \n\t- Nhận giải thưởng Chuyển đổi số Việt Nam 2022 - Hạng mục “Sản phẩm, giải pháp chuyển đổi số vì cộng đồng”.\n\t- Nhận giải thưởng Công nghệ Giáo dục Tiêu biểu 2022 tại Diễn đàn Giáo dục và Triển lãm Học đường 4.0 năm 2022. \n\t- Tiên phong sử dụng công nghệ AI hoàn toàn miễn phí giúp học sinh rèn luyện phát âm nâng cao kỹ năng nói tiếng Anh theo chuẩn quốc tế. \n\t- Góp phần tích cực vào việc thực hiện “Đề án dạy và học ngoại ngữ trong hệ thống giáo dục quốc dân giai đoạn 2017-2025”."
+    - text: |
+        IOE đã nhận được sự hưởng ứng tham gia của 30,2 triệu học sinh đến từ hơn 26.000 nhà trường, phủ rộng khắp 705 quận huyện của 63 tỉnh thành trên toàn quốc. Với nỗ lực không ngừng, IOE tự hào với những thành tựu và kết quả tích cực đóng góp cho sự phát triển của giáo dục Việt Nam: 
+          + Nhận giải thưởng Chuyển đổi số Việt Nam 2022 - Hạng mục “Sản phẩm, giải pháp chuyển đổi số vì cộng đồng”.
+          + Nhận giải thưởng Công nghệ Giáo dục Tiêu biểu 2022 tại Diễn đàn Giáo dục và Triển lãm Học đường 4.0 năm 2022. 
+          + Tiên phong sử dụng công nghệ AI hoàn toàn miễn phí giúp học sinh rèn luyện phát âm nâng cao kỹ năng nói tiếng Anh theo chuẩn quốc tế. 
+          + Góp phần tích cực vào việc thực hiện “Đề án dạy và học ngoại ngữ trong hệ thống giáo dục quốc dân giai đoạn 2017-2025”.
 
   utter_so_acc_max:
-    - text: "Với các vòng thi tự luyện, hệ thống không giới hạn số lượng các tài khoản dự thi của mỗi học sinh. \nTrong các kì thi chính thức, mỗi học sinh được đăng ký tối đa 2 tài khoản dự thi, tuy nhiên học sinh chỉ được dự thi bằng một tài khoản chính. Trong trường hợp gặp sự cố với tài khoản chính, học sinh có thể chuyển sang khung giờ thi khác hoặc thi lại trong cùng ca thi đó, sử dụng tài khoản dự phòng nếu còn thời gian."
+    - text: |
+        - Với các vòng thi tự luyện, hệ thống không giới hạn số lượng các tài khoản dự thi của mỗi học sinh. 
+        - Trong các kì thi chính thức, mỗi học sinh được đăng ký tối đa 2 tài khoản dự thi, tuy nhiên học sinh chỉ được dự thi bằng một tài khoản chính.
+        Trong trường hợp gặp sự cố với tài khoản chính, học sinh có thể chuyển sang khung giờ thi khác hoặc thi lại trong cùng ca thi đó, sử dụng tài khoản dự phòng nếu còn thời gian.
 
   utter_one_tel_use_max_acc:
-    - text: "Hiện tại, theo quy định thì 1 số điện thoại có thể xác thực cho tối đa 05 tài khoản.\nĐể kiểm tra danh sách tài khoản đã xác thực với số điện thoại của bạn, hãy soạn tin nhắn: \"GO\" gửi 8100. "
+    - text: |
+        - Hiện tại, theo quy định thì 1 số điện thoại có thể xác thực cho tối đa 05 tài khoản.
+        Để kiểm tra danh sách tài khoản đã xác thực với số điện thoại của bạn, hãy soạn tin nhắn: "GO" gửi 8100. 
 
   utter_what_is_ID:
     - text: "Mã tài khoản (Còn gọi là ID của tài khoản): là 1 dãy số gồm 10 số. Mỗi người dùng IOE sẽ có 1 số ID riêng không giống nhau.\nSau khi bạn đăng nhập vào tài khoản, bạn có thể nhìn thấy ID của mình ở phía bên phải, trong khung thông tin cá nhân của bạn."
@@ -172,13 +182,13 @@ responses:
     - text: "Bạn chỉ có thể khôi phục mật khẩu nếu tài khoản đã được xác thực (đăng ký số điện thoại bảo mật).\nĐể lấy lại mật khẩu, bạn thực hiện: \n\t- Soạn GO MK [MA MKC2] gửi 8100. Sau bước này sẽ có SMS trả về mã là MẬT KHẨU cho tài khoản. \n\t- Nếu bạn quên mật khẩu cấp 2 (MKC2), soạn tin nhắn với cú pháp: GO MKC2 129xxxxxx gửi 8100. Trong đó 129xxxxxx là ID tài khoản IOE của bạn. Sau bước này hệ thống sẽ gửi về SMS có mã MKC2.\n\t- Nếu bạn quên ID của tài khoản, soạn tin nhắn với cú pháp sau: GO gửi 8100. Thông tin tài khoản sẽ được trả về qua SMS.\nSau khi đã lấy lại mật khẩu, bạn có thể đăng nhập và thay đổi MẬT KHẨU theo ý."
 
   utter_change_password:
-    - text: "Để thay đổi mật khẩu tài khoản, hãy đảm bảo tài khoản của bạn đã đươc xác thực (đăng ký số điện thoại bảo mật). Hướng dẫn thay đổi mật khẩu: \n\t- Bước 1: Đăng nhập vào tài khoản và chọn \"Bảo mật\".\n\t- Bước 2: Chọn \"Đổi mật khẩu\" và thực hiện điền các thông tin hệ thông yêu cầu rồi ấn \"Xác nhận\".\nTham khảo: video hướng dẫn thay đổi mật khẩu: https://youtu.be/DN1z7MYZZok."
+    - text: "Để thay đổi mật khẩu tài khoản, hãy đảm bảo tài khoản của bạn đã đươc xác thực (đăng ký số điện thoại bảo mật). Hướng dẫn thay đổi mật khẩu: \n\t- Bước 1: Đăng nhập vào tài khoản và chọn \"Bảo mật\".\n\t- Bước 2: Chọn \"Đổi mật khẩu\" và thực hiện điền các thông tin hệ thông yêu cầu rồi ấn \"Xác nhận\".\nTham khảo: video hướng dẫn thay đổi mật khẩu https://youtu.be/DN1z7MYZZok."
 
   utter_verify_acc:
-    - text: "Để xác thực tài khoản, bạn thực hiện theo các bước sau: \n\tBước 1: Thực hiện đăng nhập tài khoản trên website https://ioe.vn/. \n\tBước 2: Chọn mục Thông tin và chọn Bảo mật. \n\tBước 3: Giao diện sẽ hiển thị cú pháp nhắn tin: GO [Mã ID] gửi 8100, bạn gửi tin nhắn như trên để xác thực tài khoản IOE. \n\tBước 4: Hệ thống sẽ hiển thị mã xác thực kèm MKC2 về điện thoại. Bạn nhập mã xác thực vào ô nhập mã trên Web rồi ấn Xác nhận. \n\tBước 5: Hệ thống sẽ báo xác thực thành công. Lúc này bạn có thể an tâm đã hoàn thành nhé!"
+    - text: "Để xác thực tài khoản, bạn thực hiện theo các bước sau: \n\t- Bước 1: Thực hiện đăng nhập tài khoản trên website https://ioe.vn/. \n\t- Bước 2: Chọn mục Thông tin và chọn Bảo mật. \n\t- Bước 3: Giao diện sẽ hiển thị cú pháp nhắn tin: GO [Mã ID] gửi 8100, bạn gửi tin nhắn như trên để xác thực tài khoản IOE. \n\t- Bước 4: Hệ thống sẽ hiển thị mã xác thực kèm MKC2 về điện thoại. Bạn nhập mã xác thực vào ô nhập mã trên Web rồi ấn Xác nhận. \n\t- Bước 5: Hệ thống sẽ báo xác thực thành công. Lúc này bạn có thể an tâm đã hoàn thành nhé!"
 
   utter_sign_in:
-    - text: "Hãy click vào link sau để đăng nhập nhé: [login](https://ioe.vn/oauth/login?client_id=a402e57987f74cc1&redirect_uri=https://ioe.vn/sso&state=eyJpZCI6bnVsbCwidXJpIjoiaHR0cHM6Ly9pb2Uudm4vdHJhbmctY2h1Iiwic3QiOiI2Mzg1MjA3MzYwOTU4Mjc1OTkiLCJydCI6ImxvZ2luIn0) \nChú ý điền đúng thông tin Tên đăng nhập và mật khẩu để có thể đăng nhập nha!\nNếu bạn chưa có tài khoản, hãy đăng ký tài khoản."
+    - text: "Hãy click vào link sau để đăng nhập nhé: https://bit.ly/4cwD0kX \nChú ý điền đúng thông tin Tên đăng nhập và mật khẩu để có thể đăng nhập nha!\nNếu bạn chưa có tài khoản, hãy đăng ký tài khoản."
       buttons:
         - title: "Đăng ký tài khoản"
           payload: "/sign_up"
@@ -187,7 +197,7 @@ responses:
     - text: "Chọn tài khoản bạn muốn đăng ký: "
       buttons:
         - title: "Tài khoản Học sinh"
-          payload: "/sin_up_student"
+          payload: "/sign_up_student"
         - title: "Tài khoản Phụ huynh"
           payload: "/sign_up_parents"
         - title: "Tài khoản Giáo viên lớp"
@@ -198,10 +208,10 @@ responses:
           payload: "/sign_up_Education_Department"
 
   utter_sign_up_student:
-    - text: "Để đăng ký tài khoản học sinh, bạn làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\" nhé. \n\tBước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản học sinh\". \n\tBước 5: Bạn điền các thông tin giáo dục cho học sinh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \n\tBước 6: Sau khi điền thông tin giáo dục, bạn cần đăng ký số điện thoại xác thực cho tài khoản. Hãy làm theo hướng dẫn trên trang xác thực để hoàn thành đăng ký tài khoản.\nChúc bạn đăng ký tài khoản thành công! "
+    - text: "Để đăng ký tài khoản học sinh, bạn làm theo các bước sau:\n\t- Bước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\t- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\" nhé. \n\t- Bước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\t- Bước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản học sinh\". \n\t- Bước 5: Bạn điền các thông tin giáo dục cho học sinh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \n\t- Bước 6: Sau khi điền thông tin giáo dục, bạn cần đăng ký số điện thoại xác thực cho tài khoản. Hãy làm theo hướng dẫn trên trang xác thực để hoàn thành đăng ký tài khoản.\nChúc bạn đăng ký tài khoản thành công! "
 
   utter_sign_up_parents:
-    - text: "Để đăng ký tài khoản dành cho phụ huynh, bạn làm theo các bước sau:\n\tBước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\tBước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\". \n\tBước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\tBước 4: Sau khi bạn tạo tài khoản thành công, bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản phụ huynh\". \n\tBước 5: Bạn điền các thông tin ph huynh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \nTrên màn hình, có hiển thị dãy 10 chữ số là ID của phụ huynh. ID phụ huynh sẽ được dùng để liên kết tài với tài khoản của con. Bạn có muốn liên kết với tài khoản của con mình?"
+    - text: "Để đăng ký tài khoản dành cho phụ huynh, bạn làm theo các bước sau:\n\t- Bước 1: Click vào ô \"Đăng ký\" trên trang chủ https://ioe.vn. \n\t- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô \"NHẤN ĐỂ ĐĂNG KÝ\". \n\t- Bước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào “Cập nhật thông tin”. \n\t- Bước 4: Sau khi bạn tạo tài khoản thành công, bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn \"Tài khoản phụ huynh\". \n\t- Bước 5: Bạn điền các thông tin ph huynh theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click “Đăng ký ngay”. \nTrên màn hình, có hiển thị dãy 10 chữ số là ID của phụ huynh. ID phụ huynh sẽ được dùng để liên kết tài với tài khoản của con. Bạn có muốn liên kết với tài khoản của con mình?"
       buttons:
         - title: "Có"
           payload: "/link_parents_student"

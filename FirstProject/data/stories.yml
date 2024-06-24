@@ -238,6 +238,15 @@ stories:
       - intent: where_id_Education_Department
       - action: utter_where_id_Education_Department
 
+  - story: id là gì? id tài khoản giáo viên?
+    steps:
+      - intent: where_id
+      - action: utter_where_id
+      - intent: where_id_teacher
+      - action: utter_where_id_teacher
+
+
+
   - story: số tài khoản tối đa --> cách xác tực tài khoản _01
     steps:
       - intent: one_tel_use_max_acc

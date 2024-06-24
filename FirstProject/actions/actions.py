@@ -9,6 +9,7 @@
 
 from typing import Any, Text, Dict, List
 
+from rasa.core.agent import Agent
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import EventType, SessionStarted, ActionExecuted
 from rasa_sdk.executor import CollectingDispatcher
@@ -45,7 +46,7 @@ class ActionGreetUser(Action):
         # Gửi các buttons lựa chọn
         buttons = [
             {"title": "Đăng ký tài khoản", "payload": "/sign_up"},
-            {"title": "Đăng nhập", "payload": "/sign_in", "url": "https://ioe.vn/oauth/login?client_id=a402e57987f74cc1&redirect_uri=https://ioe.vn/sso&state=eyJpZCI6bnVsbCwidXJpIjoiaHR0cHM6Ly9pb2Uudm4vdHJhbmctY2h1Iiwic3QiOiI2Mzg1MjA3MzYwOTU4Mjc1OTkiLCJydCI6ImxvZ2luIn0"},
+            {"title": "Đăng nhập", "payload": "/sign_in", "url": "https://bit.ly/4cwD0kX"},
             {"title": "Nạp GO", "payload": "/add_GO"}
         ]
         dispatcher.utter_message(text="Mình có thể giúp gì cho bạn?", buttons=buttons)
