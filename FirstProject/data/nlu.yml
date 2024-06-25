@@ -233,9 +233,7 @@ nlu:
       - max account for 1 student
       - số tài khoản tối đa cho 1 học sinh
       - 1 học sinh tối đa bao nhiêu tài khoản
-      - 1 thí sinh có tối đa bao nhiêu tài khoản?
-      
-
+      - 1 thí sinh có tối đa bao nhiêu tài khoản
 
   - intent: one_tel_use_max_acc   # 1 sđt đăng kí tối đa bao nhiêu tài khoản
     examples: |
