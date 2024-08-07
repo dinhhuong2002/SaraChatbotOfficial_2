@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eaa7c4c-b1a1-404c-a893-d4775ba90173" name="Changes" comment="ERROR: hiển thị định dạng response khi demo trên Chatbot-Widget">
+    <list default="true" id="7eaa7c4c-b1a1-404c-a893-d4775ba90173" name="Changes" comment="Check response font: to utter_add_GO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/.rasa/cache/cache.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/nlu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/rules.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/domain.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719227048445</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Check response font: to utter_add_GO">
+      <created>1719317692206</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719317692206</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +130,7 @@
     <MESSAGE value="add: intents: thi_tu_do, mkc2, quên mk, thay đổi mk, thông tin ID" />
     <MESSAGE value="check: to forget_password" />
     <MESSAGE value="ERROR: hiển thị định dạng response khi demo trên Chatbot-Widget" />
-    <option name="LAST_COMMIT_MESSAGE" value="ERROR: hiển thị định dạng response khi demo trên Chatbot-Widget" />
+    <MESSAGE value="Check response font: to utter_add_GO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check response font: to utter_add_GO" />
   </component>
 </project>

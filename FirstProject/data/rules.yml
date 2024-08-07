@@ -14,7 +14,7 @@ rules:
   - rule: Say some help when user ask for help
     steps:
       - intent: ask_for_help
-      - action: utter_deny
+      - action: utter_ask_for_help
 
   - rule: Predicting default action with intent session_start
     steps:
@@ -40,6 +40,11 @@ rules:
     steps:
       - intent: what_is_bot
       - action: utter_iamabot
+
+  - rule: say "i'm bot, i'm oke" when people ask are you oke
+    steps:
+      - intent: bot_oke
+      - action: utter_bot_oke
 
   - rule: sign up help
     steps:

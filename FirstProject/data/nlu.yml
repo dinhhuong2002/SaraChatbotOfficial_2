@@ -151,6 +151,7 @@ nlu:
   - intent: what_is_bot
     examples: |
       - are you a bot?
+      - who are you?
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
@@ -160,15 +161,25 @@ nlu:
       - bạn tên là gì?
       - bạn là con người hả?
       - bạn tên là gì?
-      - bạn khoỏe không?
-      - bạn khỏe không?
-      - bạn khỏe chứ?
       - bạn hay giới thiệu một chút veef bản thân
       - giới thiệu về bản thân
       - bạn giới thiệu về mình đi
       - tự giới thiệu về bản thân 
-      - are you oke? 
+      - bạn là ai?
 
+  - intent: bot_oke
+    examples: |
+      - are u oke
+      - are you oke
+      - are you fine
+      - bạn khỏe không
+      - bạn khỏe chứ
+      - bạn có khỏe không
+      - bạn ổn chứ
+      - bạn đã sẵn sàng chưa?
+      - r u oke
+      - are you oke?
+      
 
   - intent: about_ioe
     examples: |
@@ -380,8 +391,6 @@ nlu:
       - mình quên mật khẩu
       - queen maatj khaaur
       - queen maatj khau
-      
-
 
 
   - intent: change_password
@@ -402,8 +411,6 @@ nlu:
       - ddooir mk
       - ddooir maatj khaaur
       - change maatj khaaur
-
-
 
 
   - intent: verify_acc
@@ -427,18 +434,20 @@ nlu:
       - xasc thuwcj taif khoanr
       - xasc thuwcj tk
       - xasc thuwcj
+      
 
   - intent: sign_in
     examples: |
       - Tôi muốn đăng nhập vào ioe
       - đăng nhập
-      - sign in
+      - sign in    
       - login
       - đăng nhập tài khoản
       - giúp tôi đăng nhập tài khoản
       - giúp tôi đăng nhập
       - i want to sign in
       - cho tôi đăng nhập
+
 
   - intent: sign_up
     examples: |
@@ -455,6 +464,7 @@ nlu:
       - dki tai khoan
       - đăng kí tài khoản ioe
 
+
   - intent: sign_up_student
     examples: |
       - Tôi muốn đăng ký tài khoản dành cho học sinh
@@ -465,6 +475,7 @@ nlu:
       - tài khoản học sinh
       - student
       - giúp tôi đăng ký tài khoản học sinh
+
 
   - intent: sign_up_parents
     examples: |
@@ -479,6 +490,7 @@ nlu:
       - giúp ti đăng ký tài khoản phụ huynh
       - tôi muốn đăng ký tài khoản phụ huynh
 
+
   - intent: sign_up_teacher
     examples: |
       - Tôi muốn đăng ký tài khoản dành cho giáo viên
@@ -489,6 +501,7 @@ nlu:
       - đăng kí giáo viên
       - giúp ti đăng ký tài khoản giáo viên
       - tài khoản giáo viên
+
 
   - intent: sign_up_school
     examples: |
@@ -503,6 +516,7 @@ nlu:
       - quản trị cấp trường
       - tài khoản quản trị cấp trường
       - cấp trường
+
 
   - intent: sign_up_Education_Department
     examples: |
@@ -519,6 +533,7 @@ nlu:
       - sở đào tạo
       - phòng đào tạo
 
+
   - intent: link_parents_student #link tk phụ huynh với tài khoản của con
     examples: |
       - tôi muốn liên kết tài khoản của mình với tài khoản của con
@@ -529,6 +544,7 @@ nlu:
       - giúp tôi liên kết tài khoản
       - Tôi có thể liên kết tài khoản của mình với con bằng cách nào
       - Hướng dẫn liên kết tài khoản
+
 
   - intent: school_acc_can_do  #tài khoản nhà trường có thể làm gì?
     examples: |
@@ -544,9 +560,7 @@ nlu:
       - tài khoản cấp trường có thể làm gì
       - tôi có thể làm gì với tài khoản cấp trường?
       - nhiệm vụ của tài khoản cấp trường
-  
-  
-  
+
   
   
 
