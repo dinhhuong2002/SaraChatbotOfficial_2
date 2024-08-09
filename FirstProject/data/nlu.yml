@@ -18,6 +18,21 @@ nlu:
       - chào buổi sáng
       - hiiiiiiiiii
 
+  - intent: call_bot
+    examples: |
+      - bạn ơiii
+      - bạn ơiiiiiii
+      - bạn à
+      - này bạn ơi
+      - này bạn
+      - bạn có đó không
+      - bạn ơi
+      - alo
+      - hú
+      - aloooo
+      - ê
+
+
 
   - intent: ask_for_help
     examples: |
@@ -179,7 +194,28 @@ nlu:
       - bạn đã sẵn sàng chưa?
       - r u oke
       - are you oke?
+
+  - intent: bot_nice
+    examples: |
+      - wow thạt là tuyệt
+      - thật tuyệt vời
+      - vậy sao
+      - bạn giỏi quá
+      - bạn thật tuyệt
+      - wowww
+      - đỉnh quá
       
+  - intent: bot_bad
+    examples: |
+      - bạn tệ quá
+      - bạn dở quá
+      - bạn sai rồi
+      - bạn trả lời sai rồi
+      - bạn xấu quá
+      - bạn không tốt
+      - chán bạn quá
+      - gì vậy tời
+      - vãi
 
   - intent: about_ioe
     examples: |
@@ -323,9 +359,8 @@ nlu:
       - cách xem id tài khoản phụ huynh
       - xem ID phụ huynh
       - id tài khoản phụ huynh thì sao
-      - tài khoản phụ huynh thì sao
+      - tài khoản phụ huynh thì sao?
       - còn id tài khoản phụ huynh thì sao
-      - id tài khoản phụ huynh thì sao
       - còn tài khoản phụ huynh?
       
 
@@ -474,6 +509,11 @@ nlu:
       - đăng ký tài khoản học sinh
       - tài khoản học sinh
       - student
+      - tài khoản học sinh thì sao
+      - hướng dẫn tôi với tài khoản học sinh
+      - vậy tài khoản học sinh thì sao
+      - tiếp tục với tài khoản học sinh
+      - tài khoản học sinh thì saoo
       - giúp tôi đăng ký tài khoản học sinh
 
 
@@ -487,7 +527,10 @@ nlu:
       - parents
       - tài khoản phụ huynh
       - tài khoản dành cho phụ huynh
+      - vậy đăng ký tài khoản phụ hynh thì sao
       - giúp ti đăng ký tài khoản phụ huynh
+      - tài khoản phụ huynh thì sao
+      - vậy còn tài khoản phụ huynh
       - tôi muốn đăng ký tài khoản phụ huynh
 
 
@@ -499,6 +542,9 @@ nlu:
       - đăng ký tài khoản giáo viên
       - tài khoản cho giáo viên
       - đăng kí giáo viên
+      - tài khoản giao viên nữa
+      - tài khoản giáo viên thì đăng ký như thế nào
+      - hướng dẫn tôi đăng ký tài khoản giáo viên nữa.
       - giúp ti đăng ký tài khoản giáo viên
       - tài khoản giáo viên
 
@@ -514,8 +560,13 @@ nlu:
       - school
       - tài khoản giáo viên quản lý cấp trường
       - quản trị cấp trường
+      - vậy tài khoản nhà trường thì sao
+      - tài khoản nhà trường thì đăng ký như nào
+      - hướng dn tôi với tài khaorn nhà trường
       - tài khoản quản trị cấp trường
       - cấp trường
+      - tài khoản nhà trường nữa
+    
 
 
   - intent: sign_up_Education_Department
@@ -532,6 +583,9 @@ nlu:
       - phòng/sở
       - sở đào tạo
       - phòng đào tạo
+      - tài khaorn phòng giáo dục thì sao
+      - tài khoản phòng giao dục nưa
+      - tiếp tục hướng dẫn với tài khoản phòng giáo dục
 
 
   - intent: link_parents_student #link tk phụ huynh với tài khoản của con
@@ -544,6 +598,9 @@ nlu:
       - giúp tôi liên kết tài khoản
       - Tôi có thể liên kết tài khoản của mình với con bằng cách nào
       - Hướng dẫn liên kết tài khoản
+      - hãy hướng dẫn tôi liên kết tài khoản của con mình
+      - cha mẹ lin kết với tài khaorn của con
+      - cha mẹ muốn liên kết tài khoản của mình với tài khoản của con
 
 
   - intent: school_acc_can_do  #tài khoản nhà trường có thể làm gì?

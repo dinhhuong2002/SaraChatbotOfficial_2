@@ -5,6 +5,10 @@ rules:
 #    steps:
 #      - intent: session_start
 #      - action: action_greet_user
+  - rule: call back bot
+    steps:
+      - intent: call_bot
+      - action: utter_call_bot
 
   - rule: Say goodbye anytime the user says goodbye
     steps:
@@ -45,6 +49,16 @@ rules:
     steps:
       - intent: bot_oke
       - action: utter_bot_oke
+
+  - rule: khen bot
+    steps:
+      - intent: bot_nice
+      - action: utter_bot_nice
+
+  - rule: bot_bad, wrong
+    steps:
+      - intent: bot_bad
+      - action: utter_bot_bad
 
   - rule: sign up help
     steps:

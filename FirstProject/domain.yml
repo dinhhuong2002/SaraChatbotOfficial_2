@@ -3,6 +3,7 @@ version: "3.1"
 intents:
   - session_start
   - hello
+  - call_bot
   - ask_for_help
   - fine_thanks
   - goodbye
@@ -13,6 +14,8 @@ intents:
   - mood_unhappy
   - what_is_bot
   - bot_oke
+  - bot_nice
+  - bot_bad
   - about_ioe
   - doi_tuong_tham_gia
   - thanh_tich_ioe
@@ -70,6 +73,11 @@ responses:
         - title: "Nạp GO"
           payload: "/add_GO"
 
+  utter_call_bot:
+  - text: "Mình nghe nè. Mình có thể giúp gì cho bạn?"
+  - text: "Mình nghe nè!"
+  - text: "Ai gọi mình đó, có mình đây ^^"
+
   utter_cheer_up:
     - text: "Here is something to cheer you up:"
       image: "https://bit.ly/4bhGdni"
@@ -124,6 +132,12 @@ responses:
     - text: "Tôi luôn sẵn sàng giúp đỡ bạn!"
     - text: "Tôi rất ổn, cảm ơn bạn."
     - text: "Với vai trò trợ lý ảo, tôi không bao giờ thấy mệt mỏi."
+
+  utter_bot_nice:
+    - text: "Hihi ^_^"
+
+  utter_bot_bad:
+    - text: "Oh, hãy để tôi tiếp tục giúp bạn."
 
   utter_about_ioe:
     - text: "   Olympic tiếng Anh trên Internet - Internet Olympiads of English (IOE) là sân chơi giúp khơi dậy niềm yêu thích tiếng Anh của các em học sinh trên khắp Việt Nam, từ đó có thể ứng dụng và sử dụng tiếng Anh vào các lĩnh vực khác nhau trong cuộc sống."
@@ -276,7 +290,7 @@ responses:
 
   utter_sign_up_parents:
     - text: |
-        Hướng dẫn đăng ký tài khoản phụ huynh:
+        <p>Hướng dẫn đăng ký tài khoản phụ huynh:</p>
         <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/></li>
         <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, phụ huynh điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b>.</li>
         <li>- Bước 3: Phụ huynh điền các thông tin cá nhân vào các ô trống và click vào <b>“Cập nhật thông tin”</b>. </li>
@@ -437,15 +451,17 @@ responses:
           payload: "/add_GO"
 
   utter_dieu_khoan_dich_vu:
-    - text: "Điều khoản dịch vụ chi tiết xem tại: https://edu.go.vn/policy/terms-of-use."
+    - text: |
+        Điều khoản dịch vụ chi tiết xem tại: <a href="https://edu.go.vn/policy/terms-of-use" target="_blank"a> https://edu.go.vn/policy/terms-of-use.</a>
 
   utter_chinh_sach_bao_mat:
     - text: |
         Trung tâm phát triển giáo dục trực tuyến (goEdu) thuộc công ty Cổ phần VTC truyền thông trực tuyến(VTC Online). Chúng tôi, VTC Online, tôn trọng quyền riêng tư của khách hàng và cam kết bảo mật thông tin cá nhân của khách hàng khi khách hàng tin vào chúng tôi cung cấp thông tin cá nhân của khách hàng cho chúng tôi khi tham gia vào hệ thống giáo dục trực tuyến của chúng tôi. Đây là nguyên tắc khi tiếp cận quyền riêng tư, thông tin cá nhân tại goEdu.
-        <li>Chi tiết chính sách bảo mật: <a href="https://edu.go.vn/policy/privacy" target="_blank"a> https://edu.go.vn/policy/privacy.</a><li>
+        Chi tiết chính sách bảo mật: <a href="https://edu.go.vn/policy/privacy" target="_blank"a> https://edu.go.vn/policy/privacy.</a>
 
   utter_the_le:
-    - text: "Chi tiết thể lệ xem tại: https://ioe.vn/the-le "
+    - text: |
+        Chi tiết thể lệ xem tại: <a href="https://ioe.vn/the-le" target="_blank"a> https://ioe.vn/the-le.</a>
     - text: "Mỗi năm học, IOE tổ chức 4 vòng thi chính thức dành cho cấp tiểu học và trung học cơ sở, cùng với 3 vòng thi chính thức cho cấp phổ thông trung học. Ngoài ra, cuộc thi có tổng cộng 35 vòng thi tự luyện tương ứng với 35 tuần học được mở vào thứ 2 hằng tuần dành cho tất cả học sinh.\n- 35 vòng Tự luyện tương ứng với 35 tuần học, được hệ thống mở vào thứ 2 hàng tuần, bắt đầu từ tháng 8 hàng năm."
 
 ###others
@@ -459,7 +475,7 @@ responses:
           <li>Facebook: <a href="https://www.facebook.com/ioe.vn" target="_blank"a> https://www.facebook.com/ioe.vn.</a> </li>
           <li>Zalo: <a href="https://zalo.me/4173902407181774207" target="_blank"a> https://zalo.me/4173902407181774207.</a> </li>
           <li>Phone: <b style="color:blue">1900.636.876</b> </li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:blue">0984.650.154</b> </li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:blue">0984.650.154</b> </li>
         </ul>
 #      buttons:
 #        - title: "Facebook"
@@ -468,11 +484,27 @@ responses:
 #          link: "https://zalo.me/4173902407181774207"
 
   utter_change_infor_student_acc:
-    - text: "Chi tiết hướng dẫn thay đổi thông tin https://hotro.go.vn/edu/IOE/search=thay%20%C4%91%E1%BB%95i/id=44"
-    - text: "Tài khoản IOE của học sinh được chia thành 2 loại: Tài khoản học sinh chưa tham gia thi các cấp và Tài khoản học sinh đã tham gia thi các cấp.\nI. Tài khoản học sinh chưa tham gia thi các cấp\n\t- Học sinh chưa hoàn thành vòng tự luyện 1: Được phép cập nhật tất cả thông tin.\n\t- Học sinh đã hoàn thành vòng tự luyện 1 thì được phép sửa các thông tin: Họ tên, Ngày sinh, Giới tính, Tên lớp và không cần gửi yêu cầu cho giáo viên quản trị trường duyệt. Nếu học sinh muốn thay đổi các thông tin khác: Tỉnh/Thành phố, Quận/Huyện, Trường thì cần gửi Yêu cầu thay đổi thông tin cho giáo viên quản trị trường duyệt.\nII. Tài khoản học sinh đã tham gia thi các cấp\n\tBước 1: Chọn “Yêu cầu thay đổi thông tin”.\n\tBước 2: Điền đầy đủ thông tin muốn thay đổi, sau đó chọn “Gửi yêu cầu”.\nSau khi gửi yêu cầu, học sinh cần thông báo tới giáo viên quản trị nhà trường để được xem xét và phê duyệt các thông tin cần chỉnh sửa."
+    - text: |
+        Chi tiết hướng dẫn thay đổi thông tin <a href="https://short.com.vn/9C8s" target="_blank"a> https://short.com.vn/9C8s.</a>.
+    - text: |
+        <ul>Tài khoản IOE của học sinh được chia thành 2 loại: Tài khoản học sinh chưa tham gia thi các cấp và Tài khoản học sinh đã tham gia thi các cấp.
+          <li><b>I. Tài khoản học sinh chưa tham gia thi các cấp</b></li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Học sinh chưa hoàn thành vòng tự luyện 1: Được phép cập nhật tất cả thông tin.</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Học sinh đã hoàn thành vòng tự luyện 1 thì được phép sửa: Họ tên, Ngày sinh, Giới tính, Tên lớp và không cần gửi yêu cầu phê duyệt. Nếu học sinh muốn thay đổi các thông tin khác: Tỉnh/Thành phố, Quận/Huyện, Trường thì cần gửi yêu cầu thay đổi cho giáo viên quản trị trường duyệt.</li>
+          <li><b>II. Tài khoản học sinh đã tham gia thi các cấp</b></li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;Bước 1: Chọn “Yêu cầu thay đổi thông tin”.</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;Bước 2: Điền đầy đủ thông tin muốn thay đổi, sau đó chọn “Gửi yêu cầu”.</li>
+          <li>Sau khi gửi yêu cầu, học sinh cần thông báo tới giáo viên quản trị nhà trường để được xem xét và phê duyệt các thông tin cần chỉnh sửa.</li>
+        </ul>
 
   utter_huy_lien_ket_sdt:
-    - text: "Để hủy liên kết với số điện thoại đã xác thực cho tài khoản, bạn vui lòng thực hiện theo hướng dẫn sau:\n\tBước 1: Bạn đăng nhập vào tài khoản của mình, chọn “Bảo mật”.\n\tBước 2: Bạn bấm “Hủy liên kết số điện thoại”.\n\tBước 3: Bạn nhắn tin theo hướng dẫn trên trang. Bạn sử dụng số điện thoại đã đăng ký xác thực với tài khoản của bạn soạn tin nhắn theo cú pháp: GO XOA <MKC2> gửi 8100. \nHệ thống sẽ tiến hành hủy liên kết số điện thoại sau 24 giờ kể từ thời điểm gửi tin nhắn và tài khoản của bạn sẽ trở về trạng thái chưa xác thực."
+    - text: |
+        <ul>Để hủy liên kết với số điện thoại đã xác thực cho tài khoản, bạn vui lòng thực hiện theo hướng dẫn sau:
+          <li>&nbsp;&nbsp;Bước 1: Đăng nhập vào tài khoản của mình, chọn <b>“Bảo mật”</b>.</li>
+          <li>&nbsp;&nbsp;Bước 2: Bấm <b>“Hủy liên kết số điện thoại”</b>.</li>
+          <li>&nbsp;&nbsp;Bước 3: Bạn sử dụng số điện thoại đã đăng ký xác thực với tài khoản của bạn soạn tin nhắn theo cú pháp: <b>GO XOA <MKC2> gửi 8100</b>.</li>
+          <li>Hệ thống sẽ tiến hành hủy liên kết số điện thoại sau 24 giờ kể từ thời điểm gửi tin nhắn và tài khoản của bạn sẽ trở về trạng thái chưa xác thực.</li>
+        </ul>
 
   utter_forget_MKC2:
     - text: "Bạn quên MKC2 và cần cấp lại vui lòng soạn SMS bằng số điện thoại đã xác thực theo hướng dẫn sau: \n\t\tGO MKC2 129xxxxxx gửi 8100. \nTrong đó, 129xxxxxx là mã ID của bạn."
@@ -487,14 +519,20 @@ responses:
         Liên hệ BTC để được giúp đỡ:
           <li>Facebook: <a href="https://www.facebook.com/ioe.vn" target="_blank"a> https://www.facebook.com/ioe.vn.</a> </li>
           <li>Zalo: <a href="https://zalo.me/4173902407181774207" target="_blank"a> https://zalo.me/4173902407181774207.</a> </li>
-            Tổng đài: 1900.636.876 từ 08:30 đến 17:30.
-            Số điện thoại: 0984650154 từ 18:00 đến 21:00.
+          <li>Tổng đài: 1900.636.876 từ 08:30 đến 17:30.
+          <li>Số điện thoại: 0984650154 từ 18:00 đến 21:00.
 #      buttons:
 #        - title: "Facebook"
 #          link: "https://www.facebook.com/ioe.vn"
 #        - title: "Zalo"
 #          link: "https://zalo.me/4173902407181774207"
 
+
+
+
+#nội dung ngoài lề (for test)
+#  utter_weather:
+#    - text: "oh, the weather is very noce today. You should go out to relax."
 
 
 actions:

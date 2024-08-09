@@ -34,6 +34,13 @@ stories:
       - intent: deny
       - action: utter_goodbye
 
+  - story: ask you oke and say bot is so wonderful
+    steps:
+      - intent: bot_oke
+      - action: utter_bot_oke
+      - intent: bot_nice
+      - action: utter_bot_nice
+
   - story: đăng ký tài khoản student
     steps:
       - intent: sign_up
@@ -94,7 +101,55 @@ stories:
       - intent: sign_up
       - action: utter_sign_up
 
-#  - story: nạp GO bằng thẻ game
+  - story: 01_lựa chọn đăng nhập tài khoản
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+      - intent: sign_up_student
+      - action: utter_sign_up_student
+      - intent: sign_up_parents
+      - action: utter_sign_up_parents
+      - intent: sign_up_teacher
+      - action: utter_sign_up_teacher
+
+
+  - story: 02_lựa chọn đăng nhập tài khoản
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+      - intent: sign_up_student
+      - action: utter_sign_up_student
+      - intent: sign_up_teacher
+      - action: utter_sign_up_teacher
+      - intent: sign_up_school
+      - action: utter_sign_up_school
+
+  - story: 03_lựa chọn đăng nhập tài khoản
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+      - intent: sign_up_teacher
+      - action: utter_sign_up_teacher
+      - intent: sign_up_school
+      - action: utter_sign_up_school
+      - intent: sign_up_Education_Department
+      - action: utter_sign_up_Education_Department
+
+  - story: 04_lựa chọn đăng nhập tài khoản
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+      - intent: sign_up_parents
+      - action: utter_sign_up_parents
+      - intent: sign_up_student
+      - action: utter_sign_up_student
+      - intent: sign_up_teacher
+      - action: utter_sign_up_teacher
+      - intent: sign_up_school
+      - action: utter_sign_up_school
+      - intent: sign_up_Education_Department
+      - action: utter_sign_up_Education_Department
+  #  - story: nạp GO bằng thẻ game
 #    steps:
 #      - intent: add_GO
 #      - action: utter_add_GO
@@ -253,3 +308,10 @@ stories:
       - action: utter_one_tel_use_max_acc
       - intent: verify_acc
       - action: utter_verify_acc
+
+
+#nội dung ngoài lề
+#  - story: tel about the weather
+#    steps:
+#      - user: "the weather today?"
+#      - action: utter_weather
