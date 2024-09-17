@@ -2,6 +2,13 @@ version: "3.1"
 
 stories:
 
+  - story: chào hỏi với tên người dùng
+    steps:
+      - intent: hello
+      - action: utter_ask_name
+      - intent: answer_name
+      - action: utter_answer_name
+
   - story: continue session when user say ok
     steps:
       - intent: agree
@@ -40,6 +47,13 @@ stories:
       - action: utter_bot_oke
       - intent: bot_nice
       - action: utter_bot_nice
+
+  - story: đăng nhập khi chưa có tài khoản
+    steps:
+      - intent: sign_in
+      - action: utter_sign_in
+      - intent: sign_up
+      - action: utter_sign_up
 
   - story: đăng ký tài khoản student
     steps:
@@ -80,12 +94,30 @@ stories:
       - intent: sign_up_teacher
       - action: utter_sign_up_teacher
 
-  - story: đăng ký tài khoản nhà trường
+  - story: đăng ký tài khoản giáo viên lớp --> hướng dẫn sử dụng
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_teacher
+      - action: utter_sign_up_teacher
+      - intent: acc_teacher_how_to_use
+      - action: utter_acc_teacher_how_to_use
+
+  - story: 01_đăng ký tài khoản nhà trường
     steps:
       - intent: sign_up
       - action: utter_sign_up
       - intent: sign_up_school
       - action: utter_sign_up_school
+
+  - story: 02_đăng ký tài khoản nhà trường --> đăng ký với tài khoản trường liên cấp
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+      - intent: sign_up_school
+      - action: utter_sign_up_school
+      - intent: so_acc_truong_lien_cap
+      - action: utter_so_acc_truong_lien_cap
 
   - story: đăng ký tài khoản sở giáo dục
     steps:
@@ -94,17 +126,10 @@ stories:
       - intent: sign_up_Education_Department
       - action: utter_sign_up_Education_Department
 
-  - story: đăng nhập khi chưa có tài khoản
+  - story: 01_lựa chọn đăng ký tài khoản
     steps:
-      - intent: sign_in
-      - action: utter_sign_in
       - intent: sign_up
       - action: utter_sign_up
-
-  - story: 01_lựa chọn đăng nhập tài khoản
-    steps:
-      - intent: sign_in
-      - action: utter_sign_in
       - intent: sign_up_student
       - action: utter_sign_up_student
       - intent: sign_up_parents
@@ -113,10 +138,10 @@ stories:
       - action: utter_sign_up_teacher
 
 
-  - story: 02_lựa chọn đăng nhập tài khoản
+  - story: 02_lựa chọn đăng ký tài khoản
     steps:
-      - intent: sign_in
-      - action: utter_sign_in
+      - intent: sign_up
+      - action: utter_sign_up
       - intent: sign_up_student
       - action: utter_sign_up_student
       - intent: sign_up_teacher
@@ -124,10 +149,10 @@ stories:
       - intent: sign_up_school
       - action: utter_sign_up_school
 
-  - story: 03_lựa chọn đăng nhập tài khoản
+  - story: 03_lựa chọn đăng ký tài khoản
     steps:
-      - intent: sign_in
-      - action: utter_sign_in
+      - intent: sign_up
+      - action: utter_sign_up
       - intent: sign_up_teacher
       - action: utter_sign_up_teacher
       - intent: sign_up_school
@@ -135,10 +160,10 @@ stories:
       - intent: sign_up_Education_Department
       - action: utter_sign_up_Education_Department
 
-  - story: 04_lựa chọn đăng nhập tài khoản
+  - story: 04_lựa chọn đăng ký tài khoản
     steps:
-      - intent: sign_in
-      - action: utter_sign_in
+      - intent: sign_up
+      - action: utter_sign_up
       - intent: sign_up_parents
       - action: utter_sign_up_parents
       - intent: sign_up_student
@@ -155,6 +180,30 @@ stories:
 #      - action: utter_add_GO
 #      - intent: add_GO_the_game
 #      - action: utter_add_GO_the_game
+  - story: 01_nạp go có bắt buộc không? --> tôi muốn nạp GO
+    steps:
+      - intent: GO_bat_buoc_khong
+      - action: utter_GO_bat_buoc_khong
+      - intent: add_GO
+      - action: utter_add_GO
+
+  - story: 02_nạp go có bắt buộc không? --> thi thử có phải nap go không --> tôi muốn nạp Go
+    steps:
+      - intent: GO_bat_buoc_khong
+      - action: utter_GO_bat_buoc_khong
+      - intent: Thi_thu_bat_buoc_GO
+      - action: utter_Thi_thu_bat_buoc_GO
+      - intent: add_GO
+      - action: utter_add_GO
+
+  - story: 03_nạp go có bắt buộc không? --> thi thử có phải nap go không --> tôi muốn nạp Go
+    steps:
+      - intent: GO_bat_buoc_khong
+      - action: utter_GO_bat_buoc_khong
+      - intent: study_with_ioe_add_GO
+      - action: utter_study_with_ioe_add_GO
+      - intent: add_GO
+      - action: utter_add_GO
 
   - story: nạp GO bằng chuyển khoản ngân hàng; có hoàn GO được không?
     steps:
@@ -199,6 +248,50 @@ stories:
       - intent: how_to_use_GO
       - action: utter_how_to_use_GO
 
+  - story: nạp Go và hỏi ioe có bao nhiêu gói dịch vụ --> đổi go
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: so_goi_dich_vu
+      - action: utter_so_goi_dich_vu
+      - intent: how_to_use_GO
+      - action: utter_how_to_use_GO
+
+  - story: đổi gói dịch vụ IOE nhưng thiếu GO
+    steps:
+      - intent: how_to_use_GO
+      - action: utter_how_to_use_GO
+      - intent: add_GO
+      - action: utter_add_GO
+
+  - story: 01_nạp GO và chuyển Go từ tài khoản phụ huynh sang tài khoản con
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: chuyen_GO_parents_to_student
+      - action: utter_chuyen_GO_parents_to_student
+
+  - story: 01_phụ huynh nạp GO cho con -> liên kết tài khoản
+    steps:
+      - intent: chuyen_GO_parents_to_student
+      - action: utter_chuyen_GO_parents_to_student
+      - intent: link_parents_student
+      - action: utter_link_parents_student
+
+  - story: 01_giáo viên đổi gói dịch vụ cho học sinh của mình
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: chuyen_GO_teacher_to_student
+      - action: utter_chuyen_GO_teacher_to_student
+
+  - story: 02_giáo viên đổi gói dịch vụ, hỏi về chiết khẩu
+    steps:
+      - intent: chuyen_GO_teacher_to_student
+      - action: utter_chuyen_GO_teacher_to_student
+      - intent: sale_goi_dich_vu
+      - action: utter_sale_goi_dich_vu
+
   - story: ID là gì? tôi có thể lấy id ở đâu?
     steps:
       - intent: what_is_ID
@@ -235,13 +328,6 @@ stories:
       - action: utter_change_password
       - intent: forget_MKC2
       - action: utter_forget_MKC2
-
-  - story: đổi gói dịch vụ IOE nhưng thiếu GO
-    steps:
-      - intent: how_to_use_GO
-      - action: utter_how_to_use_GO
-      - intent: add_GO
-      - action: utter_add_GO
 
   - story: hủy liên kết số điện thoại nhưng quên MKC2
     steps:
@@ -300,8 +386,6 @@ stories:
       - intent: where_id_teacher
       - action: utter_where_id_teacher
 
-
-
   - story: số tài khoản tối đa --> cách xác tực tài khoản _01
     steps:
       - intent: one_tel_use_max_acc
@@ -309,9 +393,20 @@ stories:
       - intent: verify_acc
       - action: utter_verify_acc
 
+  - story: điều kiện tham gia thi? có thí sinh tự do không?
+    steps:
+      - intent: Dieu_kien_thi_chinh_thuc
+      - action: utter_Dieu_kien_thi_chinh_thuc
+      - intent: thi_tu_do
+      - action: utter_thi_tu_do
+
 
 #nội dung ngoài lề
 #  - story: tel about the weather
 #    steps:
 #      - user: "the weather today?"
 #      - action: utter_weather
+  - story: interactive_story_1
+    steps:
+    - intent: sign_up_student
+

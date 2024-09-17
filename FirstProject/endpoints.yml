@@ -24,6 +24,12 @@ action_endpoint:
 #    db: <number of your database within redis, e.g. 0>
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
+tracker_store:
+  type: mongod
+  url: mongodb://localhost:27017
+  db: LogsRasa
+  collection: rasa_logs
+
 
 #tracker_store:
 #    type: mongod

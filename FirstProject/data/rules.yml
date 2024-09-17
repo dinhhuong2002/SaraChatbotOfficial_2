@@ -10,6 +10,11 @@ rules:
       - intent: call_bot
       - action: utter_call_bot
 
+  - rule: answer name
+    steps:
+      - intent: answer_name
+      - action: utter_answer_name
+
   - rule: Say goodbye anytime the user says goodbye
     steps:
       - intent: goodbye
@@ -69,6 +74,42 @@ rules:
     steps:
       - intent: sign_in
       - action: utter_sign_in
+
+  - rule: tại sao giáo viên khong thấy danh sách học sinh?
+    steps:
+      - intent: acc_teacher_cant_see_students
+      - action: utter_acc_teacher_cant_see_students
+
+  - rule: hướng dẫn sử dụng tài khoản giáo viên
+    steps:
+      - intent: acc_teacher_how_to_use
+      - action: utter_acc_teacher_how_to_use
+
+  - rule: hỗ trọ cho nhà trường mới thành lập
+    steps:
+      - intent: truong_moi_thanh_lap
+      - action: utter_truong_moi_thanh_lap
+
+  - rule: thay đổi tài khoản quản trị nhà trường
+    steps:
+      - intent: change_school_acc
+      - action: utter_change_school_acc
+
+  - rule: thay đổi tài khoản quản trị Phòng/Sở giáo dục
+    steps:
+      - intent: change_Education_Department_acc
+      - action: utter_change_Education_Department_acc
+
+  - rule: hỏi đáp số tài khoản quản trị của trường liên cấp
+    steps:
+      - intent: so_acc_truong_lien_cap
+      - action: utter_so_acc_truong_lien_cap
+
+  - rule: add_GO có bắt buộc không --> không
+    steps:
+      - intent: GO_bat_buoc_khong
+      - action: utter_GO_bat_buoc_khong
+
   - rule: add_GO
     steps:
       - intent: add_GO
@@ -83,6 +124,21 @@ rules:
     steps:
       - intent: how_to_use_GO
       - action: utter_how_to_use_GO
+
+  - rule: số gói dịch vụ ioe hiện tại
+    steps:
+      - intent: so_goi_dich_vu
+      - action: utter_so_goi_dich_vu
+
+  - rule: trả lời cách chuyển GO từ tk phụ huynh sang tài khoản con
+    steps:
+      - intent: chuyen_GO_parents_to_student
+      - action: utter_chuyen_GO_parents_to_student
+
+  - rule: trả lời cách giáo viên đổi gói dịch vụ cho học sinh của minh
+    steps:
+      - intent: chuyen_GO_teacher_to_student
+      - action: utter_chuyen_GO_teacher_to_student
 
   - rule: liên kết tài khoản phụ huynh vói tài khoản con
     steps:
@@ -201,6 +257,16 @@ rules:
       - intent: huy_lien_ket_sdt
       - action: utter_huy_lien_ket_sdt
 
+  - rule: hủy liên kết gmail hay facebook
+    steps:
+      - intent: huy_lien_ket_facebook_gmail
+      - action: utter_huy_lien_ket_facebook_gmail
+
+  - rule: hỏi điều kiện tham gia thi chính thức ioe
+    steps:
+      - intent: Dieu_kien_thi_chinh_thuc
+      - action: utter_Dieu_kien_thi_chinh_thuc
+
   - rule: có thí sinh tự do không?
     steps:
       - intent: thi_tu_do
@@ -210,4 +276,24 @@ rules:
     steps:
       - intent: help_ioe
       - action: utter_help_ioe
+
+  - rule: lịch ra vòng tự luyện
+    steps:
+      - intent: lich_ra_vong_tu_luyen
+      - action: utter_lich_ra_vong_tu_luyen
+
+  - rule: hướng dẫn hủy liên kết fb, gmail
+    steps:
+      - intent: huy_lien_ket_facebook_gmail
+      - action: utter_huy_lien_ket_facebook_gmail
+
+  - rule: 8100 không gửi tin nhắn lại
+    steps:
+      - intent: 8100_dont_reply
+      - action: utter_8100_dont_reply
+
+  - rule: ruby để làm gì?
+    steps:
+      - intent: what_is_ruby
+      - action: utter_what_is_ruby
 

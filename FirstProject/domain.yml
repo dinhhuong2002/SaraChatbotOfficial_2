@@ -1,543 +1,601 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - session_start
-  - hello
-  - call_bot
-  - ask_for_help
-  - fine_thanks
-  - goodbye
-  - deny
-  - agree
-  - thanks
-  - mood_great
-  - mood_unhappy
-  - what_is_bot
-  - bot_oke
-  - bot_nice
-  - bot_bad
-  - about_ioe
-  - doi_tuong_tham_gia
-  - thanh_tich_ioe
-  - so_acc_max
-  - one_tel_use_max_acc
-  - what_is_ID
-  - where_id
-  - where_id_student
-  - where_id_parents
-  - where_id_teacher
-  - where_id_school
-  - where_id_Education_Department
-  - forget_password
-  - change_password
-  - verify_acc
-  - sign_in
-  - sign_up
-  - sign_up_student
-  - sign_up_parents
-  - sign_up_teacher
-  - sign_up_school
-  - sign_up_Education_Department
-  - link_parents_student
-  - school_acc_can_do
-  - add_GO
-#  - add_GO_the_game
-  - add_GO_chuyen_khoan
-  - add_GO_vi_dien_tu
-  - hoan_tra_GO
-  - how_to_use_GO
-  - dieu_khoan_dich_vu
-  - chinh_sach_bao_mat
-  - the_le
-#others
-  - thi_vuot_cap
-  - dang_ky_to_chuc_thi
-  - change_infor_student_acc
-  - huy_lien_ket_sdt
-  - forget_MKC2
-  - thi_tu_do
-  - help_ioe
+- hello
+- answer_name
+- call_bot
+- ask_for_help
+- fine_thanks
+- goodbye
+- deny
+- agree
+- thanks
+- mood_great
+- mood_unhappy
+- what_is_bot
+- bot_oke
+- bot_nice
+- bot_bad
+- about_ioe
+- doi_tuong_tham_gia
+- thanh_tich_ioe
+- so_acc_max
+- one_tel_use_max_acc
+- what_is_ID
+- where_id
+- where_id_student
+- where_id_parents
+- where_id_teacher
+- where_id_school
+- where_id_Education_Department
+- forget_password
+- change_password
+- verify_acc
+- sign_in
+- sign_up
+- sign_up_student
+- sign_up_parents
+- sign_up_teacher
+- sign_up_school
+- sign_up_Education_Department
+- link_parents_student
+- acc_teacher_cant_see_students
+- acc_teacher_how_to_use
+- school_acc_can_do
+- truong_moi_thanh_lap
+- change_school_acc
+- change_Education_Department_acc
+- so_acc_truong_lien_cap
+- GO_bat_buoc_khong
+- Thi_thu_bat_buoc_GO
+- study_with_ioe_add_GO
+- add_GO
+- add_GO_chuyen_khoan
+- add_GO_vi_dien_tu
+- hoan_tra_GO
+- how_to_use_GO
+- so_goi_dich_vu
+- chuyen_GO_parents_to_student
+- chuyen_GO_teacher_to_student
+- sale_goi_dich_vu
+- dieu_khoan_dich_vu
+- chinh_sach_bao_mat
+- the_le
+- thi_vuot_cap
+- dang_ky_to_chuc_thi
+- change_infor_student_acc
+- huy_lien_ket_sdt
+- forget_MKC2
+- Dieu_kien_thi_chinh_thuc
+- thi_tu_do
+- help_ioe
+- lich_ra_vong_tu_luyen
+- huy_lien_ket_facebook_gmail
+- 8100_dont_reply
+- what_is_ruby
+
+#entities:
+#    - user_name
+#
+#slots:
+#  name:
+#    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: user_name
+
 
 
 responses:
   utter_hello:
-#    - text: "Tiếp  tục trò chuyện với mình nhé!"
-#    - text: "Hey! How are you?"
-#    - text: "Xin chào bạn. Tiếp tục trò chuyện với mình nhé!"
-    - text: "Rất vui được trò chuyện cùng bạn. Mình có thể giúp gì cho bạn?"
-      buttons:
-        - title: "Đăng ký tài khoản"
-          payload: "/sign_up"
-        - title: "Đăng nhập"
-          payload: "/sign_in"
-        - title: "Nạp GO"
-          payload: "/add_GO"
-
+  - text: Rất vui được trò chuyện cùng bạn. Mình có thể giúp gì cho bạn?
+    buttons:
+    - title: Đăng ký tài khoản
+      payload: /sign_up
+    - title: Đăng nhập
+      payload: /sign_in
+    - title: Nạp GO
+      payload: /add_GO
+  utter_ask_name:
+    - text: "Bạn vui lòng cho mình biết tên để tiện xưng hô nhé!"
+  utter_answer_name:
+    - text: "Xin chào {name}!\n{name} cần mình giúp gì nào?"
   utter_call_bot:
   - text: "Mình nghe nè. Mình có thể giúp gì cho bạn?"
   - text: "Mình nghe nè!"
   - text: "Ai gọi mình đó, có mình đây ^^"
-
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://bit.ly/4bhGdni"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://bit.ly/4bhGdni
   utter_ask_for_help:
-    - text: "Chắc chắn rồi, hãy nói cho mình nghe vấn đề của bạn nhé."
-
+  - text: "Chắc chắn rồi, hãy nói cho mình nghe vấn đề của bạn nhé."
   utter_did_that_help:
-    - text: "Did that help you?"
-
+  - text: "Did that help you?"
   utter_fine_thanks:
-    - text: "Tiếp tục trò chuyện cùng mình nhé!"
-    - text: "I'm so happy to hear that."
-
+  - text: "Tiếp tục trò chuyện cùng mình nhé!"
+  - text: "I'm so happy to hear that."
   utter_goodbye:
-    - text: "Tạm biệt, hy vọng bạn hài lòng với sự giúp đỡ của mình!"
-    - text: "Bye."
-    - text: "Goodbye. See you soon!"
-    - text: "I'm so glad to talk with you. See you again!"
-    - text: "Bye. Have a nice day!"
-    - text: "Chúc bạn một ngày tốt lành. Hẹn gặp lại bạn!"
-
+  - text: "Tạm biệt, hy vọng bạn hài lòng với sự giúp đỡ của mình!"
+  - text: "Bye."
+  - text: "Goodbye. See you soon!"
+  - text: "I'm so glad to talk with you. See you again!"
+  - text: "Bye. Have a nice day!"
+  - text: "Chúc bạn một ngày tốt lành. Hẹn gặp lại bạn!"
+  - text: "Tạm biệt {name}!\nHãy quay lại với mình khi {name} cần nhé!"
   utter_deny:
-    - text: "Oke."
-    - text: "Oh, tiếp tục hỏi nếu bạn cần trợ giúp thêm nhé!"
-    - text: "Mình luôn ở đây để giúp bạn."
-
+  - text: Oke.
+  - text: Oh, tiếp tục hỏi nếu bạn cần trợ giúp thêm nhé!
+  - text: Mình luôn ở đây để giúp bạn.
   utter_agree:
-    - text: "Oke. Tiếp tục trò chuyện cùng mình nhé!"
-    - text: "Keep going on!"
-    - text: "Cùng trò chuyện tiếp nhé!"
-    - text: "Yeah, bạn cần mình giúp gì nữa không nào?"
-    - text: "Great, carry on!"
-    - text: "Được rồi, tiếp tục trò chuyện cùng mình nhé!"
-
+  - text: Oke. Tiếp tục trò chuyện cùng mình nhé!
+  - text: Keep going on!
+  - text: Cùng trò chuyện tiếp nhé!
+  - text: Yeah, bạn cần mình giúp gì nữa không nào?
+  - text: Great, carry on!
+  - text: Được rồi, tiếp tục trò chuyện cùng mình nhé!
   utter_thanks:
-    - text: "Oke. Tiếp tục trò chuyện cùng mình nhé!"
-    - text: "Không có gì đâu, chuyện nhỏ ấy mà!"
-    - text: "Mình rất vui vì đã giúp được bạn."
-    - text: "Hihi, không có gì. Bạn còn cần mình giúp gì nữa không nào?"
-    - text: "Great, carry on!"
-    - text: "My pleasure!"
-    - text: "Hy vọng đã giúp bạn giải quyết được vấn đề. Mình luôn có mặt để giúp bạn!"
-
+  - text: Oke. Tiếp tục trò chuyện cùng mình nhé!
+  - text: Không có gì đâu, chuyện nhỏ ấy mà!
+  - text: Mình rất vui vì đã giúp được bạn.
+  - text: Hihi, không có gì. Bạn còn cần mình giúp gì nữa không nào?
+  - text: Great, carry on!
+  - text: My pleasure!
+  - text: Hy vọng đã giúp bạn giải quyết được vấn đề. Mình luôn có mặt để giúp bạn!
   utter_iamabot:
-    - text: "I am a bot, powered by VTC Online."
-    - text: "Tôi là iTalk. Một chatbot được phát triển bởi VTC Online."
-    - text: "Mình là iTalk. Mình luôn sẵn sàng giúp đỡ bạn!"
-    - text: "Luôn sẵn sàng giúp đỡ bạn, mình là trợ lý ảo của bạn!"
-
+  - text: I am a bot, powered by VTC Online.
+  - text: Tôi là iTalk. Một chatbot được phát triển bởi VTC Online.
+  - text: Mình là iTalk. Mình luôn sẵn sàng giúp đỡ bạn!
+  - text: Luôn sẵn sàng giúp đỡ bạn, mình là trợ lý ảo của bạn!
   utter_bot_oke:
-    - text: "Tôi luôn sẵn sàng giúp đỡ bạn!"
-    - text: "Tôi rất ổn, cảm ơn bạn."
-    - text: "Với vai trò trợ lý ảo, tôi không bao giờ thấy mệt mỏi."
-
+  - text: Tôi luôn sẵn sàng giúp đỡ bạn!
+  - text: Tôi rất ổn, cảm ơn bạn.
+  - text: Với vai trò trợ lý ảo, tôi không bao giờ thấy mệt mỏi.
   utter_bot_nice:
-    - text: "Hihi ^_^"
-
+  - text: Hihi ^_^
   utter_bot_bad:
-    - text: "Oh, hãy để tôi tiếp tục giúp bạn."
-
+  - text: Oh, hãy để tôi tiếp tục giúp bạn.
   utter_about_ioe:
-    - text: "   Olympic tiếng Anh trên Internet - Internet Olympiads of English (IOE) là sân chơi giúp khơi dậy niềm yêu thích tiếng Anh của các em học sinh trên khắp Việt Nam, từ đó có thể ứng dụng và sử dụng tiếng Anh vào các lĩnh vực khác nhau trong cuộc sống."
-    - text: "   IOE - Hấp dẫn - Mê say - Thấy ngay kết quả là cuộc thi Tiếng Anh trên Internet được triển khai từ năm học 2010-2011 theo sự chỉ đạo của Bộ Giáo dục và Đào tạo. Các đơn vị giáo dục và học sinh có thể lựa chọn IOE như một sân chơi tự nguyện và một kênh đánh giá năng lực tiếng Anh của học sinh."
-    - text: "   IOE, viết tắt của Internet Olympiads of English, là một cuộc thi tiếng Anh trên Internet được tổ chức bởi Bộ Giáo dục và Đào tạo dành cho học sinh từ lớp 3 đến lớp 12 trên toàn quốc. Mục tiêu chính của cuộc thi là khuyến khích sự học tập và rèn luyện tiếng Anh cho học sinh."
-
+  - text: ' Olympic tiếng Anh trên Internet - Internet Olympiads of English (IOE) là sân chơi giúp khơi dậy niềm yêu thích tiếng Anh của các em học sinh trên khắp Việt Nam, từ đó có thể ứng dụng và sử dụng tiếng Anh vào các lĩnh vực khác nhau trong cuộc sống.'
+  - text: ' IOE - Hấp dẫn - Mê say - Thấy ngay kết quả là cuộc thi Tiếng Anh trên Internet được triển khai từ năm học 2010-2011 theo sự chỉ đạo của Bộ Giáo dục và Đào tạo. Các đơn vị giáo dục và học sinh có thể lựa chọn IOE như một sân chơi tự nguyện và một kênh đánh giá năng lực tiếng Anh của học sinh.'
+  - text: ' IOE, viết tắt của Internet Olympiads of English, là một cuộc thi tiếng Anh trên Internet được tổ chức bởi Bộ Giáo dục và Đào tạo dành cho học sinh từ lớp 3 đến lớp 12 trên toàn quốc. Mục tiêu chính của cuộc thi là khuyến khích sự học tập và rèn luyện tiếng Anh cho học sinh.'
   utter_doi_tuong_tham_gia:
-    - text:
-          Học sinh phổ thông từ <b><i>lớp 3</i> đến <i>lớp 12</i></b> trên toàn quốc, nếu có điều kiện truy cập Internet và có nguyện vọng tham gia Olympic Tiếng Anh trực tuyến đều có thể đăng ký dự thi IOE.
-
+  - text: Học sinh phổ thông từ <b><i>lớp 3</i> đến <i>lớp 12</i></b> trên toàn quốc, nếu có điều kiện truy cập Internet và có nguyện vọng tham gia Olympic Tiếng Anh trực tuyến đều có thể đăng ký dự thi IOE.
   utter_thanh_tich_ioe:
-    - text: |
-        <p>IOE đã nhận được sự hưởng ứng tham gia của <b>30,2 triệu</b> học sinh đến từ hơn <b>26.000</b> nhà trường, phủ rộng khắp <b>705</b> quận huyện của 63 tỉnh thành trên toàn quốc. Với nỗ lực không ngừng, IOE tự hào với những thành tựu và kết quả tích cực đóng góp cho sự phát triển của giáo dục Việt Nam:</p>
-          <ul>
-            <li>- Nhận giải thưởng Chuyển đổi số Việt Nam 2022 - Hạng mục <b>“Sản phẩm, giải pháp chuyển đổi số vì cộng đồng”</b>.</li>
-            <li>- Nhận giải thưởng <b>Công nghệ Giáo dục Tiêu biểu 2022</b> tại Diễn đàn Giáo dục và Triển lãm Học đường 4.0 năm 2022.</li>
-            <li>- Tiên phong sử dụng công nghệ AI hoàn toàn miễn phí giúp học sinh rèn luyện phát âm nâng cao kỹ năng nói tiếng Anh theo chuẩn quốc tế.</li>
-            <li>- Góp phần tích cực vào việc thực hiện “Đề án dạy và học ngoại ngữ trong hệ thống giáo dục quốc dân giai đoạn 2017-2025”.</li>
-        </ul>
-
-
-
-  utter_so_acc_max:
-    - text: |
-        <li style="list-style: none;">- Với các vòng thi <i>tự luyện</i>, hệ thống <i>không giới hạn</i> số lượng các tài khoản dự thi của mỗi học sinh. </li>
-        <li style="list-style: none;">- Trong các kì thi <i>chính thức</i>, mỗi học sinh được đăng ký <i>tối đa 2 tài khoản</i> dự thi, tuy nhiên học sinh chỉ được dự thi bằng một tài khoản chính.</li>
-        <li style="list-style: none;">- Trong trường hợp gặp sự cố với tài khoản chính, học sinh có thể chuyển sang khung giờ thi khác hoặc thi lại trong cùng ca thi đó, sử dụng tài khoản dự phòng nếu còn thời gian.</li>
-
-
-  utter_one_tel_use_max_acc:
-    - text: |
-        Hiện tại, theo quy định thì 1 số điện thoại có thể xác thực cho tối đa <b>05 tài khoản</b>.
-          - Để kiểm tra danh sách tài khoản đã xác thực với số điện thoại của bạn, hãy soạn tin nhắn: <b>"GO" gửi 8100</b>. 
-
-
-  utter_what_is_ID:
-    - text: |
-        Mã tài khoản (còn gọi là ID của tài khoản) là 1 dãy số gồm 10 số. Mỗi người dùng IOE sẽ có 1 số ID riêng không giống nhau.
-#        - Sau khi bạn đăng nhập vào tài khoản, bạn có thể nhìn thấy ID của mình ở phía bên phải, trong khung thông tin cá nhân của bạn.
-
-  utter_where_id:
-    - text: "Tài khoản của bạn là tài khoản nào?"
-      buttons:
-        - title: "Học sinh"
-          payload: "/where_id_student"
-        - title: "Phụ huynh"
-          payload: "/where_id_parents"
-        - title: "Giáo viên"
-          payload: "/where_id_teacher"
-        - title: "Nhà trường"
-          payload: "/where_id_school"
-        - title: "Phòng/Sở"
-          payload: "/where_id_Education_Department"
-  utter_where_id_student:
-    - text: |
-        Với tài khoản học sinh, bạn đăng nhập vào tài khoản rồi chọn MyIOE, vị trí ID của bạn hiển thị như hình bên dưới:
-        <a href ="https://bit.ly/3VGOqM2"target="_blank">
-          <img src="https://bit.ly/3VGOqM2" alt="ID Học Sinh" style="width:100%;max-width:600px;">
-        </a>
-
-
-
-  utter_where_id_parents:
-    - text: | 
-        Với tài khoản phụ huynh, phụ huynh thực hiện đăng nhập vào tài khoản -> chọn MyIOE và màn hình sẽ hiện như sau, khu vực bảng xanh hiển thị thông tin tài khoản bao gồm họ tên, mã ID, tên đăng nhập:
-        <a href ="https://bit.ly/3RIFepd"target="_blank">
-          <img src="https://bit.ly/3RIFepd" alt="ID Phụ Huynh" style="width:100%;max-width:600px;">
-        </a>
-
-
-  utter_where_id_teacher:
-    - text: "Thầy cô hãy đăng nhập vào tài khoản của mình để xem ID tài khoản."
-  utter_where_id_school:
-    - text: |
-        <p>Với tài khoản quản trị Trường, thầy cô đăng nhập vào tài khoản quản trị của mình và chọn <b>"Thông tin giáo dục"</b>, màn hình sẽ hiển thị như sau:</p>
-        <a href ="https://static.ioe.vn/ioenews/EOlympic/news/2023/6/ID_GV%202.jpg" target="_blank">
-            <img src="https://static.ioe.vn/ioenews/EOlympic/news/2023/6/ID_GV%202.jpg" alt="ID Nhà trường" style="width:100%;max-width:600px;height:400px">
-        </a>
-
-
-  utter_where_id_Education_Department:
-    - text: |
-        Với tài khoản quản lý cấp Phòng/Sở Giáo dục, thầy cô đăng nhập vào tài khoản quản lý của mình và chọn <b>"Thông tin giáo dục"</b>, trên màn hình bên trái sẽ hiển thị thông tin tài khoản bao gồm cả mã ID thầy cô cần tìm.
-
-
-  utter_forget_password:
-    - text: |
-        Bạn chỉ có thể khôi phục mật khẩu nếu <i style="color:red">tài khoản đã được xác thực</i> (đăng ký số điện thoại bảo mật).
-        <ul>Để lấy lại mật khẩu, bạn thực hiện: 
-          <li>- Soạn <b>GO MK [MA MKC2] gửi 8100</b>. Sau bước này sẽ có SMS trả về mã là MẬT KHẨU cho tài khoản.</li>
-          <li>- Nếu bạn quên mật khẩu cấp 2 (MKC2), soạn tin nhắn với cú pháp: <b>GO MKC2 129xxxxxx gửi 8100</b>. Trong đó 129xxxxxx là ID tài khoản IOE của bạn. Sau bước này hệ thống sẽ gửi về SMS có mã MKC2.</li>
-          <li>- Nếu bạn quên ID của tài khoản, soạn tin nhắn với cú pháp sau: <b>GO gửi 8100</b>. Thông tin tài khoản sẽ được trả về qua SMS.</li>
-          <li>Sau khi đã lấy lại mật khẩu, bạn có thể đăng nhập và thay đổi MẬT KHẨU theo ý muốn.</li>
-        </ul>
-
-
-  utter_change_password:
-    - text: |
-        Để thay đổi mật khẩu tài khoản, hãy đảm bảo tài khoản của bạn đã đươc xác thực (đăng ký số điện thoại bảo mật).
-        - Hướng dẫn thay đổi mật khẩu: 
-        <li>- Bước 1: Đăng nhập vào tài khoản và chọn "Bảo mật".</li>
-        <li>- Bước 2: Chọn "Đổi mật khẩu" và thực hiện điền các thông tin hệ thông yêu cầu rồi ấn "Xác nhận".</li>
-        Tham khảo: video hướng dẫn thay đổi mật khẩu <a href ="https://youtu.be/DN1z7MYZZok" style = "color: blue" target="_blank">https://youtu.be/DN1z7MYZZok.</a>
-
-
-  utter_verify_acc:
-    - text: |
-        Để xác thực tài khoản, bạn thực hiện theo các bước sau:
-          <li>- Bước 1: Thực hiện đăng nhập tài khoản trên website <a href="https://ioe.vn/" target="_blank"a>https://ioe.vn/.</a> </li>
-          <li>- Bước 2: Chọn mục Thông tin và chọn Bảo mật. </li>
-          <li>- Bước 3: Giao diện sẽ hiển thị cú pháp nhắn tin: <b>GO [Mã ID] gửi 8100</b>, bạn gửi tin nhắn như trên để xác thực tài khoản IOE.</li>
-          <li>- Bước 4: Hệ thống sẽ hiển thị mã xác thực kèm MKC2 về điện thoại. Bạn nhập mã xác thực vào ô nhập mã trên Web rồi ấn Xác nhận.</li>
-          <li>- Bước 5: Hệ thống sẽ báo xác thực thành công. Lúc này bạn có thể an tâm đã hoàn thành nhé!</li>
-
-
-  utter_sign_in:
-    - text: |
-        <li style="list-style: none;">Click để đăng nhập nhé: <a href = "https://bit.ly/4cwD0kX" target="_blank" >https://bit.ly/4cwD0kX </a></li>
-        <li style="list-style: none;">Chú ý điền đúng thông tin Tên đăng nhập và Mật khẩu để có thể đăng nhập nha!</li>
-        <li style="list-style: none;">Nếu bạn chưa có tài khoản, hãy đăng ký tài khoản.</li>
-      buttons:
-        - title: "Đăng ký tài khoản"
-          payload: "/sign_up"
-
-  utter_sign_up:
-    - text: "Chọn tài khoản bạn muốn đăng ký: "
-      buttons:
-        - title: "Tài khoản Học sinh"
-          payload: "/sign_up_student"
-        - title: "Tài khoản Phụ huynh"
-          payload: "/sign_up_parents"
-        - title: "Tài khoản Giáo viên lớp"
-          payload: "/sign_up_teacher"
-        - title: "Tài khoản Nhà trường"
-          payload: "/sign_up_school"
-        - title: "Tài khoản Phòng/Sở Giáo dục"
-          payload: "/sign_up_Education_Department"
-
-  utter_sign_up_student:
-    - text: |
-        Để đăng ký tài khoản học sinh, bạn làm theo các bước sau:
-        <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/> </li>
-        <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé. </li>
-        <li>- Bước 3: Tiếp tục điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>.</li>
-        <li>- Bước 4: Bấm chọn <b>"Tài khoản học sinh"</b>. </li>
-        <li>- Bước 5: Tiếp tục điền các thông tin giáo dục theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click <b>“Đăng ký ngay”</b>.</li>
-        <li>- Bước 6: Cuối cùng, bạn cần đăng ký số điện thoại xác thực cho tài khoản. Hãy làm theo hướng dẫn trên trang xác thực để hoàn thành đăng ký tài khoản.</li>
-        <li><i>Chúc bạn đăng ký tài khoản thành công!</i></li>
-  
-
-  utter_sign_up_parents:
-    - text: |
-        <p>Hướng dẫn đăng ký tài khoản phụ huynh:</p>
-        <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/></li>
-        <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, phụ huynh điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b>.</li>
-        <li>- Bước 3: Phụ huynh điền các thông tin cá nhân vào các ô trống và click vào <b>“Cập nhật thông tin”</b>. </li>
-        <li>- Bước 4: Bấm chọn <b>"Tài khoản phụ huynh"</b>. </li>
-        <li>- Bước 5: Phụ huynh tiếp tục điền các thông tin theo hướng dẫn trên màn hình. Sau khi hoàn tất, click <b>“Đăng ký ngay”</b>.</li>
-        <li>Trên màn hình, có hiển thị dãy 10 chữ số là ID của phụ huynh. ID phụ huynh sẽ được dùng để liên kết tài với tài khoản của con.</li>
-        <li>Bạn có muốn liên kết với tài khoản của con mình không?"</li>
-
-      buttons:
-        - title: "Có"
-          payload: "/link_parents_student"
-        - title: "Không"
-          payload: "/deny"
-
-  utter_sign_up_teacher:
-    - text: |
-        <p>Tài khoản giáo viên quản lý lớp dành cho tất cả các giáo viên giảng dạy Tiếng Anh có nhu cầu quản lý lớp học, giao bài cho học sinh, tạo kỳ thi riêng, tạo bài kiểm tra cho học sinh của trường mình  trên nền tảng trực tuyến của IOE.</p>
-        <ul>Để đăng ký tài khoản cho giáo viên, thầy/cô làm theo các bước sau:
-            <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/></li>
-            <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, thầy/cô điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé.</li>
-            <li>- Bước 3: Sau đó, thầy cô điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>.</li>
-            <li>- Bước 4: Tiếp theo, thầy cô cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn <b>"Giáo viên lớp"</b>.</li>
-            <li>- Bước 5: Thầy cô đăng ký số điện thoại xác thực bằng cách làm theo hướng dẫn trên màn hình rồi click <b>"Xác nhận"</b>.</li>
-            <li>- Bước 6: Sau khi hoàn tất xác thực tài khoản, thầy/cô nhập thông tin cá nhân theo form trên màn hình và chọn <b>"Gửi yêu cầu"</b> để được tài khoản Giáo viên quản trị cấp trường phê duyệt.</li>
-            <li>Chúc thầy cô đăng ký tài khoản thành công!</li>
-        </ul>
-
-
-  utter_sign_up_school:
-    - text: |
-        <p>Để đăng ký tài khoản Giáo viên quản trị cấp Trường, bạn làm theo các bước sau:</p>
+  - text: |
+      <p>IOE đã nhận được sự hưởng ứng tham gia của <b>30,2 triệu</b> học sinh đến từ hơn <b>26.000</b> nhà trường, phủ rộng khắp <b>705</b> quận huyện của 63 tỉnh thành trên toàn quốc. Với nỗ lực không ngừng, IOE tự hào với những thành tựu và kết quả tích cực đóng góp cho sự phát triển của giáo dục Việt Nam:</p>
         <ul>
-          <li>  - Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/> </li>
-          <li>  - Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé. </li>
-          <li>  - Bước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>.</li>
-          <li>  - Bước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn <b>"Giáo viên quản trị Trường"</b>.</li>
-          <li>  - Bước 5: Sau đó, bạn cần đăng ký số điện thoại xác thực bằng cách làm theo hướng dẫn trên màn hình rồi click <b>"Xác nhận"</b>.</li>
-          <li>  - Bước 6: Tiếp theo, bạn cần cập nhật đầy đủ, chính xác tất cả thông tin cần thiết trên màn hình rồi click <b>"Xác nhận"</b>.</li>
-          <li>  - Bước 7: Cuối cùng, bạn cần tải công văn theo mẫu tổ chức quy định, điền đầy đủ thông tin rồi upload file theo như hướng dẫn trên màn hình! </li>
-          <li>Chúc bạn đăng ký tài khoản thành công! </li>
-        </ul>
-        
-
-
+          <li>- Nhận giải thưởng Chuyển đổi số Việt Nam 2022 - Hạng mục <b>“Sản phẩm, giải pháp chuyển đổi số vì cộng đồng”</b>.</li>
+          <li>- Nhận giải thưởng <b>Công nghệ Giáo dục Tiêu biểu 2022</b> tại Diễn đàn Giáo dục và Triển lãm Học đường 4.0 năm 2022.</li>
+          <li>- Tiên phong sử dụng công nghệ AI hoàn toàn miễn phí giúp học sinh rèn luyện phát âm nâng cao kỹ năng nói tiếng Anh theo chuẩn quốc tế.</li>
+          <li>- Góp phần tích cực vào việc thực hiện “Đề án dạy và học ngoại ngữ trong hệ thống giáo dục quốc dân giai đoạn 2017-2025”.</li>
+      </ul>
+  utter_so_acc_max:
+  - text: |
+      <li style="list-style: none;">- Với các vòng thi <i>tự luyện</i>, hệ thống <i>không giới hạn</i> số lượng các tài khoản dự thi của mỗi học sinh. </li>
+      <li style="list-style: none;">- Trong các kì thi <i>chính thức</i>, mỗi học sinh được đăng ký <i>tối đa 2 tài khoản</i> dự thi, tuy nhiên học sinh chỉ được dự thi bằng một tài khoản chính.</li>
+      <li style="list-style: none;">- Trong trường hợp gặp sự cố với tài khoản chính, học sinh có thể chuyển sang khung giờ thi khác hoặc thi lại trong cùng ca thi đó, sử dụng tài khoản dự phòng nếu còn thời gian.</li>
+  utter_one_tel_use_max_acc:
+  - text: |
+      Hiện tại, theo quy định thì 1 số điện thoại có thể xác thực cho tối đa <b>05 tài khoản</b>.
+        - Để kiểm tra danh sách tài khoản đã xác thực với số điện thoại của bạn, hãy soạn tin nhắn: <b>"GO" gửi 8100</b>. 
+  utter_what_is_ID:
+  - text: |
+      Mã tài khoản (còn gọi là ID của tài khoản) là 1 dãy số gồm 10 số. Mỗi người dùng IOE sẽ có 1 số ID riêng không giống nhau.
+  utter_where_id:
+  - text: Tài khoản của bạn là tài khoản nào?
+    buttons:
+    - title: Học sinh
+      payload: /where_id_student
+    - title: Phụ huynh
+      payload: /where_id_parents
+    - title: Giáo viên
+      payload: /where_id_teacher
+    - title: Nhà trường
+      payload: /where_id_school
+    - title: Phòng/Sở
+      payload: /where_id_Education_Department
+  utter_where_id_student:
+  - text: |
+      Với tài khoản học sinh, bạn đăng nhập vào tài khoản rồi chọn MyIOE, vị trí ID của bạn hiển thị như hình bên dưới:
+      <a href ="https://bit.ly/3VGOqM2"target="_blank">
+        <img src="https://bit.ly/3VGOqM2" alt="ID Học Sinh" style="width:100%;max-width:600px;">
+      </a>
+  utter_where_id_parents:
+  - text: |
+      Với tài khoản phụ huynh, phụ huynh thực hiện đăng nhập vào tài khoản -> chọn MyIOE và màn hình sẽ hiện như sau, khu vực bảng xanh hiển thị thông tin tài khoản bao gồm họ tên, mã ID, tên đăng nhập:
+      <a href ="https://bit.ly/3RIFepd"target="_blank">
+        <img src="https://bit.ly/3RIFepd" alt="ID Phụ Huynh" style="width:100%;max-width:600px;">
+      </a>
+  utter_where_id_teacher:
+  - text: Thầy cô hãy đăng nhập vào tài khoản của mình để xem ID tài khoản.
+  utter_where_id_school:
+  - text: |
+      <p>Với tài khoản quản trị Trường, thầy cô đăng nhập vào tài khoản quản trị của mình và chọn <b>"Thông tin giáo dục"</b>, màn hình sẽ hiển thị như sau:</p>
+      <a href ="https://static.ioe.vn/ioenews/EOlympic/news/2023/6/ID_GV%202.jpg" target="_blank">
+          <img src="https://static.ioe.vn/ioenews/EOlympic/news/2023/6/ID_GV%202.jpg" alt="ID Nhà trường" style="width:100%;max-width:600px;height:400px">
+      </a>
+  utter_where_id_Education_Department:
+  - text: |
+      Với tài khoản quản lý cấp Phòng/Sở Giáo dục, thầy cô đăng nhập vào tài khoản quản lý của mình và chọn <b>"Thông tin giáo dục"</b>, trên màn hình bên trái sẽ hiển thị thông tin tài khoản bao gồm cả mã ID thầy cô cần tìm.
+  utter_forget_password:
+  - text: |
+      Bạn chỉ có thể khôi phục mật khẩu nếu <i style="color:red">tài khoản đã được xác thực</i> (đăng ký số điện thoại bảo mật).
+      <ul>Để lấy lại mật khẩu, bạn thực hiện: 
+        <li>- Soạn <b>GO MK [MA MKC2] gửi 8100</b>. Sau bước này sẽ có SMS trả về mã là MẬT KHẨU cho tài khoản.</li>
+        <li>- Nếu bạn quên mật khẩu cấp 2 (MKC2), soạn tin nhắn với cú pháp: <b>GO MKC2 129xxxxxx gửi 8100</b>. Trong đó 129xxxxxx là ID tài khoản IOE của bạn. Sau bước này hệ thống sẽ gửi về SMS có mã MKC2.</li>
+        <li>- Nếu bạn quên ID của tài khoản, soạn tin nhắn với cú pháp sau: <b>GO gửi 8100</b>. Thông tin tài khoản sẽ được trả về qua SMS.</li>
+        <li>Sau khi đã lấy lại mật khẩu, bạn có thể đăng nhập và thay đổi MẬT KHẨU theo ý muốn.</li>
+      </ul>
+  utter_change_password:
+  - text: |
+      Để thay đổi mật khẩu tài khoản, hãy đảm bảo tài khoản của bạn đã đươc xác thực (đăng ký số điện thoại bảo mật).
+      - Hướng dẫn thay đổi mật khẩu: 
+      <li>- Bước 1: Đăng nhập vào tài khoản và chọn "Bảo mật".</li>
+      <li>- Bước 2: Chọn "Đổi mật khẩu" và thực hiện điền các thông tin hệ thông yêu cầu rồi ấn "Xác nhận".</li>
+      Tham khảo: video hướng dẫn thay đổi mật khẩu <a href ="https://youtu.be/DN1z7MYZZok" style = "color: blue" target="_blank">https://youtu.be/DN1z7MYZZok.</a>
+  utter_verify_acc:
+  - text: |
+      Để xác thực tài khoản, bạn thực hiện theo các bước sau:
+        <li>- Bước 1: Thực hiện đăng nhập tài khoản trên website <a href="https://ioe.vn/" target="_blank"a>https://ioe.vn/.</a> </li>
+        <li>- Bước 2: Chọn mục Thông tin và chọn Bảo mật. </li>
+        <li>- Bước 3: Giao diện sẽ hiển thị cú pháp nhắn tin: <b>GO [Mã ID] gửi 8100</b>, bạn gửi tin nhắn như trên để xác thực tài khoản IOE.</li>
+        <li>- Bước 4: Hệ thống sẽ hiển thị mã xác thực kèm MKC2 về điện thoại. Bạn nhập mã xác thực vào ô nhập mã trên Web rồi ấn Xác nhận.</li>
+        <li>- Bước 5: Hệ thống sẽ báo xác thực thành công. Lúc này bạn có thể an tâm đã hoàn thành nhé!</li>
+  utter_sign_in:
+  - text: |
+      <li style="list-style: none;">Click để đăng nhập nhé: <a href = "https://bit.ly/4cwD0kX" target="_blank" >https://bit.ly/4cwD0kX </a></li>
+      <li style="list-style: none;">Chú ý điền đúng thông tin Tên đăng nhập và Mật khẩu để có thể đăng nhập nha!</li>
+      <li style="list-style: none;">Nếu bạn chưa có tài khoản, hãy đăng ký tài khoản.</li>
+    buttons:
+    - title: Đăng ký tài khoản
+      payload: /sign_up
+  utter_sign_up:
+  - text: 'Chọn tài khoản bạn muốn đăng ký: '
+    buttons:
+    - title: Tài khoản Học sinh
+      payload: /sign_up_student
+    - title: Tài khoản Phụ huynh
+      payload: /sign_up_parents
+    - title: Tài khoản Giáo viên lớp
+      payload: /sign_up_teacher
+    - title: Tài khoản Nhà trường
+      payload: /sign_up_school
+    - title: Tài khoản Phòng/Sở Giáo dục
+      payload: /sign_up_Education_Department
+  utter_sign_up_student:
+  - text: |
+      Để đăng ký tài khoản học sinh, bạn làm theo các bước sau:
+      <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/> </li>
+      <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé. </li>
+      <li>- Bước 3: Tiếp tục điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>.</li>
+      <li>- Bước 4: Bấm chọn <b>"Tài khoản học sinh"</b>. </li>
+      <li>- Bước 5: Tiếp tục điền các thông tin giáo dục theo hướng dẫn trên màn hình. Sau khi hoàn tất, bạn click <b>“Đăng ký ngay”</b>.</li>
+      <li>- Bước 6: Cuối cùng, bạn cần đăng ký số điện thoại xác thực cho tài khoản. Hãy làm theo hướng dẫn trên trang xác thực để hoàn thành đăng ký tài khoản.</li>
+      <li><i>Chúc bạn đăng ký tài khoản thành công!</i></li>
+  utter_sign_up_parents:
+  - text: |
+      <p>Hướng dẫn đăng ký tài khoản phụ huynh:</p>
+      <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/></li>
+      <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, phụ huynh điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b>.</li>
+      <li>- Bước 3: Phụ huynh điền các thông tin cá nhân vào các ô trống và click vào <b>“Cập nhật thông tin”</b>. </li>
+      <li>- Bước 4: Bấm chọn <b>"Tài khoản phụ huynh"</b>. </li>
+      <li>- Bước 5: Phụ huynh tiếp tục điền các thông tin theo hướng dẫn trên màn hình. Sau khi hoàn tất, click <b>“Đăng ký ngay”</b>.</li>
+      <li>Trên màn hình, có hiển thị dãy 10 chữ số là ID của phụ huynh. ID phụ huynh sẽ được dùng để liên kết tài với tài khoản của con.</li>
+      <li>Bạn có muốn liên kết với tài khoản của con mình không?"</li>
+    buttons:
+    - title: Có
+      payload: /link_parents_student
+    - title: Không
+      payload: /deny
+  utter_sign_up_teacher:
+  - text: |
+      <p>Tài khoản giáo viên quản lý lớp dành cho tất cả các giáo viên giảng dạy Tiếng Anh có nhu cầu quản lý lớp học, giao bài cho học sinh, tạo kỳ thi riêng, tạo bài kiểm tra cho học sinh của trường mình  trên nền tảng trực tuyến của IOE.</p>
+      <ul>Để đăng ký tài khoản cho giáo viên, thầy/cô làm theo các bước sau:
+          <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/></li>
+          <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, thầy/cô điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé.</li>
+          <li>- Bước 3: Sau đó, thầy cô điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>.</li>
+          <li>- Bước 4: Tiếp theo, thầy cô cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn <b>"Giáo viên lớp"</b>.</li>
+          <li>- Bước 5: Thầy cô đăng ký số điện thoại xác thực bằng cách làm theo hướng dẫn trên màn hình rồi click <b>"Xác nhận"</b>.</li>
+          <li>- Bước 6: Sau khi hoàn tất xác thực tài khoản, thầy/cô nhập thông tin cá nhân theo form trên màn hình và chọn <b>"Gửi yêu cầu"</b> để được tài khoản Giáo viên quản trị cấp trường phê duyệt.</li>
+          <li>Chúc thầy cô đăng ký tài khoản thành công!</li>
+      </ul>
+  utter_sign_up_school:
+  - text: |
+      <p>Để đăng ký tài khoản Giáo viên quản trị cấp Trường, bạn làm theo các bước sau:</p>
+      <ul>
+        <li>  - Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/> </li>
+        <li>  - Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé. </li>
+        <li>  - Bước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>.</li>
+        <li>  - Bước 4: Sau khi bạn tạo tài khoản thành công, Bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn <b>"Giáo viên quản trị Trường"</b>.</li>
+        <li>  - Bước 5: Sau đó, bạn cần đăng ký số điện thoại xác thực bằng cách làm theo hướng dẫn trên màn hình rồi click <b>"Xác nhận"</b>.</li>
+        <li>  - Bước 6: Tiếp theo, bạn cần cập nhật đầy đủ, chính xác tất cả thông tin cần thiết trên màn hình rồi click <b>"Xác nhận"</b>.</li>
+        <li>  - Bước 7: Cuối cùng, bạn cần tải công văn theo mẫu tổ chức quy định, điền đầy đủ thông tin rồi upload file theo như hướng dẫn trên màn hình! </li>
+        <li>Chúc bạn đăng ký tài khoản thành công! </li>
+      </ul>
   utter_sign_up_Education_Department:
-    - text: |
-        Để đăng ký tài khoản Phòng/Sở giáo dục, bạn làm theo các bước sau:
-          <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/> </li>
-          <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé.</li>
-          <li>- Bước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>. </li>
-          <li>- Bước 4: Sau khi bạn tạo tài khoản thành công, bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn <b>"Tài khoản Phòng/Sở Giáo dục"</b>. </li>
-          <li>- Bước 5: Đăng ký số điện thoại xác thực theo hướng dẫn trên màn hình.</li>
-          <li>- Bước 6: Khai báo thông tin giáo dục cho tài khoản quản lý.</li>
-          <li>- Bước 7: Gửi đăng ký tài khoản quản lý cấp Phòng/Sở theo hướng dẫn trên màn hình.</li>
-        <li>Chúc bạn đăng ký tài khoản thành công!</li>
-
-
+  - text: |
+      Để đăng ký tài khoản Phòng/Sở giáo dục, bạn làm theo các bước sau:
+        <li>- Bước 1: Click vào ô "Đăng ký" trên trang chủ <a href ="https://ioe.vn" style="color: blue" target="_blank">https://ioe.vn.<a/> </li>
+        <li>- Bước 2: Màn hình sẽ chuyển sang trang Đăng ký, bạn điền đủ thông tin tên tài khoản và mật khẩu rồi click vào ô <b>"NHẤN ĐỂ ĐĂNG KÝ"</b> nhé.</li>
+        <li>- Bước 3: Bạn điền các thông tin cá nhân vào các ô trống  và click vào <b>“Cập nhật thông tin”</b>. </li>
+        <li>- Bước 4: Sau khi bạn tạo tài khoản thành công, bạn cần chọn loại tài khoản để đăng ký sử dụng. Bấm chọn <b>"Tài khoản Phòng/Sở Giáo dục"</b>. </li>
+        <li>- Bước 5: Đăng ký số điện thoại xác thực theo hướng dẫn trên màn hình.</li>
+        <li>- Bước 6: Khai báo thông tin giáo dục cho tài khoản quản lý.</li>
+        <li>- Bước 7: Gửi đăng ký tài khoản quản lý cấp Phòng/Sở theo hướng dẫn trên màn hình.</li>
+      <li>Chúc bạn đăng ký tài khoản thành công!</li>
   utter_link_parents_student:
+  - text: |
+      <ul style="padding-left: 0;">Hướng dẫn liên kết tài khoản của phụ huynh với tài khoản của con:
+        <li style="list-style: none;">- Bước 1: Đăng nhập tài khoản phụ huynh, điền ID tài khoản con, sau đó bấm chọn <b>"Thêm Tài khoản của con"</b>. Như vậy bạn đã thực hiện thêm tài khoản của con thành công. </li>
+        <li style="list-style: none;">- Bước 2: Đăng nhập vào tài khoản của con, tại tài khoản học viên của con chọn mục <b>"Thông tin giáo dục"</b>, tiếp tục chọn <b>"Tài khoản liên kết"</b>. </li>
+        <li style="list-style: none;">- Bước 3: Tại mục Tài khoản liên kết sẽ hiển thị ID của phụ huynh, học sinh bấm <b>“Xác nhận”</b> để hoàn tất quá trình liên kết. </li>
+        <li style="list-style: none;">Chúc bạn thực hiện liên kết thành công!</li>
+      </ul>
+  utter_acc_teacher_cant_see_students:
+    - text: "Học sinh cần hoàn thành vòng tự luyện 1 để có tên trong danh sách của tài khoản quản trị giáo viên."
+  utter_acc_teacher_how_to_use:
     - text: |
-        <ul style="padding-left: 0;">Hướng dẫn liên kết tài khoản của phụ huynh với tài khoản của con:
-          <li style="list-style: none;">- Bước 1: Đăng nhập tài khoản phụ huynh, điền ID tài khoản con, sau đó bấm chọn <b>"Thêm Tài khoản của con"</b>. Như vậy bạn đã thực hiện thêm tài khoản của con thành công. </li>
-          <li style="list-style: none;">- Bước 2: Đăng nhập vào tài khoản của con, tại tài khoản học viên của con chọn mục <b>"Thông tin giáo dục"</b>, tiếp tục chọn <b>"Tài khoản liên kết"</b>. </li>
-          <li style="list-style: none;">- Bước 3: Tại mục Tài khoản liên kết sẽ hiển thị ID của phụ huynh, học sinh bấm <b>“Xác nhận”</b> để hoàn tất quá trình liên kết. </li>
-          <li style="list-style: none;">Chúc bạn thực hiện liên kết thành công!</li>
-        </ul>
+        Một tài khoản Giáo viên quản lý lớp có thể tạo nhiều lớp với các khối khác nhau để quản lý.
+        Thầy cô xem chi tiết tại link sau: <a href = "https://ioe.vn/huong-dan/faqdetails/83" target="_blank" >https://ioe.vn/huong-dan/faqdetails/83.</a>
 
   utter_school_acc_can_do:
+  - text: |
+      Trên tài khoản này, Giáo viên quản trị có thể:   
+      <ul>1. Thống kê và quản lý số học sinh tham gia IOE của Nhà trường: 
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải danh sách học sinh toàn trường. </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Theo dõi tiến độ luyện tập, kết quả học tập của học sinh. </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải danh sách giáo viên quản trị các trường. </li>
+      </ul>
+      <ul>2. Quản trị thi các cấp IOE trên địa bàn: 
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Đăng ký tổ chức thi IOE các cấp.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Đăng ký danh sách học sinh thi IOE các cấp.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Tải và nộp Biên bản thi các cấp cho BTC.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải danh sách học sinh đăng ký thi IOE các cấp.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Tra cứu kết quả thi IOE các cấp.</li>
+      </ul>
+      <ul>3. Tổng hợp, thống kê kết quả thi IOE các cấp của Nhà trường:
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải toàn bộ kết quả thi IOE các cấp.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải Giấy chứng nhận cho học sinh đạt giải IOE.</li>
+      </ul>
+
+  utter_truong_moi_thanh_lap:
     - text: |
-        Trên tài khoản này, Giáo viên quản trị có thể:   
-        <ul>1. Thống kê và quản lý số học sinh tham gia IOE của Nhà trường: 
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải danh sách học sinh toàn trường. </li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Theo dõi tiến độ luyện tập, kết quả học tập của học sinh. </li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải danh sách giáo viên quản trị các trường. </li>
-        </ul>
-        <ul>2. Quản trị thi các cấp IOE trên địa bàn: 
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Đăng ký tổ chức thi IOE các cấp.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Đăng ký danh sách học sinh thi IOE các cấp.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Tải và nộp Biên bản thi các cấp cho BTC.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải danh sách học sinh đăng ký thi IOE các cấp.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Tra cứu kết quả thi IOE các cấp.</li>
-        </ul>
-        <ul>3. Tổng hợp, thống kê kết quả thi IOE các cấp của Nhà trường:
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải toàn bộ kết quả thi IOE các cấp.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Xem và tải Giấy chứng nhận cho học sinh đạt giải IOE.</li>
-        </ul>
+        Hướng dẫn nhà trường bổ sung, chỉnh sửa tên trường trên hệ thống: <a href = "https://ioe.vn/huong-dan/faqdetails/101/1-0" target="_blank" >https://ioe.vn/huong-dan/faqdetails/101/1-0.</a>
 
+  utter_change_school_acc:
+    - text: |
+        Hướng dẫn thầy/cô thay đổi tài khoản quản trị của nhà trường: <a href = "https://ioe.vn/huong-dan/faqdetails/63/39-27" target="_blank" >https://ioe.vn/huong-dan/faqdetails/63/39-27.</a>
 
+  utter_change_Education_Department_acc:
+    - text: |
+        Để thay đổi tài khoản quản lý cấp Phòng/Sở, Thầy/cô vui lòng tham khảo và thực hiện theo hướng dẫn sau:
+        <a href = "https://ioe.vn/huong-dan/faqdetails/137/38-27" target="_blank" >https://ioe.vn/huong-dan/faqdetails/137/38-27.</a>
+
+  utter_so_acc_truong_lien_cap:
+    - text: |
+        Theo quy định, mõi cấp học (Tiểu học, THCS và THPT) sẽ chỉ đăng ký được 1 tài khoản quản trị nhà trường.
+        Nếu là trường liên cấp thì sẽ có <i style= "color: blue">số tài khoản tương ứng với số cấp.</i>
+        Ví dụ: Trường liên cấp TH, THCS, THPT cần tạo 3 tài khoản quản trị
+        Nếu các cấp học do một người quản lý vẫn thực hiện số lần đăng ký = số cấp học.
+
+  utter_GO_bat_buoc_khong:
+    - text: |
+        Chương trình IOE miễn phí tạo tài khoản, tự luyện và thi chính thức các cấp.
+        Vì vậy, không bắt buộc phải nạp GO.
+        Nếu bạn muốn thi thử hoặc tham gia học cùng IOE thì mới phải nạp GO.
+      buttons:
+        - title: Nạp GO
+          payload: /add_GO
+  utter_Thi_thu_bat_buoc_GO:
+    - text: "Để tham gia thi thử, bạn bắt buộc phải nạp GO."
+      buttons:
+        - title: Nạp GO
+          payload: /add_GO
+  utter_study_with_ioe_add_GO:
+    - text: "Để tham gia học cùng IOE, bạn bắt buộc phải nạp GO."
+      buttons:
+        - title: Nạp GO
+          payload: /add_GO
   utter_add_GO:
-    - text: |
-        <ul>Để nạp GO, có 2 cách sau: 
-          <li> - Nạp GO qua chuyển khoản ngân hàng.</li>
-          <li> - Nạp GO qua ví điện tử.</li>
-        Vui lòng lựa chọn cách bạn muốn nạp GO:
-        </ul>
-      buttons:
-#        - title: "Thẻ game"
-#          payload: "/add_GO_the_game"
-        - title: "Chuyển khoản"
-          payload: "/add_GO_chuyen_khoan"
-        - title: "Ví điện tử"
-          payload: "/add_GO_vi_dien_tu"
-
-#  utter_add_GO_the_game:
-#    - text: "Để nạp GO bằng thẻ game, bạn hãy làm theo hướng dẫn sau: \n\tBước 1: Bạn đăng nhập vào tài khoản IOE, click vào \"Đổi gói dịch vụ IOE\" ở phía bên phải, dưới bảng thông tin cá nhân. \n\tBước 2: Màn hình hiển thị thông tin các Gói dịch vụ IOE cung cấp, bạn chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút \"Thêm\". \n\tBước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.\n\tBước 4: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.\n\tBước 5: Bạn tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.\n\tBước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Thẻ game”.\n\tBước 7: Bạn chọn loại thẻ Game, điền chính xác mã thẻ, số seri vào các ô trống tương ứng trong ảnh dưới đây  sau đó click vào “Xác nhận” để hoàn thành nạp Go qua thẻ game.\n\tBước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.\n\tBước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.\n Chúc bạn đổi GO thành công và luyện tập tốt!"
-
-  utter_add_GO_chuyen_khoan: # đổi gói bằng chuyển khoản ngân hàng
-    - text: |
-        <ul>Để nạp GO bằng chuyển khoản ngân hàng, bạn hãy làm theo hướng dẫn sau: 
-          <li>Bước 1: Đăng nhập tài khoản, click vào "Đổi gói dịch vụ IOE".</li>
-          <li>Bước 2: Chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút "Thêm".</li>
-          <li>Bước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.</li>
-          <li>Bước 4: Kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.</li>
-          <li>Bước 5: Tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.</li>
-          <li>Bước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Chuyển khoản ngân hàng”.</li>
-          <li>Bước 7: Chuyển khoản thanh toán.</li>
-          <li>Bước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo thành công, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.</li>
-          <li>Bước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.</li>
-          Chúc bạn đổi GO thành công và luyện tập tốt!
-        </ul>
-      buttons:
-        - title: "Đổi GO"
-          payload: "/how_to_use_GO"
-
+  - text: |
+      <ul>Để nạp GO, có 2 cách sau: 
+        <li> - Nạp GO qua chuyển khoản ngân hàng.</li>
+        <li> - Nạp GO qua ví điện tử.</li>
+      Vui lòng lựa chọn cách bạn muốn nạp GO:
+      </ul>
+    buttons:
+    - title: Chuyển khoản
+      payload: /add_GO_chuyen_khoan
+    - title: Ví điện tử
+      payload: /add_GO_vi_dien_tu
+  utter_add_GO_chuyen_khoan:
+  - text: |
+      <ul>Để nạp GO bằng chuyển khoản ngân hàng, bạn hãy làm theo hướng dẫn sau: 
+        <li>Bước 1: Đăng nhập tài khoản, click vào "Đổi gói dịch vụ IOE".</li>
+        <li>Bước 2: Chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút "Thêm".</li>
+        <li>Bước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.</li>
+        <li>Bước 4: Kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.</li>
+        <li>Bước 5: Tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.</li>
+        <li>Bước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Chuyển khoản ngân hàng”.</li>
+        <li>Bước 7: Chuyển khoản thanh toán.</li>
+        <li>Bước 8: Sau khi bạn chuyển khoản thành công, màn hình sẽ hiển thị thông báo thành công, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.</li>
+        <li>Bước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.</li>
+        Chúc bạn đổi GO thành công và luyện tập tốt!
+      </ul>
+    buttons:
+    - title: Đổi GO
+      payload: /how_to_use_GO
   utter_add_GO_vi_dien_tu:
-    - text: |
-        <ul>Để nạp GO bằng Ví điện tử, bạn hãy làm theo hướng dẫn sau: 
-          <li>Bước 1: Bạn đăng nhập vào tài khoản IOE, click vào "Đổi gói dịch vụ IOE". </li>
-          <li>Bước 2: Chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút "Thêm".</li>
-          <li>Bước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.</li>
-          <li>Bước 4: Kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “Xác nhận đơn hàng”.</li>
-          <li>Bước 5: Tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.</li>
-          <li>Bước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Ví điện tử”.</li>
-          <li>Bước 7: Bạn chọn loại ví điện tử, số tiền cần nạp và chọn ngân hàng sử dụng ví điện tử, điền thông tin và tiến hành thanh toán.</li>
-          <li>Bước 8: Sau khi bạn thanh toán thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.</li>
-          <li>Bước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.</li>
-          <li> Chúc bạn đổi GO thành công và luyện tập tốt!</li>
-        </ul>
-      buttons:
-        - title: "Đổi GO"
-          payload: "/how_to_use_GO"
-
+  - text: |
+      <ul>Để nạp GO bằng Ví điện tử, bạn hãy làm theo hướng dẫn sau: 
+        <li>Bước 1: Bạn đăng nhập vào tài khoản IOE, click vào "Đổi gói dịch vụ IOE". </li>
+        <li>Bước 2: Chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút "Thêm".</li>
+        <li>Bước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.</li>
+        <li>Bước 4: Kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “Xác nhận đơn hàng”.</li>
+        <li>Bước 5: Tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.</li>
+        <li>Bước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Ví điện tử”.</li>
+        <li>Bước 7: Bạn chọn loại ví điện tử, số tiền cần nạp và chọn ngân hàng sử dụng ví điện tử, điền thông tin và tiến hành thanh toán.</li>
+        <li>Bước 8: Sau khi bạn thanh toán thành công, màn hình sẽ hiển thị thông báo sau, bạn bấm vào “Đóng” để hoàn tất đổi Gói dịch vụ.</li>
+        <li>Bước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.</li>
+        <li> Chúc bạn đổi GO thành công và luyện tập tốt!</li>
+      </ul>
+    buttons:
+    - title: Đổi GO
+      payload: /how_to_use_GO
   utter_hoan_tra_GO:
-    - text: |
-        Theo quy định tại <a href="https://edu.go.vn/policy/terms-of-use" style = "color:blue" target="_blank">https://edu.go.vn/policy/terms-of-use</a>: Thẻ/mã thẻ GO đã mua, GO đã nạp không được trả lại trong bất kỳ trường hợp nào.
-
+  - text: |
+      Theo quy định tại <a href="https://edu.go.vn/policy/terms-of-use" style = "color:blue" target="_blank">https://edu.go.vn/policy/terms-of-use</a>: Thẻ/mã thẻ GO đã mua, GO đã nạp không được trả lại trong bất kỳ trường hợp nào.
   utter_how_to_use_GO:
+  - text: |
+      <p>Cảm ơn bạn đã nạp GO để sử dụng dịch vụ!</p>
+      <ul>Với GO đã nạp, bạn có đổi gói THI THỬ IOE và HỌC CÙNG IOE, bạn thưực hiện theo 2 bước: 
+        <li>Bước 1: Bạn đăng nhập vào tài khoản IOE, click vào “Thi thử” và chọn "Đổi gói dịch vụ".</li>
+        <li>Bước 2: Sau đó, bạn chọn gói dịch vụ cần đổi bẳng cách click "Thêm" vào giỏ hàng.</li>
+        <li>Bước 3: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.</li>
+        <li>Bước 4: Tiến hành thanh toán. Hãy đảm bảo số dư GO của bạn đủ để thanh toán, nếu không hãy nạp thêm GO. Khi bạn thanh toán thành công, màn hình sẽ thông báo đổi gói thành công.</li>
+        <li>Chúc bạn học tập tốt với dịch vụ được đổi!</li>
+      </ul>
+    buttons:
+    - title: Nạp GO
+      payload: /add_GO
+  utter_so_goi_dich_vu:
     - text: |
-        <p>Cảm ơn bạn đã nạp GO để sử dụng dịch vụ!</p>
-        <ul>Với GO đã nạp, bạn có đổi gói THI THỬ IOE và HỌC CÙNG IOE, bạn thưực hiện theo 2 bước: 
-          <li>Bước 1: Bạn đăng nhập vào tài khoản IOE, click vào “Thi thử” và chọn "Đổi gói dịch vụ".</li>
-          <li>Bước 2: Sau đó, bạn chọn gói dịch vụ cần đổi bẳng cách click "Thêm" vào giỏ hàng.</li>
-          <li>Bước 3: Bạn kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “ Xác nhận đơn hàng”.</li>
-          <li>Bước 4: Tiến hành thanh toán. Hãy đảm bảo số dư GO của bạn đủ để thanh toán, nếu không hãy nạp thêm GO. Khi bạn thanh toán thành công, màn hình sẽ thông báo đổi gói thành công.</li>
-          <li>Chúc bạn học tập tốt với dịch vụ được đổi!</li>
-        </ul>
-      buttons:
-        - title: "Nạp GO"
-          payload: "/add_GO"
+        Trong năm học 2024-2025, IOE cung cấp 3 gói dịch vụ có thời hạn sử dụng Kể từ thời điểm đổi gói đến ngày kết thúc năm học <b>23h59p ngày 31/05/2025</b> cụ thể:
+        <li>1. Gói thi thử không giới hạn số lần thi trong 1 năm học: 149 Go = 149.000 VNĐ. </li>
+        <li>2. Gói Học cùng IOE trong 1 năm học: 199 Go = 199.000 VNĐ.</li>
+        <li>3. Gói combo Thi thử không giới hạn và Học cùng IOE trong 1 năm học: 259 Go = 259,000 VNĐ</li>
+
+  utter_chuyen_GO_parents_to_student:
+    - text: |
+        GO nạp vào tài khoản phụ huynh có thể sử dụng để đổi gói dịch vụ cho tài khoản học sinh <b>đã liên kết</b>.
+        Để đổi gói dịch vụ cho con của mình, phụ huynh tham khảo:
+          Bước 1: Chọn <b>“Đổi gói dịch vụ IOE”</b> trong mục Tài khoản.
+          Bước 2: Chọn IOE
+          Bước 3: Chọn khối lớp -> nhập ID tài khoản của con -> Chọn gói dịch vụ cần đổi, click <b>"Thêm vào giỏ"</b>.
+          Bước 4: Chọn "Xem giỏ hàng và đổi gói", sau đó Xác nhận đơn hàng và tiến hành thanh toán.
+        Phụ huynh có thể tham khảo chi tiết: <a href = "https://ioe.vn/huong-dan/faqdetails/216/1-0" target="_blank" >https://ioe.vn/huong-dan/faqdetails/216/1-0.</a>
+
+  utter_chuyen_GO_teacher_to_student:
+    - text: |
+        Chỉ tài khoản giáo viên Quản trị trường và tài khoản giáo viên Quản lý lớp (đã liên kết với tài khoản học sinh) mới có thể đổi gói dịch vụ IOE cho học sinh. 
+        Để đổi gói dịch vụ cho học sinh của mình, Thầy/cô có thể thao tác trực tếp trên tài khoản của mình.
+          Bước 1: Đăng nhập tài khoản Giáo viên, lựa chọn mục <b>"Quản lý thi IOE"</b>.
+          Bước 2: Thầy/cô vào mục Thông tin, chọn <b>“Đổi gói dịch vụ IOE”</b>.
+          Bước 3: Chọn khối lớp -> nhập ID tài khoản của học sinh -> Chọn gói dịch vụ cần đổi, click <b>"Thêm vào giỏ hàng"</b>.
+          Bước 4: Xem giỏ hàng và tiến hành thanh toán.
+        Chi tiết tham khảo tại: <a href = "https://ioe.vn/huong-dan/faqdetails/217/1-0" target="_blank" >https://ioe.vn/huong-dan/faqdetails/217/1-0.</a>
+
+  utter_sale_goi_dich_vu:
+    - text: |
+        
 
   utter_dieu_khoan_dich_vu:
-    - text: |
-        Điều khoản dịch vụ chi tiết xem tại: <a href="https://edu.go.vn/policy/terms-of-use" target="_blank"a> https://edu.go.vn/policy/terms-of-use.</a>
-
+  - text: |
+      Điều khoản dịch vụ chi tiết xem tại: <a href="https://edu.go.vn/policy/terms-of-use" target="_blank"a> https://edu.go.vn/policy/terms-of-use.</a>
   utter_chinh_sach_bao_mat:
-    - text: |
-        Trung tâm phát triển giáo dục trực tuyến (goEdu) thuộc công ty Cổ phần VTC truyền thông trực tuyến(VTC Online). Chúng tôi, VTC Online, tôn trọng quyền riêng tư của khách hàng và cam kết bảo mật thông tin cá nhân của khách hàng khi khách hàng tin vào chúng tôi cung cấp thông tin cá nhân của khách hàng cho chúng tôi khi tham gia vào hệ thống giáo dục trực tuyến của chúng tôi. Đây là nguyên tắc khi tiếp cận quyền riêng tư, thông tin cá nhân tại goEdu.
-        Chi tiết chính sách bảo mật: <a href="https://edu.go.vn/policy/privacy" target="_blank"a> https://edu.go.vn/policy/privacy.</a>
-
+  - text: |
+      Trung tâm phát triển giáo dục trực tuyến (goEdu) thuộc công ty Cổ phần VTC truyền thông trực tuyến(VTC Online). Chúng tôi, VTC Online, tôn trọng quyền riêng tư của khách hàng và cam kết bảo mật thông tin cá nhân của khách hàng khi khách hàng tin vào chúng tôi cung cấp thông tin cá nhân của khách hàng cho chúng tôi khi tham gia vào hệ thống giáo dục trực tuyến của chúng tôi. Đây là nguyên tắc khi tiếp cận quyền riêng tư, thông tin cá nhân tại goEdu.
+      Chi tiết chính sách bảo mật: <a href="https://edu.go.vn/policy/privacy" target="_blank"a> https://edu.go.vn/policy/privacy.</a>
   utter_the_le:
-    - text: |
-        Chi tiết thể lệ xem tại: <a href="https://ioe.vn/the-le" target="_blank"a> https://ioe.vn/the-le.</a>
-    - text: "Mỗi năm học, IOE tổ chức 4 vòng thi chính thức dành cho cấp tiểu học và trung học cơ sở, cùng với 3 vòng thi chính thức cho cấp phổ thông trung học. Ngoài ra, cuộc thi có tổng cộng 35 vòng thi tự luyện tương ứng với 35 tuần học được mở vào thứ 2 hằng tuần dành cho tất cả học sinh.\n- 35 vòng Tự luyện tương ứng với 35 tuần học, được hệ thống mở vào thứ 2 hàng tuần, bắt đầu từ tháng 8 hàng năm."
-
-###others
+  - text: |
+      Chi tiết thể lệ xem tại: <a href="https://ioe.vn/the-le" target="_blank"a> https://ioe.vn/the-le.</a>
+  - text: |-
+      Mỗi năm học, IOE tổ chức 4 vòng thi chính thức dành cho cấp tiểu học và trung học cơ sở, cùng với 3 vòng thi chính thức cho cấp phổ thông trung học. Ngoài ra, cuộc thi có tổng cộng 35 vòng thi tự luyện tương ứng với 35 tuần học được mở vào thứ 2 hằng tuần dành cho tất cả học sinh.
+      - 35 vòng Tự luyện tương ứng với 35 tuần học, được hệ thống mở vào thứ 2 hàng tuần, bắt đầu từ tháng 8 hàng năm.
   utter_thi_vuot_cap:
-    - text: "Thí sinh tham dự thi IOE có thể tham gia luyện tập và thi khối lớp của mình và khối lớp khác."
+  - text: |
+      Thí sinh tham dự thi IOE có thể tham gia luyện tập và thi khối lớp của mình và khối lớp khác.
+      Chú ý: Học sinh <b>được thi vượt lớp</b>, <i>không được thi vượt cấp.</i>
 
   utter_dang_ky_to_chuc_thi:
-    - text: |
-        <p>Sở Giáo dục có thể đăng ký để ban tổ chúc IOE hỗ trợ mở một cuộc thi riêng cho học sinh trong sở.</p>
-        <ul>Liên hệ BTC:
-          <li>Facebook: <a href="https://www.facebook.com/ioe.vn" target="_blank"a> https://www.facebook.com/ioe.vn.</a> </li>
-          <li>Zalo: <a href="https://zalo.me/4173902407181774207" target="_blank"a> https://zalo.me/4173902407181774207.</a> </li>
-          <li>Phone: <b style="color:blue">1900.636.876</b> </li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:blue">0984.650.154</b> </li>
-        </ul>
-#      buttons:
-#        - title: "Facebook"
-#          link: "https://www.facebook.com/ioe.vn"
-#        - title: "Zalo"
-#          link: "https://zalo.me/4173902407181774207"
-
+  - text: |
+      <p>Sở Giáo dục có thể đăng ký để ban tổ chúc IOE hỗ trợ mở một cuộc thi riêng cho học sinh trong sở.</p>
+      <ul>Liên hệ BTC:
+        <li>Facebook: <a href="https://www.facebook.com/ioe.vn" target="_blank"a> https://www.facebook.com/ioe.vn.</a> </li>
+        <li>Zalo: <a href="https://zalo.me/4173902407181774207" target="_blank"a> https://zalo.me/4173902407181774207.</a> </li>
+        <li>Phone: <b style="color:blue">1900.636.876</b> </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:blue">0984.650.154</b> </li>
+      </ul>
   utter_change_infor_student_acc:
-    - text: |
-        Chi tiết hướng dẫn thay đổi thông tin <a href="https://short.com.vn/9C8s" target="_blank"a> https://short.com.vn/9C8s.</a>.
-    - text: |
-        <ul>Tài khoản IOE của học sinh được chia thành 2 loại: Tài khoản học sinh chưa tham gia thi các cấp và Tài khoản học sinh đã tham gia thi các cấp.
-          <li><b>I. Tài khoản học sinh chưa tham gia thi các cấp</b></li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Học sinh chưa hoàn thành vòng tự luyện 1: Được phép cập nhật tất cả thông tin.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;- Học sinh đã hoàn thành vòng tự luyện 1 thì được phép sửa: Họ tên, Ngày sinh, Giới tính, Tên lớp và không cần gửi yêu cầu phê duyệt. Nếu học sinh muốn thay đổi các thông tin khác: Tỉnh/Thành phố, Quận/Huyện, Trường thì cần gửi yêu cầu thay đổi cho giáo viên quản trị trường duyệt.</li>
-          <li><b>II. Tài khoản học sinh đã tham gia thi các cấp</b></li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;Bước 1: Chọn “Yêu cầu thay đổi thông tin”.</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;Bước 2: Điền đầy đủ thông tin muốn thay đổi, sau đó chọn “Gửi yêu cầu”.</li>
-          <li>Sau khi gửi yêu cầu, học sinh cần thông báo tới giáo viên quản trị nhà trường để được xem xét và phê duyệt các thông tin cần chỉnh sửa.</li>
-        </ul>
-
+  - text: |
+      Chi tiết hướng dẫn thay đổi thông tin <a href="https://short.com.vn/9C8s" target="_blank"a> https://short.com.vn/9C8s.</a>.
+  - text: |
+      <ul>Tài khoản IOE của học sinh được chia thành 2 loại: Tài khoản học sinh chưa tham gia thi các cấp và Tài khoản học sinh đã tham gia thi các cấp.
+        <li><b>I. Tài khoản học sinh chưa tham gia thi các cấp</b></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Học sinh chưa hoàn thành vòng tự luyện 1: Được phép cập nhật tất cả thông tin.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;- Học sinh đã hoàn thành vòng tự luyện 1 thì được phép sửa: Họ tên, Ngày sinh, Giới tính, Tên lớp và không cần gửi yêu cầu phê duyệt. Nếu học sinh muốn thay đổi các thông tin khác: Tỉnh/Thành phố, Quận/Huyện, Trường thì cần gửi yêu cầu thay đổi cho giáo viên quản trị trường duyệt.</li>
+        <li><b>II. Tài khoản học sinh đã tham gia thi các cấp</b></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;Bước 1: Chọn “Yêu cầu thay đổi thông tin”.</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;Bước 2: Điền đầy đủ thông tin muốn thay đổi, sau đó chọn “Gửi yêu cầu”.</li>
+        <li>Sau khi gửi yêu cầu, học sinh cần thông báo tới giáo viên quản trị nhà trường để được xem xét và phê duyệt các thông tin cần chỉnh sửa.</li>
+      </ul>
   utter_huy_lien_ket_sdt:
-    - text: |
-        <ul>Để hủy liên kết với số điện thoại đã xác thực cho tài khoản, bạn vui lòng thực hiện theo hướng dẫn sau:
-          <li>&nbsp;&nbsp;Bước 1: Đăng nhập vào tài khoản của mình, chọn <b>“Bảo mật”</b>.</li>
-          <li>&nbsp;&nbsp;Bước 2: Bấm <b>“Hủy liên kết số điện thoại”</b>.</li>
-          <li>&nbsp;&nbsp;Bước 3: Bạn sử dụng số điện thoại đã đăng ký xác thực với tài khoản của bạn soạn tin nhắn theo cú pháp: <b>GO XOA <MKC2> gửi 8100</b>.</li>
-          <li>Hệ thống sẽ tiến hành hủy liên kết số điện thoại sau 24 giờ kể từ thời điểm gửi tin nhắn và tài khoản của bạn sẽ trở về trạng thái chưa xác thực.</li>
-        </ul>
-
+  - text: |
+      <ul>Để hủy liên kết với số điện thoại đã xác thực cho tài khoản, bạn vui lòng thực hiện theo hướng dẫn sau:
+        <li>&nbsp;&nbsp;Bước 1: Đăng nhập vào tài khoản của mình, chọn <b>“Bảo mật”</b>.</li>
+        <li>&nbsp;&nbsp;Bước 2: Bấm <b>“Hủy liên kết số điện thoại”</b>.</li>
+        <li>&nbsp;&nbsp;Bước 3: Bạn sử dụng số điện thoại đã đăng ký xác thực với tài khoản của bạn soạn tin nhắn theo cú pháp: <b>GO XOA <MKC2> gửi 8100</b>.</li>
+        <li>Hệ thống sẽ tiến hành hủy liên kết số điện thoại sau 24 giờ kể từ thời điểm gửi tin nhắn và tài khoản của bạn sẽ trở về trạng thái chưa xác thực.</li>
+      </ul>
   utter_forget_MKC2:
-    - text: "Bạn quên MKC2 và cần cấp lại vui lòng soạn SMS bằng số điện thoại đã xác thực theo hướng dẫn sau: \n\t\tGO MKC2 129xxxxxx gửi 8100. \nTrong đó, 129xxxxxx là mã ID của bạn."
+  - text: |-
+      Bạn quên MKC2 và cần cấp lại vui lòng soạn SMS bằng số điện thoại đã xác thực theo hướng dẫn sau: 
+      		GO MKC2 129xxxxxx gửi 8100. 
+      Trong đó, 129xxxxxx là mã ID của bạn.
+
+  utter_Dieu_kien_thi_chinh_thuc:
+    - text: |
+        Học sinh được tham dự thi vòng thi chính thức các cấp khi thỏa mãn các điều kiện sau:
+        <li>- Học sinh phải xác thực tài khoản và hoàn thành số vòng tự luyện tương ứng với mỗi vòng thi.</li>
+        <li>- Học sinh được giao viên quản trị trường đăng ký tham gia thi trong thời haạn đăng ký mà BTC công bố.</li>
+        Bạn có thể kiểm tra thông tin theo hướng dẫn sau: 
+        <a href="https://ioe.vn/huong-dan/faqdetails/75/43-32" target="_blank"a> https://ioe.vn/huong-dan/faqdetails/75/43-32.</a>
 
   utter_thi_tu_do:
-    - text: |
-        <li>- Kỳ thi chính thức của IOE không có hình thức thi tự do. Học sinh bắt buộc phải được giáo viên quản trị trường đăng ký dự thi và tham gia thi theo Hội đồng thi.</li>
-        <li>- Tuy nhiên, học sinh không được đăng ký dự thi chính thức vẫn có thể tham gia 35 vòng tự luyện, thi trải nghiệm, sử dụng các gói dịch vụ Thi thử và Học cùng IOE.</li>
+  - text: |
+      <li>- Kỳ thi chính thức của IOE không có hình thức thi tự do. Học sinh bắt buộc phải được giáo viên quản trị trường đăng ký dự thi và tham gia thi theo Hội đồng thi.</li>
+      <li>- Tuy nhiên, học sinh không được đăng ký dự thi chính thức vẫn có thể tham gia 35 vòng tự luyện, thi trải nghiệm, sử dụng các gói dịch vụ Thi thử và Học cùng IOE.</li>
 
   utter_help_ioe:
+  - text: |
+      Liên hệ BTC để được giúp đỡ:
+        <li>Facebook: <a href="https://www.facebook.com/ioe.vn" target="_blank"a> https://www.facebook.com/ioe.vn.</a> </li>
+        <li>Zalo: <a href="https://zalo.me/4173902407181774207" target="_blank"a> https://zalo.me/4173902407181774207.</a> </li>
+        <li>Tổng đài: 1900.636.876 từ 08:30 đến 17:30.
+        <li>Số điện thoại: 0984650154 từ 18:00 đến 21:00.
+
+  utter_lich_ra_vong_tu_luyen:
     - text: |
-        Liên hệ BTC để được giúp đỡ:
-          <li>Facebook: <a href="https://www.facebook.com/ioe.vn" target="_blank"a> https://www.facebook.com/ioe.vn.</a> </li>
-          <li>Zalo: <a href="https://zalo.me/4173902407181774207" target="_blank"a> https://zalo.me/4173902407181774207.</a> </li>
-          <li>Tổng đài: 1900.636.876 từ 08:30 đến 17:30.
-          <li>Số điện thoại: 0984650154 từ 18:00 đến 21:00.
-#      buttons:
-#        - title: "Facebook"
-#          link: "https://www.facebook.com/ioe.vn"
-#        - title: "Zalo"
-#          link: "https://zalo.me/4173902407181774207"
+        Lịch mở vòng tự luyện và lịch thi chính thức các cấp bạn tham khảo tại:
+        <a href="https://ioe.vn/chi-tiet/tin-tu-ban-to-chuc/lich-tu-luyen-va-cac-vong-thi-chinh-thuc-ioe-nam-hoc-20232024-1-5860" target="_blank"a> Lịch mở các vòng tự luyện.</a>
 
 
+  utter_huy_lien_ket_facebook_gmail:
+    - text: |
+        Để được hỗ trợ gỡ liên kết đăng nhập qua facebook hoặc gmail, bạn vui lòng gửi yêu cầu hỗ trợ trên trang <a href = "https://hotro.go.vn/edu/IOE/home/" target="_blank" >hotro.ioe.vn</a> theo hướng dẫn sau: 
+        <a href = "https://ioe.vn/huong-dan/faqdetails/142" target="_blank" >https://ioe.vn/huong-dan/faqdetails/142.</a>
 
+  utter_8100_dont_reply:
+    - text: |
+        Nếu anh/chị không nhận được tin nhắn từ tổng đài 8100, bạn vui lòng thực hiện theo các bước sau:
+          1. Bạn thêm dấu "+" trước số 8100 để gửi tin nhắn.
+          2. Nếu vẫn chưa nhận được tin nhắn, bạn vui lòng liên hệ với tổng đài yêu cầu kích hoạt dịch vụ giá trị gia tăng để nhắn tin đến đầu số ngắn như 8100.
+        Trân trọng!
 
-#nội dung ngoài lề (for test)
-#  utter_weather:
-#    - text: "oh, the weather is very noce today. You should go out to relax."
-
+  utter_what_is_ruby:
+    - text: |
+        Ruby chính là điểm thưởng ghi nhận sự chăm chỉ, nỗ lực và thành tích của học sinh.
+        Chức năng điểm thưởng này hy vọng sẽ thúc đẩy động lực và tạo hứng thú mới mẻ cho học sinh trong quá trình ôn luyện tiếng Anh.
+        Hướng dẫn truy cập tính năng điểm thưởng:
+           Bước 1: Đăng nhập tài khoản IOE học sinh.
+           Bước 2: Tại trang chủ, chọn “Thông tin” và chọn “MyIOE”.
+           Bước 3: Tham gia trải nghiệm tính năng “Điểm thưởng”.
+        Ngoài ra, Ruby còn được sử dụng để đổi gói dịch vụ IOE với 1000 ruby = 1 GO = 1000 VNĐ.
+        
 
 actions:
-  - action_greet_user
-
+- utter_hello
+- utter_agree
+- action_greet_user
 session_config:
-  session_expiration_time: 60       #time for one session, minutes
-  carry_over_slots_to_new_session: true     #save session
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
