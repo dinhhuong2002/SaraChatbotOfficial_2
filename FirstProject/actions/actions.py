@@ -55,3 +55,12 @@ class ActionGreetUser(Action):
         events.append(ActionExecuted("action_listen"))
 
         return events
+
+
+class ActionFallback(Action):
+    def name(self) -> str:
+        return "action_fallback"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
+        dispatcher.utter_message(text="Để giải đáp vấn đề của bạn, bạn hãy liên hệ: 0984.650.154 hoặc fanpage [https://www.facebook.com/ioe.vn].")
+        return []

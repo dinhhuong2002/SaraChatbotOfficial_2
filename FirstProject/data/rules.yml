@@ -1,10 +1,21 @@
 version: "3.1"
 
 rules:
+
 #  - rule: Greet user at the start of the conversation
 #    steps:
 #      - intent: session_start
 #      - action: action_greet_user
+
+  - rule: handle NLU fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_fallback
+
+  - rule: Handle Core fallback
+    steps:
+      - action: action_fallback
+
   - rule: call back bot
     steps:
       - intent: call_bot

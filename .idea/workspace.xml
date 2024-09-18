@@ -1,119 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eaa7c4c-b1a1-404c-a893-d4775ba90173" name="Changes" comment="update: use slots, form">
+    <list default="true" id="7eaa7c4c-b1a1-404c-a893-d4775ba90173" name="Changes" comment="add: to -&gt; thống kê kết qu học sinh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/.rasa/cache/cache.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp3mxgnuv5/synonyms.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp3rqg16st/feature_to_idx_dict.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.fake_features.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.label_quantiles.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.meta.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.priority.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5dqddlwl/unexpected_intent_policy.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5e1br2ku/feature_to_idx_dict.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5g46gzvt/oov_words.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5g46gzvt/vocabularies.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.index_label_id_mapping.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.sparse_feature_sizes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/DIETClassifier.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5ix0ydt8/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp7exuntd5/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp7exuntd5/rule_only_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp7exuntd5/rule_policy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp7i82yasi/oov_words.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp7i82yasi/vocabularies.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp87q2ravo/oov_words.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp87q2ravo/vocabularies.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp_vw48kga/synonyms.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpbz1y4el1/feature_to_idx_dict.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.fake_features.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.meta.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.priority.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpd4b22uol/ted_policy.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdplss9jk/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdplss9jk/memorized_turns.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpfrzs4pt6/oov_words.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpfrzs4pt6/vocabularies.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpgdryqpem/synonyms.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpk2z2b3x0/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpk2z2b3x0/memorized_turns.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpldgrz_a0/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpldgrz_a0/memorized_turns.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmplz9g955m/patterns.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.fake_features.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.label_quantiles.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.meta.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.priority.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpo8jxwgbf/unexpected_intent_policy.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.fake_features.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.meta.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.priority.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpou3exnqa/ted_policy.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmppj5kpxpp/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmppj5kpxpp/memorized_turns.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpro0wnvzq/patterns.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpsnzxbn2t/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpsnzxbn2t/rule_only_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpsnzxbn2t/rule_policy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.index_label_id_mapping.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.sparse_feature_sizes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/DIETClassifier.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptals5wr7/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuebjhu2f/patterns.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpvso44trf/featurizer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpvso44trf/rule_only_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpvso44trf/rule_policy.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpx3wqhvou/oov_words.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpx3wqhvou/vocabularies.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.data_example.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.entity_tag_specs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.index_label_id_mapping.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.label_data.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.sparse_feature_sizes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.tf_model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/DIETClassifier.tf_model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyi63hkqp/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyj0kak3k/oov_words.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpyj0kak3k/vocabularies.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/credentials.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/credentials.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5b88x4e9/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5b88x4e9/memorized_turns.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5h2gdkvx/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp5h2gdkvx/memorized_turns.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.data_example.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.entity_tag_specs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.fake_features.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.label_data.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.meta.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.priority.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.tf_model.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmp8rbza7xu/ted_policy.tf_model.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpbrwj0yep/synonyms.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.data_example.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.entity_tag_specs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.index_label_id_mapping.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.label_data.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.sparse_feature_sizes.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.tf_model.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/DIETClassifier.tf_model.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpdzgd3f57/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpe0ad7kf5/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpe0ad7kf5/rule_only_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpe0ad7kf5/rule_policy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmph8jj27w7/patterns.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpi5poy5a8/feature_to_idx_dict.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpm8mabq77/oov_words.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpm8mabq77/vocabularies.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpp_nnrb4e/oov_words.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpp_nnrb4e/vocabularies.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmprx2xmq30/patterns.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpsr3nw97c/oov_words.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpsr3nw97c/vocabularies.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.data_example.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.entity_tag_specs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.fake_features.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.label_data.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.meta.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.priority.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.tf_model.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmptftvko91/ted_policy.tf_model.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.data_example.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.entity_tag_specs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.fake_features.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.label_data.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.label_quantiles.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.meta.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.priority.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.tf_model.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpuycdqjo5/unexpected_intent_policy.tf_model.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwbnfc3ws/synonyms.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwmi70wfe/feature_to_idx_dict.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.data_example.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.entity_tag_specs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.index_label_id_mapping.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.label_data.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.sparse_feature_sizes.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.tf_model.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/DIETClassifier.tf_model.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpwvyq9bs6/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpxnal9jlm/synonyms.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpxvi2f4as/oov_words.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpxvi2f4as/vocabularies.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpzx72w4uh/featurizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/.rasa/cache/tmpzx72w4uh/memorized_turns.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/actions/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstProject/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/nlu.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/rules.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/data/stories.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstProject/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/domain.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstProject/endpoints.yml" beforeDir="false" afterPath="$PROJECT_DIR$/FirstProject/endpoints.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723200397444</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add: to -&gt; thống kê kết qu học sinh">
+      <created>1726571267439</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726571267440</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +228,7 @@
     <MESSAGE value="Check response font: to utter_add_GO" />
     <MESSAGE value="Check: all intent font, style" />
     <MESSAGE value="update: use slots, form" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: use slots, form" />
+    <MESSAGE value="add: to -&gt; thống kê kết qu học sinh" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: to -&gt; thống kê kết qu học sinh" />
   </component>
 </project>

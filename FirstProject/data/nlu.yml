@@ -16,46 +16,43 @@ nlu:
     - chào
     - chào buổi sáng
     - hiiiiiiiiii
-
 - intent: answer_name
   examples: |
-    - Tôi tên là [Nam]{"entity": "user_name"}
-    - Chị tên là [Hoa]{"entity": "user_name"}
-    - Anh tên là [Long]{"entity": "user_name"}
-    - Mình tên là [Phúc]{"entity": "user_name"}
-    - Mình tên [Phát]{"entity": "user_name"}
-    - Em tên [Hà]{"entity": "user_name"} nhé
-    - Huy [Nam]{"entity": "user_name"}
-    - Gọi mình là [Phụng]{"entity": "user_name"} nha
-    - Tôi tên [Hoàng]{"entity": "user_name"}
-    - chị tên [Cúc]{"entity": "user_name"}
-    - anh tên [Đức]{"entity": "user_name"}
-    - [Tuấn]{"entity": "user_name"} nhé
-    - [Bình]{"entity": "user_name"}
-    - [Lĩnh]{"entity": "user_name"}
-    - [Viễn]{"entity": "user_name"}
-    - [Duy]{"entity": "user_name"}
-    - [Tú]{"entity": "user_name"}
-    - [Tâm]{"entity": "user_name"}
-    - [Xuân]{"entity": "user_name"}
-    - [Kiều]{"entity": "user_name"}
-    - [Thành]{"entity": "user_name"}
-    - [Đăng]{"entity": "user_name"}
-    - [Bình]{"entity": "user_name"}
-    - [Đạt]{"entity": "user_name"}
-    - [Vy]{"entity": "user_name"}
-    - [Loan]{"entity": "user_name"}
-    - [Luân]{"entity": "user_name"}
-    - [Quang]{"entity": "user_name"}
-    - [Thuận]{"entity": "user_name"}
-    - [Trọng]{"entity": "user_name"}
-    - [An]{"entity": "user_name"}
-    - [Kim]{"entity": "user_name"}
-    - [Hằng]{"entity": "user_name"}
-    - [Cường]{"entity": "user_name"}
-    - [Phú]{"entity": "user_name"}
-    - [Thiện]{"entity": "user_name"}
-
+    - Tôi tên là [Nam](user_name)
+    - Chị tên là [Hoa](user_name)
+    - Anh tên là [Long](user_name)
+    - Mình tên là [Phúc](user_name)
+    - Mình tên [Phát](user_name)
+    - Em tên [Hà](user_name) nhé
+    - Huy [Nam](user_name)
+    - Gọi mình là [Phụng](user_name) nha
+    - Tôi tên [Hoàng](user_name)
+    - chị tên [Cúc](user_name)
+    - anh tên [Đức](user_name)
+    - [Tuấn](user_name) nhé
+    - [Bình](user_name)
+    - [Lĩnh](user_name)
+    - [Viễn](user_name)
+    - [Duy](user_name)
+    - [Tú](user_name)
+    - [Tâm](user_name)
+    - [Xuân](user_name)
+    - [Kiều](user_name)
+    - [Thành](user_name)
+    - [Đăng](user_name)
+    - [Đạt](user_name)
+    - [Vy](user_name)
+    - [Loan](user_name)
+    - [Luân](user_name)
+    - [Quang](user_name)
+    - [Thuận](user_name)
+    - [Trọng](user_name)
+    - [An](user_name)
+    - [Kim](user_name)
+    - [Hằng](user_name)
+    - [Cường](user_name)
+    - [Phú](user_name)
+    - [Thiện](user_name)
 - intent: call_bot
   examples: |
     - bạn ơiii
@@ -406,8 +403,7 @@ nlu:
     - xem id tài khoản quản lý sở giáo dục/ phòng giáo dục
     - cách xem id tài khoản phòng giáo dục
     - cách xem id tài khoản sở giáo dục
-
-- intent: forget_password #với tài khoản học sinh
+- intent: forget_password
   examples: |
     - tôi quên mật khẩu tài khoản
     - học sinh phải làm gì khi quên mật khẩu
@@ -425,10 +421,7 @@ nlu:
     - queen maatj khaaur
     - tôi là giáo viên, tôi quên mật khẩu đăng nhập tài khoản
     - TÔI LÀ GIÁO VIÊN ĐÃ ĐĂNG KÝ TÀI KHOẢN QUẢN TRỊ NHƯNG TÔI QUÊN TÊN ĐĂNG NHẬP VÀ MẬT KHẨU? NHỜ BTC GIÚP TÔI KHÔI PHỤC TÀI KHOẢN QUẢN TRỊ?
-
-
-
-- intent: change_password #với tài khoản học sinh
+- intent: change_password
   examples: |
     - tôi muốn thay đổi mật khẩu tài khoản
     - hướng dẫn thay đổi mật khẩu
@@ -445,7 +438,6 @@ nlu:
     - ddooir maatj khaaur
     - ddooir mk
     - change maatj khaaur
-
 - intent: verify_acc
   examples: |
     - cho tôi biết cách xác tực tài khoản
@@ -467,7 +459,6 @@ nlu:
     - xasc thuwcj taif khoanr
     - xasc thuwcj tk
     - xasc thuwcj
-
 - intent: sign_in
   examples: |
     - Tôi muốn đăng nhập vào ioe
@@ -479,7 +470,6 @@ nlu:
     - giúp tôi đăng nhập
     - i want to sign in
     - cho tôi đăng nhập
-
 - intent: sign_up
   examples: |
     - Tôi muốn đăng ký tài khoản
@@ -494,7 +484,7 @@ nlu:
     - tài khoản
     - dki tai khoan
     - đăng kí tài khoản ioe
-
+    - tôi muốn đăng ký tài khoản
 - intent: sign_up_student
   examples: |
     - Tôi muốn đăng ký tài khoản dành cho học sinh
@@ -511,7 +501,6 @@ nlu:
     - tài khoản học sinh thì saoo
     - giúp tôi đăng ký tài khoản học sinh
     - dăng kí tài khoản học sinh
-
 - intent: sign_up_parents
   examples: |
     - đăng ký tài khoản phụ huynh
@@ -526,7 +515,6 @@ nlu:
     - giúp ti đăng ký tài khoản phụ huynh
     - tài khoản phụ huynh thì sao
     - vậy còn tài khoản phụ huynh
-
 - intent: sign_up_teacher
   examples: |
     - Tôi muốn đăng ký tài khoản dành cho giáo viên
@@ -540,7 +528,6 @@ nlu:
     - hướng dẫn tôi đăng ký tài khoản giáo viên nữa.
     - giúp ti đăng ký tài khoản giáo viên
     - tài khoản giáo viên
-
 - intent: sign_up_school
   examples: |
     - Tôi muốn đăng ký tài khoản dành cho nhà trường
@@ -558,7 +545,6 @@ nlu:
     - tài khoản quản trị cấp trường
     - cấp trường
     - tài khoản nhà trường nữa
-
 - intent: sign_up_Education_Department
   examples: |
     - Tôi muốn đăng ký tài khoản dành cho Phòng giáo dục
@@ -575,11 +561,10 @@ nlu:
     - tài khaorn phòng giáo dục thì sao
     - tài khoản phòng giao dục nưa
     - tiếp tục hướng dẫn với tài khoản phòng giáo dục
-
 - intent: link_parents_student
   examples: |
     - tài khoản của tôi đã liên kết với tài khoản của con chưa?
-    -tooii muốn biết mình đã liên kết với tài khoản của con chưa?
+    - tooii muốn biết mình đã liên kết với tài khoản của con chưa?
     - tôi muốn liên kết tài khoản của mình với tài khoản của con
     - liên kết tài khoản của con
     - liên kết tài khoản
@@ -600,7 +585,7 @@ nlu:
     - sau khi đăng kí tài khoản giáo viên thành công, tôi vẫn không thấy danh sách học sinh của mình
     - tại sao tôi không thấy danh sách tài khoản học sinh của mình?
     - tại sao tôi không thấy danh sách học sinh của mình trong tài khoản của tôi?
-
+    - tôi là giáo viên, tôi không thấy danh sach shocj sinh của mình
 - intent: acc_teacher_how_to_use
   examples: |
     - hướng dẫn sử dụng tài khoản giáo viên
@@ -610,8 +595,7 @@ nlu:
     - sử dụng tài khoản giáo viên như thế nào?
     - hướng dẫn sử dụng tài khoản giáo viên quản lý lớp
     - sử dụng tài khoản giáo viên quản lý lớp
-
-
+    - suwr dụng tài khoản giáo viên
 - intent: school_acc_can_do
   examples: |
     - quyền của tài khoản nhà trường
@@ -626,7 +610,6 @@ nlu:
     - tài khoản cấp trường có thể làm gì
     - tôi có thể làm gì với tài khoản cấp trường?
     - nhiệm vụ của tài khoản cấp trường
-
 - intent: truong_moi_thanh_lap
   examples: |
     - trường tôi mới thành lập nên chưa có tên trên hệ thống
@@ -638,7 +621,7 @@ nlu:
     - trường tôi mới thành lập, tôi phải làm sao?
     - trường mới thành lập nên chưa có tên trên hệ thống.
     - trường tôi mới thành lập
-
+    - trường tôi chưa có tên trên hệ thống thì tôi phải làm sao
 - intent: change_school_acc
   examples: |
     - nhà trường muốn thay đổi tài khoản quản trị
@@ -650,7 +633,7 @@ nlu:
     - nhà trường muốn thay đổi tài khoản quản trị giáo viên
     - thay đổi tài khoản quản trị nhà trường
     - hướng dẫn tôi thay đổi tài khoản quản trị của nhà trường
-
+    - nhà trường muốn thay đổi tài khoản quản trị nhà trường
 - intent: change_Education_Department_acc
   examples: |
     - Sở/Phòng có nhu cầu thay đổi tài khoản quản lý thì phải làm thế nào?
@@ -661,7 +644,7 @@ nlu:
     - giúp tôi  thay đổi tài khoản quản trị phòng/sở giáo dục
     - phòng/sở giáo dục muốn thay đổi tài khoản quản lý thì phải làm thế nào?
     - thay đổi tài khoản quản lý phòng/sở giáo dục
-
+    - vậy tôi muốn thay đổi tài khoản quản trị phòng giáo dục thì sao
 - intent: so_acc_truong_lien_cap
   examples: |
     - Khi trường gồm 3 cấp Tiểu học, THCS, THPT, tôi phải đăng ký mấy tài khoản quản trị giáo viên?
@@ -672,8 +655,7 @@ nlu:
     - trường liên cấp thì đăng ký tài khoản quản trị như thế nào
     - trường liên cấp đăng ký 1 hay nhiều tài khoản quản trị?
     - Trường tôi là trường liên cấp và tôi phụ trách IOE ở cả 3 cấp thì có dùng chung tài khoản được không?
-
-
+    - trường tôi là trường liên cấp, vậy chúng tôi cần có bao nhiêu tài khoản quản trị
 - intent: GO_bat_buoc_khong
   examples: |
     - có bắt buộc phải nạp GO không
@@ -686,7 +668,7 @@ nlu:
     - Nạp Go có bắt buộc không?
     - GO bắt buộc
     - bắt buộc go
-
+    - tooi có bắt buộc phải nạp GO không?
 - intent: Thi_thu_bat_buoc_GO
   examples: |
     - tôi muốn tham gia thi thử
@@ -698,7 +680,6 @@ nlu:
     - để tham gia thi thử tôi bắt buộc phải nạp GO đúng không?
     - Go Thi thử
     - nạp go thi thử
-
 - intent: study_with_ioe_add_GO
   examples: |
     - nạp GO để tham gia học cùng IOE
@@ -710,8 +691,6 @@ nlu:
     - phải nạp GO để tham gia học cùng ioe hả bạn?
     - nạp go thì mới học cùng ioe được ạ?
     - nạp go học cùng ioe
-    
-
 - intent: add_GO
   examples: |
     - Hướng dẫn nạp go
@@ -775,21 +754,21 @@ nlu:
     - go có thể đổi dịch vụ gì
     - đổi go đổi go đổi go
     - TÔI ĐÃ CÓ SỐ DƯ GO, LÀM THẾ NÀO ĐỂ ĐỔI GO SANG GÓI THI THỬ IOE?
-
 - intent: so_goi_dich_vu
   examples: |
     - ioe có mấy gói dịch vụ?
     - hiện tại ioe cung cấp bao nhiêu gói dịch vụ?
     - hiện tại ioe cung cấp bao nhiêu gói dịch vụ và số tiền cần nạp là bao nhiêu?
-    - số gói dịch vụ 
+    - số gói dịch vụ
     - số gói dịch vụ ioe cung cấp hiện tại
     - năm nay, ioe cung cấp bao nhiêu gói dịch vụ
     - số gói dịch vụ ioe cung cấp trong năm nay, kèm số tiền từng gói
     - số tiền từng gói dịch vụ ioe trong năm nay.
     - TÔI MUỐN MUA GÓI THI THỬ KHÔNG GIỚI HẠN THÌ CẦN NẠP BAO NHIÊU TIỀN?
-
+    - cho tôi danh sách các gói dịch vụ ioe hiện tại
+    - tôi muốn biết danh sách các gói dịch vụ ioe hiện tại
 - intent: chuyen_GO_parents_to_student
-  exmpales: |
+  examples: |
     - TÔI ĐÃ NẠP NHẦM TIỀN VÀO TÀI KHOẢN PHỤ HUYNH, HÃY HƯỚNG DẪN TÔI CHUYỂN TỪ TK PHỤ HUYNH SANG TK CỦA CON
     - Chuyển tiền từ tài khoản phụ huynh sang tài khoản con như thế nào?
     - đổi gói dịch vụ từ tài khoản phụ huynh
@@ -799,9 +778,11 @@ nlu:
     - hướng dân tôi mua gói dịch vụ từ tài khoản phụ huynh cho con của mình
     - hướng dẫn phụ huynh đổi gói dịch vụ
     - đổi gói dịch vụ ioe từ tài khoản phụ huynh
-
+    - hướng dẫn tôi chuyển go sang tài khoản của con mình
+    - huowsg dẫn tôi chuyển go sang tài khoản của con mình
+    - chuyeern go từ tài khoản phụ huynh sang tài khoản con mình
 - intent: chuyen_GO_teacher_to_student
-  exmpales: |
+  examples: |
     - tôi là giáo viên, tôi muốn đổi gói dịch vụ cho học sinh của mình
     - TÔI MUỐN MUA GÓI THI THỬ CHO HỌC SINH TỪ TÀI KHOẢN GIÁO VIÊN?
     - tôi muốn mua gói thi thử cho học sinh của mình
@@ -810,14 +791,12 @@ nlu:
     - giáo viên muốn đổi gói dịch vụ cho học sinh
     - thầy cô muốn đổi gói dịch vụ cho học sinh của mình
     - hướng dẫn giáo viên đổi gói dịch vụ cho học sinh
-
 - intent: sale_goi_dich_vu
   examples: |
     - mua nhiều gói dịch vụ có được chiết khẩu không?
     - giảm giá khi mua gói dịch vụ ioe
     - Giáo viên mua nhiều goi ioe cho học sinh có được chiết khấu không?
     - Giáo viên mua nhiều goi ioe cho học sinh có được giảm giá không?
-
 - intent: dieu_khoan_dich_vu
   examples: |
     - điều khoản sử dụng tài khoản goedu
@@ -856,7 +835,6 @@ nlu:
     - quy định
     - các vòng thi IOE
     - thể lệ cuộc thi ioe là gì?
-
 - intent: thi_vuot_cap
   examples: |
     - có thể thi vượt cấp không
@@ -872,7 +850,6 @@ nlu:
     - 1 học sinh có thể thi ở mấy khối lớp?
     - em có thể đăng kí thi ở 2 khối lớp không?
     - em muốn đăng kí thi vượt cấp
-
 - intent: dang_ky_to_chuc_thi
   examples: |
     - sở giáo dục đăng kí tổ chức thi
@@ -882,7 +859,6 @@ nlu:
     - đăng ký tổ chức thi ioe cho học sinh
     - đăng kí tổ chức cuộc thi ioe cho học sinh
     - giúp đăng kí tổ chức thi ioe cho học sinh trong sở giáo dục
-
 - intent: change_infor_student_acc
   examples: |
     - tôi muốn thay đổi thông tin cá nhân
@@ -898,7 +874,6 @@ nlu:
     - các bước thay đổi thông tin cá nhân
     - tôi muốn thay đổi tên con cho đúng giấy khai sinh
     - tôi muốn thay đổi thông tin của con mình
-
 - intent: huy_lien_ket_sdt
   examples: |
     - hủy liên kết số điện thoại xác thực tài khoản ioe
@@ -914,7 +889,6 @@ nlu:
     - hủy sđt liên kết tài khoản ioe
     - hủy sđt liên hết ioe
     - hủy liên kết sđt xác thực tài khoản ioe
-
 - intent: forget_MKC2
   examples: |
     - tôi quên mật khẩu cấp 2
@@ -929,8 +903,6 @@ nlu:
     - tôi muốn lấy lại mkc2
     - giúp tôi khôi phụ mkc2
     - giúp tôi khôi phục mật khẩu cấp 2
-
-
 - intent: Dieu_kien_thi_chinh_thuc
   examples: |
     - điều kiện để học sinh tham dự thi ioe chính thức là gì ạ?
@@ -944,7 +916,6 @@ nlu:
     - tôi có thể tham gia kì thi cấp tỉnh/thành phố không?
     - tôi đủ điều kiện dự thi vòng cấp Quốc gia không?
     - tôi muốn biết mình có đủ điều kiện dự thi không
-
 - intent: thi_tu_do
   examples: |
     - ioe có hình thức thi tự do không?
@@ -958,8 +929,6 @@ nlu:
     - thí sinh tự do có tự đăng ký thi chính thức không?
     - thi tự do được không?
     - Nếu trường em không tổ chức thi thì em có thể đăng ký thi tự do không ạ?
-    
-
 - intent: help_ioe
   examples: |
     - ban hỗ trợ ioe
@@ -972,8 +941,6 @@ nlu:
     - thông tin liên hệ
     - thông tin liên kết hỗ trợ
     - thông tin liên hệ giúp đỡ
-
-
 - intent: lich_ra_vong_tu_luyen
   examples: |
     - lịch ra các vòng tự luyện
@@ -986,7 +953,6 @@ nlu:
     - lịch ra vòng tự luyện mới
     - tôi có thể xem lịch ra các vòng tự luyện ở đâu?
     - cho tôi biết lịch ra các vòng tụ luyện
-
 - intent: huy_lien_ket_facebook_gmail
   examples: |
     - Làm thế nào để gỡ liên kết đăng nhập qua facebook hoặc gmail ạ?
@@ -997,7 +963,6 @@ nlu:
     - hủy bỏ liên kết gmail, fb với tài khoản ioe
     - hủy bỏ liên kết facebook với tài khoản ioe
     - hủy liên kết gmail với tài khoản ioe
-
 - intent: 8100_dont_reply
   examples: |
     - Tôi đã nhắn tin về 8100 nhưng không thấy tin nhắn trả về?
@@ -1008,7 +973,6 @@ nlu:
     - đợi lâu mà không nhận được tin nhắn
     - tại sao tôi không nhận được tin nhắn phản hồi từ tổng đài?
     - tại sao tôi không nhận được tin nhắn trả về từ ioe?
-
 - intent: what_is_ruby
   examples: |
     - ruby là gì?
@@ -1019,5 +983,4 @@ nlu:
     - đổi ruby lấy GO
     - cách sử dụng ruby
     - có thể sử dụng ruby để đổi gói dịch vụ không?
-    - tôi có thể sử dụng ruby để đổi gói dịch vụ ioe không? 
-
+    - tôi có thể sử dụng ruby để đổi gói dịch vụ ioe không?

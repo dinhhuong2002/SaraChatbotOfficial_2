@@ -4,7 +4,6 @@ stories:
 
   - story: chào hỏi với tên người dùng
     steps:
-      - intent: hello
       - action: utter_ask_name
       - intent: answer_name
       - action: utter_answer_name
@@ -410,3 +409,35 @@ stories:
     steps:
     - intent: sign_up_student
 
+
+- story: interactive_story_1
+  steps:
+  - intent: hello
+  - action: utter_hello
+  - intent: sign_up
+  - action: utter_sign_up
+  - intent: acc_teacher_cant_see_students
+  - action: utter_acc_teacher_cant_see_students
+  - intent: GO_bat_buoc_khong
+  - action: utter_GO_bat_buoc_khong
+  - intent: truong_moi_thanh_lap
+  - action: utter_truong_moi_thanh_lap
+  - intent: acc_teacher_how_to_use
+  - action: utter_acc_teacher_how_to_use
+  - intent: change_school_acc
+  - action: utter_change_school_acc
+  - intent: change_Education_Department_acc
+  - action: utter_change_Education_Department_acc
+  - intent: so_acc_truong_lien_cap
+  - action: utter_so_acc_truong_lien_cap
+  - intent: acc_teacher_cant_see_students
+  - intent: so_goi_dich_vu
+  - action: utter_so_goi_dich_vu
+  - intent: nlu_fallback
+  - intent: chuyen_GO_parents_to_student
+  - action: utter_chuyen_GO_parents_to_student
+  - intent: acc_teacher_cant_see_students
+  - intent: so_goi_dich_vu
+  - action: utter_so_goi_dich_vu
+  - intent: chuyen_GO_parents_to_student
+  - action: utter_chuyen_GO_parents_to_student
