@@ -2,6 +2,10 @@ version: "3.1"
 nlu:
 - intent: hello
   examples: |
+    - bchbbffr
+    - aaaaa
+    - ????
+    - 125e3uwqdfi
     - hey
     - hello
     - hi
@@ -53,6 +57,8 @@ nlu:
     - [Cường](user_name)
     - [Phú](user_name)
     - [Thiện](user_name)
+    - tớ tên là [Hà](user_name)
+
 - intent: call_bot
   examples: |
     - bạn ơiii
@@ -66,6 +72,21 @@ nlu:
     - hú
     - aloooo
     - ê
+    - oh, bạn ơi
+
+- intent: bot_can_do
+  examples: |
+    - Khả năng của bạn là gì?
+    - Bạn có thể giúp gì cho mình
+    - bạn có thể giúp tôi làm gì
+    - Hiện tại, bạn có thể làm gì
+    - bạn có thể làm gì?
+    - hãy cho tôi biết khả năng của bạn
+    - hãy cho tôi biết khả năng của bạn là gì
+    - năng lực của bạn là gì?
+    - bạn có thể giúp gì cho tôi?
+    
+
 - intent: ask_for_help
   examples: |
     - can you help me
@@ -82,6 +103,27 @@ nlu:
     - hãy giúp tôi
     - giúp tôi nhé
     - giúp mình đi
+    
+
+- intent: is_that_true
+  examples: |
+    - thế à bạn
+    - thật vậy sao
+    - đúng vậy hả bạn?
+    - đúng như vậy sao bạn
+    - thật vậy sao
+    - thật thế ạ
+    - đúng như vậy á
+    - đúng như vậy sao
+    - thật thế á
+    - really?
+    - real?
+    - thật sao
+    - is that true?
+    - đúng vậy sao?
+    - đúng vậy ạ?
+    
+
 - intent: fine_thanks
   examples: |
     - fine
@@ -109,6 +151,11 @@ nlu:
     - see you later
     - oke, bb
     - oke, bye
+    - see you again
+    - hẹn gặp lại nhé
+    - hẹn gặp lại bạn nhé
+    - see u soon
+    - chào tạm biệt
 - intent: deny
   examples: |
     - no
@@ -123,6 +170,10 @@ nlu:
     - n
 - intent: agree
   examples: |
+    - oh
+    - ohhhhh
+    - đúng rồi đó
+    - đúng đúng
     - có
     - đúng vậy
     - đúng
@@ -130,8 +181,11 @@ nlu:
     - ok
     - oke
     - yes
+    - được
+    - cũng được
     - tôi có
     - yep
+    - ò
     - oki
     - tuyệt
     - tuyệt vời
@@ -170,6 +224,9 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - hehe
+    - hihi
+    - haha
     - rất vui được gặp bạn
 - intent: mood_unhappy
   examples: |
@@ -218,16 +275,26 @@ nlu:
     - are you oke?
 - intent: bot_nice
   examples: |
+    - cũng được đó
+    - omg, được của ló
     - wow thạt là tuyệt
     - thật tuyệt vời
     - vậy sao
     - bạn giỏi quá
     - bạn thật tuyệt
     - wowww
+    - bạn giỏi quá đi
     - đỉnh quá
+    - cũng được đấy
+    - được quá chứ
+    - bạn cũng được đấy
+
 - intent: bot_bad
   examples: |
     - bạn tệ quá
+    - haiz, chán thật
+    - haiz, chán thiệc
+    - haizzzz
     - bạn dở quá
     - bạn sai rồi
     - bạn trả lời sai rồi
@@ -236,11 +303,18 @@ nlu:
     - chán bạn quá
     - gì vậy tời
     - vãi
+    - chán bạn vãi
     - stupid
+    - gì ngu vậy
     - ngu ngốc
     - bạn ngốc quá
+    - chán thiệt
+    - ngu thật đấy
+
 - intent: about_ioe
   examples: |
+    - bạn vui lòng giới thiệu cho tôi về cuộc thi ioe đi
+    - cho tôi thông tin về cuộc thi ioe đi
     - ioe là gì
     - what is ioe?
     - can u tell me some thing about ioe?
@@ -254,8 +328,15 @@ nlu:
     - ioe là cuộc thi gì
     - ioe là
     - something about ioe
+    - giới thiệu cho tôi biết về cuộc thi ioe
+
 - intent: doi_tuong_tham_gia
   examples: |
+    - cháu học lớp 1 có thể tham gia thi ioe không?
+    - sinh viên đại học có thể tham gia thi ioe không?
+    - sinh viên học đại học có thể tham gia thi ioe không?
+    - cách để tham gia cuộc thi ioe
+    - cách để tham gia cuộc thi
     - đối tượng tham gia thi ioe
     - đối tượng thi ioe
     - ai có thể thi ioe
@@ -287,6 +368,10 @@ nlu:
     - ioe đã có những thành tựu gì?
 - intent: so_acc_max
   examples: |
+    - tôi có thể tạo bao nhiêu tài khoản ioe?
+    - tôi đăng ký 5 tài khoản ioe được không?
+    - tôi đăng ký 10 tài khoản ioe được không?
+    - học sinh có thể tham gia tự luyện với 10 tài khoản ioe không?
     - mỗi thí sinh có thể đăng ký tối đa bao nhiêu tài khoản
     - số tài khoản tối đa mỗi học sinh có thể đăng ký
     - 1 học sinh có tối đa bao nhiêu tài khoản
@@ -297,21 +382,23 @@ nlu:
     - số tài khoản tối đa cho 1 học sinh
     - 1 học sinh tối đa bao nhiêu tài khoản
     - 1 thí sinh có tối đa bao nhiêu tài khoản
+
 - intent: one_tel_use_max_acc
   examples: |
     - mọt số điện thoại được đăng ký tối đa bao nhiêu tài khoản
     - 1 sđt được đăng ký cho bao nhiêu tài khoản?
     - 1 sđt tối đa bao nhiêu tài khoản
-    - có thể sử dụng 1 sđt cho tối da bao nhiêu tài khoản
+    - có thể sử dụng 1 số điện thoại cho tối da bao nhiêu tài khoản
     - có thể sử dụng 1 số điện thoại cho bao nhiêu tài khoản
     - tối đa có thể đăng kí bao nhiêu tài khoản với 1 số điện thoại
     - 1 sđt tối đa số tài khoản đăng ký
     - bao nhiêu tài khoản có thể đăng kí với cùng 1 sđt?
     - bao nhiêu tài khoản có thể đăng kí với cùng 1 số điện thoại?
-    - 1 sddt xác thực cho bao nhiêu tài khoản
-    - 1 sđt xc thực cho bao nhiêu tài khoản
+    - 1 số điện thoại xác thực cho bao nhiêu tài khoản vậy?
+    - 1 số điện thoại xác thực cho bao nhiêu tài khoản
     - 1 số điện thoại có thể xác thực cho bao nhiêu tài khoản
     - số tài khoản tối đa sử dụng 1 số điện thoại
+
 - intent: what_is_ID
   examples: |
     - ID là gì
@@ -421,6 +508,7 @@ nlu:
     - queen maatj khaaur
     - tôi là giáo viên, tôi quên mật khẩu đăng nhập tài khoản
     - TÔI LÀ GIÁO VIÊN ĐÃ ĐĂNG KÝ TÀI KHOẢN QUẢN TRỊ NHƯNG TÔI QUÊN TÊN ĐĂNG NHẬP VÀ MẬT KHẨU? NHỜ BTC GIÚP TÔI KHÔI PHỤC TÀI KHOẢN QUẢN TRỊ?
+
 - intent: change_password
   examples: |
     - tôi muốn thay đổi mật khẩu tài khoản
@@ -440,6 +528,8 @@ nlu:
     - change maatj khaaur
 - intent: verify_acc
   examples: |
+    - hướng dẫn tôi xác thực tài khoản
+    - tài khoản của tôi chưa được xác thực
     - cho tôi biết cách xác tực tài khoản
     - các bươc xác thực tài khoản
     - hướng dân xác thực tài khoản
@@ -455,10 +545,9 @@ nlu:
     - xác thực tài khoản
     - help me how to verify account
     - verify account
-    - axsc thuwcj taif khoanr
     - xasc thuwcj taif khoanr
-    - xasc thuwcj tk
-    - xasc thuwcj
+
+
 - intent: sign_in
   examples: |
     - Tôi muốn đăng nhập vào ioe
@@ -564,6 +653,8 @@ nlu:
 - intent: link_parents_student
   examples: |
     - tài khoản của tôi đã liên kết với tài khoản của con chưa?
+    - tôi muốn liên kết tài khoản phụ huynh với tài khoản học sinh
+    - mình muốn liên kết tài khoản phụ huynh với tài khoản học sinh
     - tooii muốn biết mình đã liên kết với tài khoản của con chưa?
     - tôi muốn liên kết tài khoản của mình với tài khoản của con
     - liên kết tài khoản của con
@@ -588,6 +679,10 @@ nlu:
     - tôi là giáo viên, tôi không thấy danh sach shocj sinh của mình
 - intent: acc_teacher_how_to_use
   examples: |
+    - quyền lợi tài khoản giáo viên
+    - quyền hạn tài khoản giáo viên quản lý lớp
+    - quyền của tài khoản giáo viên
+    - tài khoản giáo viên có thể làm những gì?
     - hướng dẫn sử dụng tài khoản giáo viên
     - sử dụng và quản lý tài khoản giáo viên
     - hướng dẫn quản lý tài khoản giáo viên
@@ -598,6 +693,9 @@ nlu:
     - suwr dụng tài khoản giáo viên
 - intent: school_acc_can_do
   examples: |
+    - tài khoản quản trị nhà trường có thể làm gì?
+    - hướng dẫn sử dụng tài khoản quản trị cấp trường
+    - sử dụng tài khoản quản trị cấp trường như thế nào?
     - quyền của tài khoản nhà trường
     - quyền của tài khoản giáo viên quản trị cấp trường
     - giáo viên quản trị có thể?
@@ -612,14 +710,16 @@ nlu:
     - nhiệm vụ của tài khoản cấp trường
 - intent: truong_moi_thanh_lap
   examples: |
+    - trường tôi mới xây dựng thì đăng ký như thế nào
+    - trường của tôi mới xây dựng, tôi muốn đăng ký tên trường trên hệ thống
     - trường tôi mới thành lập nên chưa có tên trên hệ thống
     - trường tôi chưa có tên trên hệ thống thì phải làm sao
     - trường tôi mới thành lập, muốn đăng kí dự thi
     - bổ sung tên trường trên hệ thống
     - chỉnh sửa tên trường trên hệ thống
-    - thay đổi tên trường trên hệ thống
+    - thay đổi tên trường trên hệ 
     - trường tôi mới thành lập, tôi phải làm sao?
-    - trường mới thành lập nên chưa có tên trên hệ thống.
+    - trường mới thành lập nên chưa có tên 
     - trường tôi mới thành lập
     - trường tôi chưa có tên trên hệ thống thì tôi phải làm sao
 - intent: change_school_acc
@@ -636,6 +736,8 @@ nlu:
     - nhà trường muốn thay đổi tài khoản quản trị nhà trường
 - intent: change_Education_Department_acc
   examples: |
+    - hướng dẫn phòng giáo dục thay đổi tài khoản quản trị
+    - hướng dẫn sở giáo dục thay đổi tài khoản quản trị
     - Sở/Phòng có nhu cầu thay đổi tài khoản quản lý thì phải làm thế nào?
     - Phòng Giáo dục muốn thay đổi tài khoản quản lý
     - sở Giáo dục muốn thay đổi tài khoản quản lý
@@ -728,6 +830,7 @@ nlu:
     - hướng dẫn tôi nạp qua ví điện tử
 - intent: hoan_tra_GO
   examples: |
+    - tôi đã nạp go, vậy, tôi có thể được hoàn trả go đã nạp không
     - tôi có thể hoàn trả GO đã nạp không?
     - hoàn trả GO
     - hoàn go
@@ -738,9 +841,16 @@ nlu:
     - hoàn go đã nạp được không?
     - giúp tôi hoàn lại go đã nạp
     - GO đã nạp có hoàn trả được không?
-    - 
+    - Go thừa tôi không sử dụng co thể hoàn trả lại không? 
+
 - intent: how_to_use_GO
   examples: |
+    - với go đã nạp, tôi có thể làm gì?
+    - cách đổi gói dịch vụ ioe
+    - tôi sử dụng go đã nạp như thế nào?
+    - hướng dẫn mình mua gói ioe
+    - hướng dn mình mua gói dịch vụ ioe
+    - hướng dẫn tôi mua gói combo
     - tôi muốn đổi GO
     - hướng dẫn đổi gói dịch vụ IOE
     - tôi muốn đổi gói dịch vụ IOE
@@ -754,9 +864,11 @@ nlu:
     - go có thể đổi dịch vụ gì
     - đổi go đổi go đổi go
     - TÔI ĐÃ CÓ SỐ DƯ GO, LÀM THẾ NÀO ĐỂ ĐỔI GO SANG GÓI THI THỬ IOE?
+
 - intent: so_goi_dich_vu
   examples: |
     - ioe có mấy gói dịch vụ?
+    - cho mình hỏi danh sách các gói ioe với
     - hiện tại ioe cung cấp bao nhiêu gói dịch vụ?
     - hiện tại ioe cung cấp bao nhiêu gói dịch vụ và số tiền cần nạp là bao nhiêu?
     - số gói dịch vụ
@@ -767,6 +879,7 @@ nlu:
     - TÔI MUỐN MUA GÓI THI THỬ KHÔNG GIỚI HẠN THÌ CẦN NẠP BAO NHIÊU TIỀN?
     - cho tôi danh sách các gói dịch vụ ioe hiện tại
     - tôi muốn biết danh sách các gói dịch vụ ioe hiện tại
+
 - intent: chuyen_GO_parents_to_student
   examples: |
     - TÔI ĐÃ NẠP NHẦM TIỀN VÀO TÀI KHOẢN PHỤ HUYNH, HÃY HƯỚNG DẪN TÔI CHUYỂN TỪ TK PHỤ HUYNH SANG TK CỦA CON
@@ -781,6 +894,7 @@ nlu:
     - hướng dẫn tôi chuyển go sang tài khoản của con mình
     - huowsg dẫn tôi chuyển go sang tài khoản của con mình
     - chuyeern go từ tài khoản phụ huynh sang tài khoản con mình
+
 - intent: chuyen_GO_teacher_to_student
   examples: |
     - tôi là giáo viên, tôi muốn đổi gói dịch vụ cho học sinh của mình
@@ -794,6 +908,14 @@ nlu:
 - intent: sale_goi_dich_vu
   examples: |
     - mua nhiều gói dịch vụ có được chiết khẩu không?
+    - tôi mua nhiều gói ioe có được ưu đãi gì không?
+    - ưu đãi
+    - khuyến mãi
+    - tôi mua nhiều gói dịch vụ ioe có được ưu đãi gì không?
+    - cho tôi biết ưu đãi khi mua các gói dịch vụ ioe
+    - khuyến mãi khi mua gói dịch vụ ioe
+    - ưu đãi khi mua gói dịch vụ ioe
+    - khi mua nhều gói combo ioe thì có được chiết khấu gì không?
     - giảm giá khi mua gói dịch vụ ioe
     - Giáo viên mua nhiều goi ioe cho học sinh có được chiết khấu không?
     - Giáo viên mua nhiều goi ioe cho học sinh có được giảm giá không?
@@ -827,6 +949,7 @@ nlu:
     - chi tiết thể lệ cuộc thi
     - tôi muốn biết thể lệ cuộc thi
     - chi tiết thể lệ
+    - luật lệ của cuộc thi ioe
     - thể lệ
     - thể lệ cuộc thi ioe
     - thể lệ của cuộc thi ioe là gì?
@@ -846,21 +969,32 @@ nlu:
     - có thể thi vượt cấp như thế nào?
     - thi vượt cấp
     - thi hai khối lớp
+    - mình là học sinh lớp 4, có thể thi ioe lớp 7 được không?
+    - mình là học sinh lớp 9 có thể tham gia thi ioe lớp 10 không?
     - 1 học sinh có thể thi hai khối lớp không
     - 1 học sinh có thể thi ở mấy khối lớp?
     - em có thể đăng kí thi ở 2 khối lớp không?
     - em muốn đăng kí thi vượt cấp
+    - con tôi học lớp 5, có thể tham gia thi ioe lớp 5 không?
+
 - intent: dang_ky_to_chuc_thi
   examples: |
-    - sở giáo dục đăng kí tổ chức thi
+    - hướng dẫn đăng ký tổ chức cuộc thi riêng của sở giáo dục
+    - sở giáo dục đăng kí tổ chức thi, hướng dẫn tôi
+    - nhà trường đăng ký tổ chức thi ioe, hướng dẫn tôi
     - sở giáo dục muốn đăng kí tổ chức thi ioe cho học sinh
     - sở giáo dục tôi muốn đăng ký tổ chức thi ioe cho học sinh
     - sở giáo dục muốn tổ chức thi ioe cho học sinh
-    - đăng ký tổ chức thi ioe cho học sinh
-    - đăng kí tổ chức cuộc thi ioe cho học sinh
-    - giúp đăng kí tổ chức thi ioe cho học sinh trong sở giáo dục
+    - đăng ký tổ chức thi ioe riêng cho học sinh của tỉnh
+    - đăng kí tổ chức cuộc thi ioe cho học sinh của huyện
+    - giúp đăng kí tổ chức thi ioe cho học sinh trong sở giáo dục, hướng dẫn tôi
+    - đăng ký tổ chức thi ioe riêng
+    - để tổ cức cuộc thi riêng trong huyện sở, tôi cần thực hiện các thủ tục đăng ký như thế nào?
+
+
 - intent: change_infor_student_acc
   examples: |
+    - CON TÔI KHÔNG THAY ĐỔI ĐƯỢC THÔNG TIN GIÁO DỤC?
     - tôi muốn thay đổi thông tin cá nhân
     - hướng dẫn thay đổi thông tin cá nhân
     - thay đổi thông tin cá nhân
@@ -868,6 +1002,7 @@ nlu:
     - thay đổi thông tin cá nhân của mình
     - làm sao để thay đổi thông tin tài khoản
     - tôi muốn thay đổi thông tin tài khoản của mình
+    - Cho mình hỏi, muốn sửa lại tên con cho đúng khai sinh thì làm thế nào ạ?
     - thay đổi thông tin
     - help me change my information
     - change my information

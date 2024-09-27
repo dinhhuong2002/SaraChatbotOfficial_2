@@ -62,5 +62,6 @@ class ActionFallback(Action):
         return "action_fallback"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
+        dispatcher.utter_message(text="Xin lỗi, tôi chưa hiểu rõ  của bạn. Vui lòng đợi, chúng tôi sẽ chuyển bạn đến bộ phận CSKH.")
         dispatcher.utter_message(text="Để giải đáp vấn đề của bạn, bạn hãy liên hệ: 0984.650.154 hoặc fanpage [https://www.facebook.com/ioe.vn].")
         return []

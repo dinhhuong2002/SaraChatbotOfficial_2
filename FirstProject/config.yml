@@ -24,6 +24,7 @@ pipeline:
      max_ngram: 4
    - name: DIETClassifier
      epochs: 100
+     entity_recognition: True
      constrain_similarities: true
    - name: EntitySynonymMapper
    - name: ResponseSelector
@@ -50,7 +51,8 @@ policies:
    - name: RulePolicy
      fallback_action_name: "action_fallback"
      core_fallback_threshold: 0.2
-     nlu_fallback_threshold: 0.7
+     nlu_fallback_threshold: 0.6
+     enable_fallback_prediction: True
 
 # config.yml
 

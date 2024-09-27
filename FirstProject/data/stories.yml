@@ -2,10 +2,18 @@ version: "3.1"
 
 stories:
 
+
+  - story: fallback example
+    steps:
+      - intent: nlu_fallback
+      - action: action_fallback
+
   - story: chào hỏi với tên người dùng
     steps:
       - action: utter_ask_name
       - intent: answer_name
+        entities:
+          - name: "An"
       - action: utter_answer_name
 
   - story: continue session when user say ok
@@ -46,6 +54,27 @@ stories:
       - action: utter_bot_oke
       - intent: bot_nice
       - action: utter_bot_nice
+
+  - story: 01_hỏi lại bot rằng câu trẻ lời của bot có đúng không? is_that_true
+    steps:
+      - intent: GO_bat_buoc_khong
+      - action: utter_GO_bat_buoc_khong
+      - intent: is_that_true
+      - action: utter_is_that_true
+
+  - story: 02_hỏi lại bot rằng câu trẻ lời của bot có đúng không? is_that_true
+    steps:
+      - intent: hoan_tra_GO
+      - action: utter_hoan_tra_GO
+      - intent: is_that_true
+      - action: utter_is_that_true
+
+  - story: 03_hỏi lại bot rằng câu trẻ lời của bot có đúng không? is_that_true
+    steps:
+      - intent: so_acc_truong_lien_cap
+      - action: utter_so_acc_truong_lien_cap
+      - intent: is_that_true
+      - action: utter_is_that_true
 
   - story: đăng nhập khi chưa có tài khoản
     steps:
@@ -405,39 +434,3 @@ stories:
 #    steps:
 #      - user: "the weather today?"
 #      - action: utter_weather
-  - story: interactive_story_1
-    steps:
-    - intent: sign_up_student
-
-
-- story: interactive_story_1
-  steps:
-  - intent: hello
-  - action: utter_hello
-  - intent: sign_up
-  - action: utter_sign_up
-  - intent: acc_teacher_cant_see_students
-  - action: utter_acc_teacher_cant_see_students
-  - intent: GO_bat_buoc_khong
-  - action: utter_GO_bat_buoc_khong
-  - intent: truong_moi_thanh_lap
-  - action: utter_truong_moi_thanh_lap
-  - intent: acc_teacher_how_to_use
-  - action: utter_acc_teacher_how_to_use
-  - intent: change_school_acc
-  - action: utter_change_school_acc
-  - intent: change_Education_Department_acc
-  - action: utter_change_Education_Department_acc
-  - intent: so_acc_truong_lien_cap
-  - action: utter_so_acc_truong_lien_cap
-  - intent: acc_teacher_cant_see_students
-  - intent: so_goi_dich_vu
-  - action: utter_so_goi_dich_vu
-  - intent: nlu_fallback
-  - intent: chuyen_GO_parents_to_student
-  - action: utter_chuyen_GO_parents_to_student
-  - intent: acc_teacher_cant_see_students
-  - intent: so_goi_dich_vu
-  - action: utter_so_goi_dich_vu
-  - intent: chuyen_GO_parents_to_student
-  - action: utter_chuyen_GO_parents_to_student
