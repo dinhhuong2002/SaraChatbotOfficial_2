@@ -22,6 +22,7 @@ nlu:
     - hiiiiiiiiii
 - intent: answer_name
   examples: |
+    - Tôi tên là [hương](user_name)
     - Tôi tên là [Nam](user_name)
     - Chị tên là [Hoa](user_name)
     - Anh tên là [Long](user_name)
@@ -58,9 +59,14 @@ nlu:
     - [Phú](user_name)
     - [Thiện](user_name)
     - tớ tên là [Hà](user_name)
-
+    - [mai anh](user_name)
+    - [hương](user_name)
+    - [Gia Bảo](user_name)
+    - [Bảo Linh](user_name)
 - intent: call_bot
   examples: |
+    - heyyy
+    - bạnnnnnnn
     - bạn ơiii
     - bạn ơiiiiiii
     - bạn à
@@ -73,9 +79,9 @@ nlu:
     - aloooo
     - ê
     - oh, bạn ơi
-
 - intent: bot_can_do
   examples: |
+    - bạn thông minh chứ?
     - Khả năng của bạn là gì?
     - Bạn có thể giúp gì cho mình
     - bạn có thể giúp tôi làm gì
@@ -85,8 +91,6 @@ nlu:
     - hãy cho tôi biết khả năng của bạn là gì
     - năng lực của bạn là gì?
     - bạn có thể giúp gì cho tôi?
-    
-
 - intent: ask_for_help
   examples: |
     - can you help me
@@ -103,15 +107,13 @@ nlu:
     - hãy giúp tôi
     - giúp tôi nhé
     - giúp mình đi
-    
-
 - intent: is_that_true
   examples: |
+    - vậy hả?
     - thế à bạn
     - thật vậy sao
     - đúng vậy hả bạn?
     - đúng như vậy sao bạn
-    - thật vậy sao
     - thật thế ạ
     - đúng như vậy á
     - đúng như vậy sao
@@ -122,8 +124,7 @@ nlu:
     - is that true?
     - đúng vậy sao?
     - đúng vậy ạ?
-    
-
+    - vậy hả
 - intent: fine_thanks
   examples: |
     - fine
@@ -208,6 +209,8 @@ nlu:
     - tks
     - thanksssss
     - fine thanks
+    - sớm cải thiện nhé
+
 - intent: mood_great
   examples: |
     - perfect
@@ -228,6 +231,9 @@ nlu:
     - hihi
     - haha
     - rất vui được gặp bạn
+    - love u
+    - love you
+
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -246,6 +252,8 @@ nlu:
     - so sad
 - intent: what_is_bot
   examples: |
+    - cho mình xin thông tin của bạn nhé
+    - cho mình thông tin về bạn nhé.
     - are you a bot?
     - who are you?
     - are you a human?
@@ -263,6 +271,8 @@ nlu:
     - bạn là ai?
 - intent: bot_oke
   examples: |
+    - bạn khỏe không bạn?
+    - bạn tốt chứ?
     - are u oke
     - are you oke
     - are you fine
@@ -273,6 +283,7 @@ nlu:
     - bạn đã sẵn sàng chưa?
     - r u oke
     - are you oke?
+    - oke bạn iu
 - intent: bot_nice
   examples: |
     - cũng được đó
@@ -288,9 +299,15 @@ nlu:
     - cũng được đấy
     - được quá chứ
     - bạn cũng được đấy
-
 - intent: bot_bad
   examples: |
+    - gì vậy má
+    - ùa alo
+    - what the fuck
+    - wtf
+    - fuck
+    - lâu thế bạn
+    - bạn trả lời lâu quá
     - bạn tệ quá
     - haiz, chán thật
     - haiz, chán thiệc
@@ -310,7 +327,6 @@ nlu:
     - bạn ngốc quá
     - chán thiệt
     - ngu thật đấy
-
 - intent: about_ioe
   examples: |
     - bạn vui lòng giới thiệu cho tôi về cuộc thi ioe đi
@@ -329,7 +345,6 @@ nlu:
     - ioe là
     - something about ioe
     - giới thiệu cho tôi biết về cuộc thi ioe
-
 - intent: doi_tuong_tham_gia
   examples: |
     - cháu học lớp 1 có thể tham gia thi ioe không?
@@ -382,7 +397,6 @@ nlu:
     - số tài khoản tối đa cho 1 học sinh
     - 1 học sinh tối đa bao nhiêu tài khoản
     - 1 thí sinh có tối đa bao nhiêu tài khoản
-
 - intent: one_tel_use_max_acc
   examples: |
     - mọt số điện thoại được đăng ký tối đa bao nhiêu tài khoản
@@ -398,7 +412,6 @@ nlu:
     - 1 số điện thoại xác thực cho bao nhiêu tài khoản
     - 1 số điện thoại có thể xác thực cho bao nhiêu tài khoản
     - số tài khoản tối đa sử dụng 1 số điện thoại
-
 - intent: what_is_ID
   examples: |
     - ID là gì
@@ -508,7 +521,6 @@ nlu:
     - queen maatj khaaur
     - tôi là giáo viên, tôi quên mật khẩu đăng nhập tài khoản
     - TÔI LÀ GIÁO VIÊN ĐÃ ĐĂNG KÝ TÀI KHOẢN QUẢN TRỊ NHƯNG TÔI QUÊN TÊN ĐĂNG NHẬP VÀ MẬT KHẨU? NHỜ BTC GIÚP TÔI KHÔI PHỤC TÀI KHOẢN QUẢN TRỊ?
-
 - intent: change_password
   examples: |
     - tôi muốn thay đổi mật khẩu tài khoản
@@ -546,8 +558,6 @@ nlu:
     - help me how to verify account
     - verify account
     - xasc thuwcj taif khoanr
-
-
 - intent: sign_in
   examples: |
     - Tôi muốn đăng nhập vào ioe
@@ -561,6 +571,9 @@ nlu:
     - cho tôi đăng nhập
 - intent: sign_up
   examples: |
+    - tôi phải làm sao để đăng ký tài khoản?
+    - làm sao để đăng ký tài khoản hả bạn?
+    - bạn ơi, làm sao để đăng ký tài khoản ạ?
     - Tôi muốn đăng ký tài khoản
     - Đăng ký tài khoản
     - i want to sign up
@@ -669,6 +682,7 @@ nlu:
     - cha mẹ muốn liên kết tài khoản của mình với tài khoản của con
 - intent: acc_teacher_cant_see_students
   examples: |
+    - Cho tôi hỏi học sinh đã đăng kí tài khoản ioe nhưng quản trị trường không thấy hiện trong danh sách của trường?
     - tại sao tôi đăng ký tài khoản quản trị thành côngvà được BTC phê duyệt rồi mà vẫn không thấy danh sách học sinh hiển thị trong tài khoản quản trị ạ
     - tôi không tìm thấy danh sách học sinh trong tài khoan quản trị của tôi
     - tôi không thấy danh sách học sinh trong khi tôi đã được BTC phê duyệt
@@ -717,9 +731,9 @@ nlu:
     - trường tôi mới thành lập, muốn đăng kí dự thi
     - bổ sung tên trường trên hệ thống
     - chỉnh sửa tên trường trên hệ thống
-    - thay đổi tên trường trên hệ 
+    - thay đổi tên trường trên hệ
     - trường tôi mới thành lập, tôi phải làm sao?
-    - trường mới thành lập nên chưa có tên 
+    - trường mới thành lập nên chưa có tên
     - trường tôi mới thành lập
     - trường tôi chưa có tên trên hệ thống thì tôi phải làm sao
 - intent: change_school_acc
@@ -818,6 +832,8 @@ nlu:
     - ck
     - ckhoan
     - ck nhé
+    - tôi muốn nạp go bằng chuyển khoản
+    - chuyển khoản đi bà
 - intent: add_GO_vi_dien_tu
   examples: |
     - tôi muốn nạp GO qua ví điện tử
@@ -828,6 +844,22 @@ nlu:
     - ví điện tử nhé
     - nạp go qua ví điện tử
     - hướng dẫn tôi nạp qua ví điện tử
+    - hướng dẫn nạp Go bằng ví điện tử
+    - tôi có thể nạp go bằng ví điện tử không?
+- intent: add_GO_the_game
+  examples: |
+    - nạp go bằng thẻ game
+    - nạp go bằng thẻ game được không?
+    - hướng dẫn đổi gói dịch vụ bằng thẻ game
+    - tôi muốn dùng thẻ game để nạp GO được không?
+    - hướng dẫn tôi nạp GO bằng thẻ game
+    - tôi muốn dùng thẻ game
+    - dùng tẻ game đi
+    - thẻ game nhé
+    - nạp GO bằng thẻ game có được không bạn?
+    - bạn hướng dẫn cho tôi nạp go bằng thẻ game đi
+    - thẻ game
+    - dùng thẻ game để nạp GO và đổi gói dịch vụ
 - intent: hoan_tra_GO
   examples: |
     - tôi đã nạp go, vậy, tôi có thể được hoàn trả go đã nạp không
@@ -841,8 +873,7 @@ nlu:
     - hoàn go đã nạp được không?
     - giúp tôi hoàn lại go đã nạp
     - GO đã nạp có hoàn trả được không?
-    - Go thừa tôi không sử dụng co thể hoàn trả lại không? 
-
+    - Go thừa tôi không sử dụng co thể hoàn trả lại không?
 - intent: how_to_use_GO
   examples: |
     - với go đã nạp, tôi có thể làm gì?
@@ -864,7 +895,6 @@ nlu:
     - go có thể đổi dịch vụ gì
     - đổi go đổi go đổi go
     - TÔI ĐÃ CÓ SỐ DƯ GO, LÀM THẾ NÀO ĐỂ ĐỔI GO SANG GÓI THI THỬ IOE?
-
 - intent: so_goi_dich_vu
   examples: |
     - ioe có mấy gói dịch vụ?
@@ -879,7 +909,6 @@ nlu:
     - TÔI MUỐN MUA GÓI THI THỬ KHÔNG GIỚI HẠN THÌ CẦN NẠP BAO NHIÊU TIỀN?
     - cho tôi danh sách các gói dịch vụ ioe hiện tại
     - tôi muốn biết danh sách các gói dịch vụ ioe hiện tại
-
 - intent: chuyen_GO_parents_to_student
   examples: |
     - TÔI ĐÃ NẠP NHẦM TIỀN VÀO TÀI KHOẢN PHỤ HUYNH, HÃY HƯỚNG DẪN TÔI CHUYỂN TỪ TK PHỤ HUYNH SANG TK CỦA CON
@@ -894,7 +923,6 @@ nlu:
     - hướng dẫn tôi chuyển go sang tài khoản của con mình
     - huowsg dẫn tôi chuyển go sang tài khoản của con mình
     - chuyeern go từ tài khoản phụ huynh sang tài khoản con mình
-
 - intent: chuyen_GO_teacher_to_student
   examples: |
     - tôi là giáo viên, tôi muốn đổi gói dịch vụ cho học sinh của mình
@@ -976,7 +1004,6 @@ nlu:
     - em có thể đăng kí thi ở 2 khối lớp không?
     - em muốn đăng kí thi vượt cấp
     - con tôi học lớp 5, có thể tham gia thi ioe lớp 5 không?
-
 - intent: dang_ky_to_chuc_thi
   examples: |
     - hướng dẫn đăng ký tổ chức cuộc thi riêng của sở giáo dục
@@ -990,8 +1017,6 @@ nlu:
     - giúp đăng kí tổ chức thi ioe cho học sinh trong sở giáo dục, hướng dẫn tôi
     - đăng ký tổ chức thi ioe riêng
     - để tổ cức cuộc thi riêng trong huyện sở, tôi cần thực hiện các thủ tục đăng ký như thế nào?
-
-
 - intent: change_infor_student_acc
   examples: |
     - CON TÔI KHÔNG THAY ĐỔI ĐƯỢC THÔNG TIN GIÁO DỤC?
@@ -1024,6 +1049,20 @@ nlu:
     - hủy sđt liên kết tài khoản ioe
     - hủy sđt liên hết ioe
     - hủy liên kết sđt xác thực tài khoản ioe
+- intent: change_sdt
+  examples: |
+    - tôi muốn thay đổi sdt xác thực
+    - tôi muốn thay đổi số điện thoại xác thực tài khoản
+    - cho tôi hướng dẫn thay đổi số điện thoại xác thực tài khoản ioe
+    - hướng dẫn thay đổi số điện thoại xác thực tài khoản
+    - help me change phone number
+    - change phone number
+    - tôi có thể thay đổi số điện thoại xác thực tài khoản không?
+    - thay đổi số điện thoại xác thực tài khoản thi ioe
+    - thay đổi sđt
+    - toi muon thay doi sdt xac thuc ioe
+    - huong dan toi thay doi sdt xac thuc tài khoan ioe
+    - tôi muốn thay đôi sdt xác thực tài khoản
 - intent: forget_MKC2
   examples: |
     - tôi quên mật khẩu cấp 2
@@ -1053,6 +1092,7 @@ nlu:
     - tôi muốn biết mình có đủ điều kiện dự thi không
 - intent: thi_tu_do
   examples: |
+    - học sinh có thể đăng ký thi tự do không?
     - ioe có hình thức thi tự do không?
     - có thể thi tự do không
     - có thể đăng kí thi tự do không?
@@ -1119,3 +1159,355 @@ nlu:
     - cách sử dụng ruby
     - có thể sử dụng ruby để đổi gói dịch vụ không?
     - tôi có thể sử dụng ruby để đổi gói dịch vụ ioe không?
+    
+
+
+# intents: quy định về các vòng thi tự luyện của ioe
+- intent: dang_ky_du_thi_cac_cap
+  examples: |
+    - hướng dẫn đăng ký dự thi các cấp
+    - hướng dẫn đăng ký danh sách học sinh dự thi các cấp
+    - tôi là giáo viên quản trị nhà trường, hướng dẫn tôi cách đăng ký danh sách học sinh tham dự kì thi các cấp
+    - đăng ký dự thi các cấp như thế nào?
+    - tôi đăng ký ự thi kì thi của ioe như thế nào?
+    - hướng dẫn giáo viên nhà trường đăng ký danh sách học sinh dự thi
+    - đăng ký dự thi các cấp như thế nào?
+    - làm sao để có thể đăng ký dự thi kì thi các cấp của ioe?
+    
+
+- intent: dang_ky_danh_sach_cap_truong
+  examples: |
+    - hướng dẫn đăng kí danh sách thi cấp trường
+    - đăng ký danh sách học sinh tham gia thi cấp trường như thế nào?
+    - hướng dẫn tôi đăng ký danh sách học sinh tham gia thi cấp trường
+    - tôi muốn đăng ký danh sách học sinh thi cấp trường
+    - Trường tôi phải Đăng ký danh sách thí sinh tham dự THI CẤP TRƯỜNG như thế nào?
+    - Trường tôi phải Đăng ký danh sách thí sinh tham dự THI CẤP TRƯỜNG
+    - nhà trường muốn đăng ký danh sách học sinh thi cấp trường
+    - đăng ký danh sách học sinh thi cấp trường
+    - lập danh sách học sinh tham gia thi cấp trường
+
+- intent: thoi_han_dang_ky_cap_truong
+  examples: |
+    - thời hạn để đăng ký thi cấp trường là bao giờ?
+    - Thời hạn đăng ký thi cấp Trường?
+    - cho tôi biết hạn cuối để đăng ký thi cấp trường
+    - hạn nộp danh sách học sinh tham gia thi cấp trường
+    - thời gian nộp danh sách học sinh tham gia thi cấp trường
+    - thời gian đăng ký tham gia thi cấp trường
+    - hạn đăng ký tham gia thi cấp trường
+    - thời hạn để đăng ký tham gia thi cấp trường
+    - thời hạn để nộp danh sách đăng ký thi cấp trường
+
+- intent: xem_danh_sach_hoc_sinh_hoan_thanh_tu_luyen
+  examples: |
+    - hướng dẫn xem kết quả tự luyện của học sinh.
+    - Hướng dẫn xem thống kê Kết quả tự luyện của học sinh trong Tài khoản Giáo viên Quản trị Trường
+    - hướng dẫn tôi xem danh sách học sinh hoàn thành vòng thi tự luyện
+    - tôi là giáo viên, tôi muốn xem danh sách thống kê học sinh đã hoàn thành vòng thi tự luyện
+    - làm sao để xem thống kê danh sách học sinh đã hoàn thành vòng tự luyện
+    - Tôi là giáo viên quản trị, tôi cần xem Thống kê số học sinh của trường mình đã hoàn thành các vòng tự luyện thì xem ở đâu
+    - tôi cần xem Thống kê số học sinh của trường mình đã hoàn thành các vòng tự luyện thì xem ở đâu
+    - thống kê cho tôi danh sách học sinh đã hoàn thành vòng thi tự luyện
+    - hướng dẫn tôi xem danh sách học sinh của trường mình đã hoàn thành các vòng tự luyện
+    - cho tôi xem thống kê danh sách học sinh đã tham gia vòng tự luyện
+    - thống kê danh sách học sinh tham gia các vòng thi tự luyện giúp tôi
+
+- intent: ket_qua_cap_truong
+  examples: |
+    - làm sao để tôi xem kết quả thi cấp trường
+    - hướng dẫn xem kết quả của học sinh thi cấp trường
+    - tôi là giáo viên, tôi muốn xem thống kê két quả học sinh thi cấp trường
+    - kết quả học sinh thi cấp trường
+    - kết quả thi cấp trường
+    - xem kết quả thi cấp trường ở đâu
+    - tôi có thể xem kết quả thi cấp trường của mình không
+    - tôi muốn xem kết quả thi cấp trường, hướng dẫn tôi cách để xem
+    - hướng dẫn tôi cách để xem kết quả thi cấp trường
+    - tôi có thể xem kết quả thi cấp trường như thế nào?
+    - cho tôi kết quả thi cấp trường của học sinh
+    - xem kết quả thi cấp trường kiểu gì cơ
+    - xem kết quả thi cấp trường như thế nào hả?
+
+- intent: trien_khai_thi_cap_huyen
+  examples: |
+    - hướng dẫn chuyên viên quản trị cấp huyện tổ chức thi cấp huyện
+    - các thủ tục để tổ chức thi cấp huyện
+    - các thủ tục để đăng ký tổ chức kỳ thi cấp Quận/Huyện
+    - hướng dẫn thực hiện các thủ tục triển khai kỳ thi cấp huyện
+    - Tôi là chuyên viên quản trị cấp Sở/Phòng để triển khai kỳ thi cấp Quận/Huyện tại Sở/Phòng, tôi cần thực hiện các thủ tục đăng ký như thế nào?
+    - hướng dẫn tôi triển khai kỳ thi cấp huyện
+    - cần những thủ tục gì  triển khai kỳ thi cấp huyện
+    - hướng dẫn cán bộ tổ chức kỳ thi ioe cấp huyện
+    - cho tôi biết thủ tục triển khai, tổ chức kỳ thi cấp quận huyện
+    - cho tôi hướng dẫn tổ chức kỳ thi cấp quận huyện
+
+- intent: dang_ky_danh_sach_cap_huyen
+  examples: |
+    - hướng dẫn đăng kí danh sách thi cấp quận/huyện
+    - đăng ký danh sách học sinh tham gia thi cấp huyện như thế nào?
+    - hướng dẫn tôi đăng ký danh sách học sinh tham gia thi cấp quận huyện
+    - tôi muốn đăng ký danh sách học sinh thi cấp quận huyện
+    - tôi phải Đăng ký danh sách thí sinh tham dự THI CẤP huyện như thế nào?
+    - tôi phải Đăng ký danh sách thí sinh tham dự THI CẤP QUẬN/HUYỆN như thế nào?
+    - Trường tôi phải Đăng ký danh sách thí sinh tham dự kì thi cấp huyện như thế nào?
+    - nhà trường muốn đăng ký danh sách học sinh thi cấp quận huyện
+    - đăng ký danh sách học sinh thi cấp quận huyện
+    - lập danh sách học sinh tham gia thi cấp quận huyện
+    - làm sao để đăng ký danh sách học sinh thi câp huyện?
+
+- intent: thoi_han_dang_ky_cap_huyen
+  examples: |
+    - đăng ký thi cấp huyện
+    - thời hạn để đăng ký thi cấp huyện là bao giờ?
+    - Thời hạn đăng ký thi cấp huyện?
+    - cho tôi biết hạn cuối để đăng ký thi cấp huyện
+    - hạn nộp danh sách học sinh tham gia thi cấp huyện
+    - thời gian nộp danh sách học sinh tham gia thi cấp huyện
+    - thời gian đăng ký tham gia thi cấp huyện
+    - hạn đăng ký tham gia thi cấp huyện
+    - thời hạn để đăng ký tham gia thi cấp huyện
+    - thời hạn để nộp danh sách đăng ký thi cấp huyện
+    - đăng ký thi cấp huyện đến bao giờ
+    - thời gian đăng ký thi cấp huyện
+    - thời hạn cuối để đăng ký thi cấp huyện
+
+- intent: dieu_kien_thi_cap_huyen
+  examples: |
+    - điều kiện thi cấp huyện là gì?
+    - làm sao để đủ điều kiện thi cấp huyện
+    - tôi có đủ điều kiện thi cấp huyện chưa?
+    - tôi có đủ điều kiện thi cấp huyện không?
+    - bạn cho tôi bết, tôi có đủ điều kiện thi cấp huyện không?
+    - phải cần những điều kiện gì để tham gia thi cấp huyện?
+    - cần đủ những điều kiện gì để được thi cấp huyện?
+    - điều kiện thi cấp huyện
+    - kiểm tra điều kiện thi cấp huyện
+    - điều kiện để được tham gia thi cấp huyện
+    - Kiểm tra xem tôi có đủ điều kiện tham gia thi cấp huyện không?
+    
+
+- intent: ket_qua_thi_cap_huyen
+  examples: |
+    - hướng dẫn tôi xem kết quả thi cấp huyện 
+    - hướng dẫn tôi xem kết quả thi cấp huyện của mình đi.
+    - cập nhật kết quả thi cấp huyện
+    - kết quả thi cấp huyện
+    - làm sao để xem kết quả thi cấp huyện
+    - làm sao để xem kết quả thi cấp huyện của tôi
+    - kết quả thi cấp huyện có thể xem bằng cách nào
+    - xem kết quả thi cấp huyện như thế nào?
+    - xem kết quả thi cấp huyện kiểu gì?
+    
+
+- intent: nop_bien_ban_thi
+  examples: |
+    - hướng dẫn giáo viên nộp biên bản thi
+    - hướng dẫn nộp biên bản thi.
+    - giáo viên nộp biên bản thi như thế nào?
+    - hướng dẫn cho tôi nộp biên bản thi 
+    - hướng dẫn hội đồng nộp biên bản thi
+    - nộp biên bản thi
+    - nộp biên bản thi như thế nào?
+    - nộp biên bản thi kiểu gì?
+
+- intent: dang_ky_thi_cap_tinh
+  examples: |
+    - hướng dẫn đăng ký thi cấp tỉnh
+    - tôi có thể đăng ký thi cấp tỉnh như thế nào
+    - giáo viên dăng ký danh sách học sinh thi cấp tỉnh
+    - hướng dẫn giáo viên đăng ký danh sách học sinh thi cấp tỉnh
+    - tôi muốn đăng ký danh sách học sinh thi cấp tỉnh
+    - giúp tôi đăng ký dự thi cấp tỉnh
+    - tôi muốn đăng ký thi cấp tỉnh
+    - đăng ký thi cấp tỉnh giúp tôi với
+    - tôi muốn đăng ký thi cấp tỉnh, bạn hãy giúp tôi đăng ký nhé
+    - hãy giúp tôi đăng ký dự thi ioe cấp tỉnh nhé ạ
+
+- intent: dieu_kien_thi_cap_tinh
+  examples: |
+    - điều kiện để có thể tham gia cuộc thi cấp tỉnh là gì?
+    - tôi cần những điều kiện gì để có thể tham gia kì thi cấp tỉnh?
+    - tôi có đủ điều kiện để tham gia cuộc thi cấp tỉnh không?
+    - các điều kiện để tham gia kì thi ioe cấp tỉnh
+    - cần có những điều kiện gì để tham gia kì thi cấp tỉnh
+    - cho tôi biết điều kiện để có thể tham gia kì thi cấp tỉnh nhé!
+    - kì thi ioe cấp tỉnh cần những điều kiện gì để tham gia?
+    - những điều kiện cần có để tham gia kỳ thi cấp tỉnh là gì?
+    - hãy cho tôi các yêu cầu tôi cần có để có thể tham gia kỳ thi cấp tỉnh?
+
+- intent: thoi_han_dang_ky_cap_tinh
+  examples: |
+    - thời hạn cuối để đăng ký danh sách học sinh thi cấp tỉnh là bao giờ?
+    - cho tôi biết thời gian để đăng ký dụ thi cấp tỉnh
+    - thời gian đăng ký thi cấp tỉnh
+    - hạn chót đăng ký thi cấp tỉnh
+    - thời hạn để đăng ký thi cấp tỉnh?
+    - thời hạn cho phép đăng ký thi cấp tỉnh
+    - thời hạn để đăng ký thi cấp tỉnh
+    - hạn để đăng ký thi cấp tỉnh là bao giờ?
+    - bạn cho tôi hỏi về hạn đăng ký thi cấp tỉnh ạ?
+    - bạn cho mình ỏi về thời hạn đăng ký cấp tỉnh là bao giờ ạ?
+    - bạn hãy cho mình biết về thời gian đăng ký thi cấp tỉnh
+    - bạn có biết thời hạn đăng ký thi cấp tỉnh không?
+    
+    
+
+- intent: xem_ma_ca_thi  #giáo viên xem mã ca thi
+  examples: |
+    - Tôi là giáo viên quản trị, làm thế nào để xem được mã ca thi?
+    - tôi muốn xem mã ca thi
+    - xem mã ca thi
+    - xem mã ca thi như thế nào
+    - làm sao để lấy được mã ca thi?
+    - tôi là giáo viên, tôi muốn lấy mã ca thi
+    - hướng dẫn tôi cách để xem mã ca thi
+    - làm thế nào để tôi xem được mã ca thi?
+    - tôi phải làm như thế nào để xem được mã ca thi?
+    - cách xem mã ca thi là gì?
+    - cách xem mã ca thi
+    
+    
+
+- intent: su_dung_ma_ca_thi    #hướng dẫn giáo viên sử dụng mã ca thi
+  examples: |
+    - hướng dẫn giáo viên sử dụng mã ca thi
+    - hướng dẫn nhà trường sử dụng mã ca thi
+    - sử dụng mã ca thi
+    - sử dụng mã ca thi như thế nào?
+    - cho tôi biết cách giáo viên sử dụng mã ca thi
+    - cho mình biết cách sử dụng mã ca thi nhé
+    - tôi đã đăng ký danh sách học sinh dự thi thành công, cho tôi biết cách sử dụng mã ca thi như tế nào?
+    - cách sử dụng mã ca thi
+    - mã ca thi để làm gì?
+    - giáo viên cung cấp mã ca thi cho học sinh như th nào?
+    - sử dụng mã ca thi như thế nào?
+    
+
+- intent: khoi_lop_thi_quoc_gia
+  examples: |
+    - thi quốc gia dành cho các khối lớp nào?
+    - lớp 2 có thể tham gia thi quốc gia được không?
+    - các khối lớp có thể tham gia kỳ thi quốc gia?
+    - bạn hãy cho tôi biết danh sách các lớp có thể them gia kì thi quốc gia?
+    - có phải tất cả các khối lớp đều có thể tham gia kỳ thi quốc gia?
+    - các khối lớp có thể tham gia kì thi quốc gia?
+    - em là học sinh lớp 10, em có thể tham gia kỳ thi cấp quốc gia không?
+    - em là học sinh lớp 12, em có thể tham gia kỳ thi cấp quốc gia không?
+    - học sinh lớp 11 có được tham gia kỳ thi cấp quốc gia không?
+    - các khối lớp nào được tham gia kỳ thi cấp quốc gia?
+
+- intent: dieu_kien_thi_quoc_gia
+  examples: |
+    - Điều kiện để tham gia kì thi quốc gia là gì?
+    - bạn ơi, mình có đủ điều kiện tham gia thi quốc gia hay không?
+    - tôi có đủ điều kiện tham gia thi quốc gia không?
+    - điều kiện để tham gia thi quốc gia
+    - cho tôi biết điều kiện để được dự thi quốc gia?
+    - làm sao để có thể tham gia kỳ thi quốc gia
+    - tham gia kỳ thi cấp quốc gia
+
+- intent: thoi_han_dang_ky_thi_cac_cap
+  examples: |
+    - cho tôi thông tin thời hạn đăng ký danh sách học sinh thi các cấp.
+    - thời gian để đăng ký thi các cấp
+    - thời hạn đăng ký thi các cấp
+    - thời hạn đăng kí các cấp
+    - thời gian để đăng ký dự thi các cấp
+    - bạn cho mình hỏi về thời gian dự thi các cấp nhé.
+    - bạn hãy cho mình biết về thời gian để đăng ký dự thi các cấp?
+    - bạn có biết thời hạn đăng ký dự thi là bao giờ không?
+    
+
+- intent: truong_khong_to_chuc_thi
+  examples: | 
+    - nếu trường tôi không tổ chức thi thì em phải làm gì?
+    - nếu trường không tổ chức thi thì em có thể thi tự do các cấp không?
+    - trường em không tổ chức cuộc thi ioe
+    - em muốn tham gia thi ioe nhưng trường em không tổ chức thi, em phải làm gì ạ?
+    - em muốn tham gia thi cấp trường nhưng nhà trường lại không tổ chức thi, em phải làm như thế nào ạ?
+    - nhà trường không tổ chức thi thì làm sao để học sinh có thể tham gia thi các cấp?
+    - trường em không tổ chức thi vậy em có thể thi tại trường khác không?
+    - trường em không tổ chức cho học sinh thi, vậy em có thể tham gia thi tại cơ sở khác không?
+    - em có thể tham gia thi ioe tại trường khác nếu trường em không tổ chức thi ioe không?
+    - em có thể đăng ký thi tại trường khác không phải trường mình không?
+    - nếu nhà trường không tổ chức thi thì học sinh có thể đăng ký tham gia thi tại trường khác không?
+    
+
+- intent: phongGD_khong_to_chuc_thi
+  examples: |
+    - Sở/Phòng giáo dục không tổ chức cuộc thi
+    - sở giáo dục không có chủ trương tổ chức cuộc thi thì nhà trường có thể tự tổ chức thi các cấp cho các em học sinh không?
+    - nếu phòng giáo dục không tổ chức thi thì nhà trường có thể tự tổ chức thi không?
+    - nhà trường có thể tự tổ chức cuộc thi nếu phòng giáo dục không tổ chức thi không?
+    - nhà trường muốn kết hợp với trường khác để tổ chức thi vì phòng giáo dục không tổ chức thi.
+    - nhà trường làm sao để học sinh có thể tham gia thi nếu phòng giáo dục không tổ chức thi?
+    - nhà trường làm sao để học sinh có thể tham gia thi nếu sở giáo dục không tổ chức thi?
+    - hướng dẫn nhà trường tổ chức thi cho học sinh nếu phòng giáo dục không tổ chức thi
+    - phòng giáo dục không tổ chức thi thì phải làm sao
+    - sở giáo dục không tổ chức thi thì phải làm sao?
+
+
+- intent: giai_thuong_cac_ky_thi
+  examples: |
+    - bạn có thể cho tôi biết danh sách giải thưởng được không?
+    - học sinh đạt giải quốc gia sẽ được thưởng như thế nào?
+    - tôi muốn biết giải thường của giải nhất kì thi quốc gia
+    - cho tôi biết về cơ cấu giải thưởng ioe nhé
+    - học sinh đạt giải trong các kỳ thi của ioe sẽ được nhận thưởng như thế nào?
+    - giải thưởng ioe 
+    - các giải thưởng mà học sinh có được trong các kì thi ioe
+    - giải thưởng ioe dành cho cac học sinh đạt giải trong kì thi các cấp
+    - Cơ cấu giải thưởng của các kỳ thi như thế nào ạ?
+    - cơ cấu giải thưởng của kì thi ioe các cấp như thế nào ạ?
+    - những giải thưởng học sinh có thể có khi đạt giải?
+    - giải thường
+    - thưởng 
+
+
+- intent: lam_bai_tu_luyen_o_dau
+  examples: |
+    - hướng dẫn tôi làm bài tự luyện
+    - tôi bắt đầu làm bài tự luyện ở đâu?
+    - Tôi phải vào làm bài tự luyện ở đâu?
+    - các bước vào làm bài tự luyện?
+    - hướng dẫn mình làm bài tự luyện ở đâu nhé
+    - học sinh phải vào đâu để làm bài thi tự luyện
+    - học sinh phải làm bài thi tự luyện ở đâu?
+    - làm sao để truy cập và làm bài thi tự luyện?
+    - hướng dẫn truy cập và làm bài thi tự luyện
+    - làm bài thi tự luyện
+    - hướng dẫn cho tôi cách truy cập và làm bài thi tự luyện
+    - hướng dẫn mình cách truy cập và làm bài tự luyện
+    
+
+- intent: lam_bai_so_5
+  examples: |
+    - hướng dẫn làm bài thi số 5
+    - hướng dẫn học sinh làm bài thi số 5
+    - bài thi nói số 5
+    - cách làm bài thi nói số 5 như thế nào?
+    - bạn hãy hướng dẫn mình cách làm bài thi số 5
+    - làm sao mình có thể truy cập và làm bài thi số 5
+    - làm bài thi nói số 5 như thế nào?
+    - bạn hãy hướng dẫn mình làm bài thi nói số 5 nhé
+    - bạn ơi, làm sao để làm bài thi nói số 5 vậy ạ?
+    - làm sao để làm bài thi nói số 5 vậy hả
+    
+
+- intent: tao_phieu_yeu_cau
+  examples: |
+    - tôi muốn tạo phiếu yêu cầu
+    - giúp tôi tạo phiếu yêu cầu gửi về ban tổ chức
+    - bạn có thể giúp mình làm 1 cái phiếu yêu cầu không?
+    - giúp mình làm phiếu yêu cầu liền nhé
+    - hướng dẫn tôi tạo phiếu yêu cầu
+    - cách tạo phiếu yêu cầu như thế nào?
+    - bạn ơi, hãy cho tôi biết cách để tạo phiếu yêu cầu nhé
+    - hướng dẫn tôi cách tạo phiếu yêu cầu để gửi về ban tổ chức
+    - cách tạo phiếu yêu cầu gửi về BTC
+    - cách tạo phiếu yêu cầu để được hỗ trợ từ ban tổ chức
+    - phiếu yêu cầu
+    - tạo phiếu yêu cầu
+    
+    

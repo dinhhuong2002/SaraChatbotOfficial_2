@@ -11,7 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa.core.agent import Agent
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import EventType, SessionStarted, ActionExecuted
+from rasa_sdk.events import EventType, SessionStarted, ActionExecuted, UserUtteranceReverted
 from rasa_sdk.executor import CollectingDispatcher
 
 
@@ -57,11 +57,22 @@ class ActionGreetUser(Action):
         return events
 
 
-class ActionFallback(Action):
+class ActionDefaultFallback(Action):
     def name(self) -> str:
         return "action_fallback"
 
+    # def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
+    #     dispatcher.utter_message(text="Xin lỗi, tôi chưa hiểu rõ  của bạn. Vui lòng đợi, chúng tôi sẽ chuyển bạn đến bộ phận CSKH.")
+    #     dispatcher.utter_message(text="Để giải đáp vấn đề của bạn, bạn hãy liên hệ: 0984.650.154 hoặc fanpage [https://www.facebook.com/ioe.vn].")
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
-        dispatcher.utter_message(text="Xin lỗi, tôi chưa hiểu rõ  của bạn. Vui lòng đợi, chúng tôi sẽ chuyển bạn đến bộ phận CSKH.")
-        dispatcher.utter_message(text="Để giải đáp vấn đề của bạn, bạn hãy liên hệ: 0984.650.154 hoặc fanpage [https://www.facebook.com/ioe.vn].")
-        return []
+        # Custom behavior for fallback
+        # dispatcher.utter_message(text="I'm sorry, I didn't quite understand that. Could you rephrase?")
+        dispatcher.utter_message(text="Xin lỗi, mình chưa hiểu ý của bạn. Bạn có muốn liên hệ với CSKH không?")
+        # dispatcher.utter_message(text="Để giải đáp vấn đề của bạn, bạn hãy liên hệ: 0984.650.154 hoặc fanpage [ioe.vn](https://www.facebook.com/ioe.vn).")
+        buttons = [
+            {"title": "Có", "payload": "/help_ioe"},
+            {"title": "Không", "payload": "/deny"},
+        ]
+        # Optionally, you can revert the last user utterance
+        return [UserUtteranceReverted()]
+        # return []

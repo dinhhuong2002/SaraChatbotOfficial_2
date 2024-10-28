@@ -9,11 +9,13 @@ intents:
 - acc_teacher_how_to_use
 - add_GO
 - add_GO_chuyen_khoan
+- add_GO_the_game
 - add_GO_vi_dien_tu
 - agree
 - answer_name
 - ask_for_help
 - bot_bad
+- bot_can_do
 - bot_nice
 - bot_oke
 - call_bot
@@ -21,6 +23,7 @@ intents:
 - change_infor_student_acc
 - change_password
 - change_school_acc
+- change_sdt
 - chinh_sach_bao_mat
 - chuyen_GO_parents_to_student
 - chuyen_GO_teacher_to_student
@@ -38,6 +41,7 @@ intents:
 - how_to_use_GO
 - huy_lien_ket_facebook_gmail
 - huy_lien_ket_sdt
+- is_that_true
 - lich_ra_vong_tu_luyen
 - link_parents_student
 - mood_great
@@ -72,23 +76,39 @@ intents:
 - where_id_school
 - where_id_student
 - where_id_teacher
-- is_that_true
-- bot_can_do
-
-
+- dang_ky_du_thi_cac_cap   # intents: quy định về các vòng thi tự luyện của ioe
+- dang_ky_danh_sach_cap_truong
+- thoi_han_dang_ky_cap_truong
+- xem_danh_sach_hoc_sinh_hoan_thanh_tu_luyen
+- ket_qua_cap_truong
+- trien_khai_thi_cap_huyen
+- dang_ky_danh_sach_cap_huyen
+- thoi_han_dang_ky_cap_huyen
+- dieu_kien_thi_cap_huyen
+- ket_qua_thi_cap_huyen
+- nop_bien_ban_thi
+- dang_ky_thi_cap_tinh
+- dieu_kien_thi_cap_tinh
+- thoi_han_dang_ky_cap_tinh
+- xem_ma_ca_thi
+- su_dung_ma_ca_thi
+- khoi_lop_thi_quoc_gia
+- dieu_kien_thi_quoc_gia
+- thoi_han_dang_ky_thi_cac_cap
+- truong_khong_to_chuc_thi
+- phongGD_khong_to_chuc_thi
+- giai_thuong_cac_ky_thi
+- lam_bai_tu_luyen_o_dau
+- lam_bai_so_5
+- tao_phieu_yeu_cau
 entities:
 - user_name
-
-
 slots:
   user_name:
     type: text
     mappings:
     - type: from_entity
       entity: user_name
-
-
-
 
 responses:
   utter_hello:
@@ -100,7 +120,7 @@ responses:
       payload: /sign_in
     - title: Nạp GO
       payload: /add_GO
-  utter_ask_name:
+  utter_ask_user_name:
   - text: Bạn vui lòng cho mình biết tên để tiện xưng hô nhé!
   utter_answer_name:
   - text: |
@@ -120,20 +140,16 @@ responses:
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://bit.ly/4bhGdni
-
   utter_bot_can_do:
-    - text: Mình có thể giúp bạn các vấn đề liên quan đến cuộc thi IOE. Hãy hỏi mình khi cần nhé!
-    - text: Mình có thể trả lời, hướng dẫn bạn các vấn đề về cuộc thi IOE. Hãy hỏi mình nhé! Mình luôn sẵn sàng.
-    - text: Hiện tại mình có thể giúp bạn giải quyết các vấn đề liên quan đến cuộc thi IOE.
-
+  - text: Mình có thể giúp bạn các vấn đề liên quan đến cuộc thi IOE. Hãy hỏi mình khi cần nhé!
+  - text: Mình có thể trả lời, hướng dẫn bạn các vấn đề về cuộc thi IOE. Hãy hỏi mình nhé!
+  - text: Hiện tại mình có thể giúp bạn giải quyết các vấn đề liên quan đến cuộc thi IOE.
   utter_ask_for_help:
   - text: Chắc chắn rồi, hãy nói cho mình nghe vấn đề của bạn nhé.
-
   utter_is_that_true:
-    - text: Đúng vậy đó!
-    - text: Dạ đúng rồi.
-    - text: Chính xác rồi.
-
+  - text: Đúng vậy đó!
+  - text: Dạ đúng rồi.
+  - text: Chính xác rồi.
   utter_did_that_help:
   - text: Did that help you?
   utter_fine_thanks:
@@ -147,9 +163,6 @@ responses:
   - text: Bye. Have a nice day!
   - text: Chúc bạn một ngày tốt lành. Hẹn gặp lại bạn!
   - text: Hẹn gặp lại nhé!
-#  - text: |
-#      Tạm biệt {user_name}!
-#      Hãy quay lại với mình khi {user_name} cần nhé!
   utter_deny:
   - text: Oke.
   - text: Oh, tiếp tục hỏi nếu bạn cần trợ giúp thêm nhé!
@@ -421,9 +434,10 @@ responses:
       payload: /add_GO
   utter_add_GO:
   - text: |
-      <ul>Để nạp GO, có 2 cách sau: 
+      <ul>Để nạp GO, có 3 cách sau: 
         <li> - Nạp GO qua chuyển khoản ngân hàng.</li>
         <li> - Nạp GO qua ví điện tử.</li>
+        <li> - Nạp GO bằng thẻ game.</li>
       Vui lòng lựa chọn cách bạn muốn nạp GO:
       </ul>
     buttons:
@@ -431,6 +445,8 @@ responses:
       payload: /add_GO_chuyen_khoan
     - title: Ví điện tử
       payload: /add_GO_vi_dien_tu
+    - title: Thẻ game
+      payload: /add_GO_the_game
   utter_add_GO_chuyen_khoan:
   - text: |
       <ul>Để nạp GO bằng chuyển khoản ngân hàng, bạn hãy làm theo hướng dẫn sau: 
@@ -462,6 +478,23 @@ responses:
         <li>Bước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.</li>
         <li> Chúc bạn đổi GO thành công và luyện tập tốt!</li>
       </ul>
+    buttons:
+    - title: Đổi GO
+      payload: /how_to_use_GO
+  utter_add_GO_the_game:
+  - text: |
+      <ul>Để nạp GO bằng Thẻ game, bạn hãy làm theo hướng dẫn sau: 
+          <li>Bước 1: Bạn đăng nhập vào tài khoản IOE, click vào "Đổi gói dịch vụ IOE". </li>
+          <li>Bước 2: Chọn khối lớp của mình sau đó chọn gói dịch vụ cần đổi và click vào nút "Thêm".</li>
+          <li>Bước 3: Màn hình hiển thị thông báo về thời hạn sử dụng Gói dịch vụ bạn cần đổi, bạn kiểm tra lại và bấm vào “Xem giỏ hàng và đổi gói”.</li>
+          <li>Bước 4: Kiểm tra thông tin gói dịch vụ trong giỏ hàng, sau đó bấm vào “Xác nhận đơn hàng”.</li>
+          <li>Bước 5: Tiến hành đổi Gói dịch vụ bằng cách bấm vào “Thanh toán”.</li>
+          <li>Bước 6: Màn hình hiện ra các hình thức nạp Go, bạn click vào “Thẻ game”.</li>
+          <li>Bước 7: Bạn chọn loại thẻ Game, điền chính xác mã thẻ, số seri rồi click vào "Xác nhận".</li>
+          <li>Bước 8: Sau khi bạn thanh toán thành công, bạn bấm vào “Đóng” trên màn hình để hoàn tất đổi Gói dịch vụ.</li>
+          <li>Bước 9: Màn hình hiển thị lịch sử các gói dịch vụ IOE bạn đã đổi.</li>
+          <li> Chúc bạn đổi GO thành công và luyện tập tốt!</li>
+        </ul>
     buttons:
     - title: Đổi GO
       payload: /how_to_use_GO
@@ -506,12 +539,11 @@ responses:
         <li>Bước 4: Xem giỏ hàng và tiến hành thanh toán.</li>
       </ul>
       <p>Chi tiết tham khảo tại: <a href = "https://ioe.vn/huong-dan/faqdetails/217/1-0" target="_blank" >https://ioe.vn/huong-dan/faqdetails/217/1-0.</a></p>
-
   utter_sale_goi_dich_vu:
   - text: |
-        Chính sách khuyến mãi sẽ được áp dụng khi thầy/cô đổi gói combo Học cùng IOE và Thi thử IOE cho 10 tài khoản học sinh thì hệ thống sẽ <b>cộng điểm thưởng Ruby.</b>
-        Số ruby được thưởng sẽ quy đổi được thành 1 gói combo.
-        Trân trọng cảm ơn thầy/cô đã ủng hộ cuộc thi!
+      Chính sách khuyến mãi sẽ được áp dụng khi thầy/cô đổi gói combo Học cùng IOE và Thi thử IOE cho 10 tài khoản học sinh thì hệ thống sẽ <b>cộng điểm thưởng Ruby.</b>
+      Số ruby được thưởng sẽ quy đổi được thành 1 gói combo.
+      Trân trọng cảm ơn thầy/cô đã ủng hộ cuộc thi!
   utter_dieu_khoan_dich_vu:
   - text: |
       Điều khoản dịch vụ chi tiết xem tại: <a href="https://edu.go.vn/policy/terms-of-use" target="_blank"a> https://edu.go.vn/policy/terms-of-use.</a>
@@ -521,7 +553,7 @@ responses:
       <li>Chi tiết chính sách bảo mật: <a href="https://edu.go.vn/policy/privacy" target="_blank"a> https://edu.go.vn/policy/privacy.</a></li>
   utter_the_le:
   - text: |
-      Chi tiết thể lệ xem tại: <a href="https://ioe.vn/the-le" target="_blank"a> https://ioe.vn/the-le.</a>
+      Chi tiết thể lệ xem tại: <a href="https://ioe.vn/the-le" target="_blank"> https://ioe.vn/the-le.</a>
   - text: |-
       Mỗi năm học, IOE tổ chức 4 vòng thi chính thức dành cho cấp tiểu học và trung học cơ sở, cùng với 3 vòng thi chính thức cho cấp phổ thông trung học. Ngoài ra, cuộc thi có tổng cộng 35 vòng thi tự luyện tương ứng với 35 tuần học được mở vào thứ 2 hằng tuần dành cho tất cả học sinh.
       - 35 vòng Tự luyện tương ứng với 35 tuần học, được hệ thống mở vào thứ 2 hàng tuần, bắt đầu từ tháng 8 hàng năm.
@@ -529,7 +561,6 @@ responses:
   - text: |
       Thí sinh tham dự thi IOE có thể tham gia luyện tập và thi khối lớp của mình và khối lớp khác.
       <b style="text-decoration: underline;">Chú ý:</b> Học sinh <b style="color: green;">được thi vượt lớp</b>, <i style="color: red;">không được thi vượt cấp.</i>
-
   utter_dang_ky_to_chuc_thi:
   - text: |
       <p>Sở Giáo dục có thể đăng ký để ban tổ chúc IOE hỗ trợ mở một cuộc thi riêng cho học sinh trong sở.</p>
@@ -560,6 +591,9 @@ responses:
         <li>&nbsp;&nbsp;Bước 3: Bạn sử dụng số điện thoại đã đăng ký xác thực với tài khoản của bạn soạn tin nhắn theo cú pháp: <b>GO XOA <MKC2> gửi 8100</b>.</li>
         <li>Hệ thống sẽ tiến hành hủy liên kết số điện thoại sau 24 giờ kể từ thời điểm gửi tin nhắn và tài khoản của bạn sẽ trở về trạng thái chưa xác thực.</li>
       </ul>
+  utter_change_sdt:
+  - text: |
+      Để có thể thayddooiri số điện thoại xác thực tài khoản 
   utter_forget_MKC2:
   - text: |
       Bạn quên MKC2 và cần cấp lại vui lòng soạn SMS bằng số điện thoại đã xác thực theo hướng dẫn sau: 
@@ -571,7 +605,7 @@ responses:
       <li style="list-style: none;">- Học sinh phải xác thực tài khoản và hoàn thành số vòng tự luyện tương ứng với mỗi vòng thi.</li>
       <li style="list-style: none;">- Học sinh được giao viên quản trị trường đăng ký tham gia thi trong thời haạn đăng ký mà BTC công bố.</li>
       Bạn có thể kiểm tra thông tin theo hướng dẫn sau: 
-      <a href="https://ioe.vn/huong-dan/faqdetails/75/43-32" target="_blank"a> https://ioe.vn/huong-dan/faqdetails/75/43-32.</a>
+      <a href="https://ioe.vn/huong-dan/faqdetails/75/43-32" target="_blank"> https://ioe.vn/huong-dan/faqdetails/75/43-32.</a>
   utter_thi_tu_do:
   - text: |
       <li style="list-style: none;">- <b>Kỳ thi chính thức</b> của IOE không có hình thức thi tự do. Học sinh bắt buộc phải được giáo viên quản trị trường đăng ký dự thi và tham gia thi theo Hội đồng thi.</li>
@@ -586,7 +620,7 @@ responses:
   utter_lich_ra_vong_tu_luyen:
   - text: |
       Lịch mở vòng tự luyện và lịch thi chính thức các cấp bạn tham khảo tại:
-      <a href="https://ioe.vn/chi-tiet/tin-tu-ban-to-chuc/lich-tu-luyen-va-cac-vong-thi-chinh-thuc-ioe-nam-hoc-20232024-1-5860" target="_blank"a> Lịch mở các vòng tự luyện.</a>
+      <a href="https://ioe.vn/chi-tiet/tin-tu-ban-to-chuc/lich-tu-luyen-va-cac-ky-thi-chinh-thuc-ioe-nam-hoc-20242025-1-6607" target="_blank"a> Lịch mở các vòng tự luyện.</a>
   utter_huy_lien_ket_facebook_gmail:
   - text: |
       Để được hỗ trợ gỡ liên kết đăng nhập qua facebook hoặc gmail, bạn vui lòng gửi yêu cầu hỗ trợ trên trang <a href = "https://hotro.go.vn/edu/IOE/home/" target="_blank" >hotro.ioe.vn</a> theo hướng dẫn sau: 
@@ -607,10 +641,270 @@ responses:
          <li>Bước 3: Tham gia trải nghiệm tính năng “Điểm thưởng”.</li>
       </ul>
       Ngoài ra, Ruby còn được sử dụng để đổi gói dịch vụ IOE với 1000 ruby = 1 GO = 1000 VNĐ.
-actions:
 
+
+#intent: quy định các vòng thi
+  utter_dang_ky_du_thi_cac_cap:
+    - text: |
+        Hướng dẫn đăng ký danh sách học sinh thi cấp của IOE:
+          <b>Bước 1:</b> Thầy cô đăng nhập tài khoản giáo viên quản trị Trường, vào mục <b>Quản lý thi IOE</b>, chọn <b>Thi các cấp</b> rồi chọn <b>Quản lý thi</b>.
+            Tại mục <b>Đủ điều kiện thi</b> thầy cô có thể xem danh sách học sinh đã đủ điều kiện dự thi.
+          <b>Bước 2:</b> Để đăng ký danh sách dự thi, Thầy/Cô lựa chọn học sinh bằng cách tích chọn từng học sinh sau đó nhâp vào nút <b>Đăng ký</b> hoặc nhấp vào <b>Đăng ký tất cả</b> để chọn toàn bộ danh sách.
+          <b>Bước 3:</b> Thầy/Cô kiểm tra lại danh sách đã đăng ký bằng cách nhấp vào mục <b>Đã đăng ký thi</b>. Thầy/cô có thể Hủy đăng ký thi của học sinh bằng cách bấm vào nút <b style="color:red;">Hủy</b>. 
+            Thầy/cô có thể kiểm tra danh sách học sinh chưa đủ điều kiện thi bằng cách nhấp vào mục “Chưa đủ điều kiện thi”.
+        Tham khảo chi tiết tại: <a href="https://ioe.vn/huong-dan/faqdetails/88/44-32" target="_blank">Đăng ký danh sách thi các cấp.</a>
+  
+
+  utter_dang_ky_danh_sach_cap_truong:
+    - text: |
+        Hướng dẫn đăng ký danh sách học sinh thi cấp trường:
+          <b>Bước 1:</b> Thầy cô đăng nhập tài khoản giáo viên quản trị Trường, vào mục <b>Quản lý thi IOE</b>, chọn <b>Thi các cấp</b> rồi chọn <b>Quản lý thi</b>.
+            Tại mục <b>Đủ điều kiện thi</b> thầy cô có thể xem danh sách học sinh đã đủ điều kiện dự thi.
+          <b>Bước 2:</b> Để đăng ký danh sách dự thi, Thầy/Cô lựa chọn học sinh bằng cách tích chọn từng học sinh sau đó nhâp vào nút <b>Đăng ký</b> hoặc nhấp vào <b>Đăng ký tất cả</b> để chọn toàn bộ danh sách.
+          <b>Bước 3:</b> Thầy/Cô kiểm tra lại danh sách đã đăng ký bằng cách nhấp vào mục <b>Đã đăng ký thi</b>. Thầy/cô có thể Hủy đăng ký thi của học sinh bằng cách bấm vào nút <b style="color:red;">Hủy</b>. 
+            Thầy/cô có thể kiểm tra danh sách học sinh chưa đủ điều kiện thi bằng cách nhấp vào mục “Chưa đủ điều kiện thi”.
+        Tham khảo chi tiết tại: <a href="https://ioe.vn/huong-dan/faqdetails/88/44-32" target="_blank">Đăng ký danh sách thi các cấp.</a>
+
+  utter_thoi_han_dang_ky_cap_truong:
+    - text: |
+        Thời hạn giáo viên đăng ký danh sách học sinh tham dự thi cấp trường năm học 2024-2025: được đề cập trong công văn hướng dẫn thi cả năm học.
+  #hỏi lại và cập nhật sau
+  utter_xem_danh_sach_hoc_sinh_hoan_thanh_tu_luyen:
+    - text: |
+        <ul>Để xem KẾT QUẢ THI các vòng Tự luyện của học sinh trên nền tảng IOE, Thầy/ Cô vui lòng thực hiện theo hướng dẫn sau:
+              <li>Bước 1: Đăng nhập vào Tài khoản Giáo viên Quản trị Trường đã được phê duyệt.</li>
+              <li>Bước 2: Trên trang chủ của Tài khoản, Thầy/ cô chọn “Quản lý thi IOE”.</li>
+              <li>Bước 3: Trên giao diện “Quản lý thi IOE”, Thầy/ cô chọn <b>“Kết quả thi và vinh danh”</b>, tiếp tục chọn <b>“Kết quả tự luyện”</b>.</li>
+              <li>Bước 4: Thầy/Cô có thể chọn "Lọc danh sách", thao tác tìm kiếm/ tra cứu/ quản lý trên giao diện thống kê.</li>
+              Thầy/ cô  có thể chọn Tải về danh sách học sinh toàn trường hoặc Cập nhật danh sách (nếu cần thiết).
+        </ul>
+
+    - text: |
+        Để xem bảng thống kê, Thầy/Cô vui lòng thực hiện theo hướng dẫn sau: <a href="https://ioe.vn/huong-dan/faqdetails/170/1-0" target="_blank">Hướng dẫn.</a>
+
+  utter_ket_qua_cap_truong:
+    - text: |
+        Đối với tài khoản học sinh:
+        <ul>
+          <li>Bước 1: Đăng nhập vào tài khoản.</li>
+          <li>Bước 2: Vào mục Thông tin --> chọn MyIOE</li>
+          <li>Bước 3: Trên màn hình MyIOE, học sinh có thể xem lại Kết quả thi các cấp IOE như hình minh họa bên dưới:</li>
+          <li>
+            <a href="https://cdn-s3.vtconline.vn/ioe-resource-02/filePublish/NewsImages/EOlympic/news/2024/1/image(6).png" target="_blank">
+              <img src="https://cdn-s3.vtconline.vn/ioe-resource-02/filePublish/NewsImages/EOlympic/news/2024/1/image(6).png" alt="Kết quả thi cấp trường" style="width:100%;max-width:600px;height:400px">
+            </a>
+          </li>
+        </ul>
+        <br> <!-- Dòng trống để ngăn cách giữa hai danh sách -->
+        Đối với tài khoản giáo viên:
+        <ul>
+          <li>Bước 1: Thầy/cô đăng nhập vào tài khoản Quản trị trường, chọn mục “Quản lý thi IOE”.</li>
+          <li>Bước 2: Thầy/cô lựa chọn mục “Tra cứu kết quả thi” trong tính năng Quản lý thi IOE.</li>
+          <li>Bước 3: Thầy/cô lựa chọn vòng thi chính thức cần tra cứu để xem Kết quả thi của các học sinh đã dự thi của nhà trường.</li>
+          Hệ thống sẽ trả ra toàn bộ kết quả thi tại kỳ thi chính thức mà Thầy/Cô lựa chọn trong năm học đó.
+        </ul>
+
+  utter_trien_khai_thi_cap_huyen:
+    - text: |
+        Quy trình tổ chức kỳ thi cấp huyện như sau:
+        <b style="color:blue">Bước 1: LỰA CHỌN KHỐI LỚP</b>
+        <ul>
+          <li>1. Thầy/Cô đăng nhập Tài khoản Quản lý, vào mục “Quản lý thi IOE”, lựa chọn tính năng "Đăng ký và tạo mã ca thi”.</li>
+          <li>2. Thầy/Cô bấm vào mục “Chọn khối” để lựa chọn khối lớp theo nhu cầu thực tế.</li>
+          <li>3. Thầy/cô chọn “ Đăng ký và Tạo mã ca thi”.</li>
+        Sau khi thầy/cô đăng ký thành công, màn hình sẽ hiển thị thông báo đã tạo MÃ THI thành công.
+        </ul>
+        <br> <!-- Dòng trống để ngăn cách giữa hai danh sách -->
+        <b style="color:blue">BƯỚC 2:  MÃ CA THI</b>
+        <ul>
+          <li>Sau khi hệ thống thông báo đăng ký khối lớp thành công, thầy/cô bấm “Xem mã ca thi”.</li>
+          <li>- Sau khi tạo mã ca thi thành công, Phòng giáo dục chủ động quản lý/thông báo đúng mã ca thi cho các Hội đồng thi.</li>
+          <li>- Với các khối lớp Phòng không đăng ký tổ chức thi, học sinh sử dụng mã ca thi hiển thị trong tài khoản Giáo viên để vào thi.</li>
+        </ul>
+         <br> <!-- Dòng trống để ngăn cách giữa hai danh sách -->
+        <b style="color:blue">BƯỚC 3:  NỘP BIÊN BẢN THI</b>
+        <li>Sau khi hoàn thành tổ chức thi ở bước 2, Thầy cô tải và nộp BBT (bản scan) lên hệ thống trong thời gian Quy định của BTC.</li>
+#thêm buttons cho việc nộp biên bản thi intent: nop_bien_ban_thi
+      buttons:
+        - title: Hướng dẫn nộp biên bản
+          payload: /nop_bien_ban_thi
+
+        - title: Xem mã ca thi
+          payload: /utter_xem_ma_ca_thi
+
+  utter_dang_ky_danh_sach_cap_huyen:
+    - text: |
+        Hướng dẫn đăng ký danh sách học sinh thi cấp huyện:
+          <b>Bước 1:</b> Thầy cô đăng nhập tài khoản giáo viên quản trị, vào mục <b>Quản lý thi IOE</b>, chọn <b>Thi các cấp</b> rồi chọn <b>Quản lý thi</b>.
+            Tại mục <b>Đủ điều kiện thi</b> thầy cô có thể xem danh sách học sinh đã đủ điều kiện dự thi.
+          <b>Bước 2:</b> Để đăng ký danh sách dự thi, Thầy/Cô lựa chọn học sinh bằng cách tích chọn từng học sinh sau đó nhâp vào nút <b>Đăng ký</b> hoặc nhấp vào <b>Đăng ký tất cả</b> để chọn toàn bộ danh sách.
+          <b>Bước 3:</b> Thầy/Cô kiểm tra lại danh sách đã đăng ký bằng cách nhấp vào mục <b>Đã đăng ký thi</b>. Thầy/cô có thể Hủy đăng ký thi của học sinh bằng cách bấm vào nút <b style="color:red;">Hủy</b>. 
+            Thầy/cô có thể kiểm tra danh sách học sinh chưa đủ điều kiện thi bằng cách nhấp vào mục “Chưa đủ điều kiện thi”.
+        Tham khảo chi tiết tại: <a href="https://ioe.vn/huong-dan/faqdetails/88/44-32" target="_blank">Đăng ký danh sách thi các cấp.</a>
+  
+  
+
+  utter_thoi_han_dang_ky_cap_huyen:
+    - text: |
+        Thời hạn giáo viên đăng ký danh sách học sinh tham dự thi cấp huyện năm học 2024-2025: được đề cập trong công văn hướng dẫn thi cả năm học.
+  #update sau thời hạn đăng ký
+
+  utter_dieu_kien_thi_cap_huyen:
+    - text: |
+        Học sinh được tham dự  kỳ thi chính thức cấp Quận/Huyện  khi thỏa mãn các điều kiện sau:
+          - Học sinh phải xác thực tài khoản.
+          - Học sinh phải hoàn thành vòng tự luyện thứ 20 và được ghi nhận kết quả tự luyện trên hệ thống.
+          - Học sinh phải được giáo viên quản trị trường đăng ký tham gia thi trong thời hạn đăng ký mà BTC công bố.
+        <b>Lưu ý:</b> Học sinh chưa tham gia dự thi cấp Trường vẫn được tham gia dự thi cấp Quận/Huyện nếu đáp ứng các điều kiện của BTC.
+
+  utter_ket_qua_thi_cap_huyen:
+    - text: |
+        Đối với tài khoản học sinh:
+        <ul>
+          <li>Bước 1: Đăng nhập vào tài khoản.</li>
+          <li>Bước 2: Vào mục Thông tin --> chọn MyIOE</li>
+          <li>Bước 3: Trên màn hình MyIOE, học sinh có thể xem lại Kết quả thi các cấp IOE như hình minh họa bên dưới:</li>
+          <li>
+            <a href="https://cdn-s3.vtconline.vn/ioe-resource-02/filePublish/NewsImages/EOlympic/news/2024/1/image(6).png" target="_blank">
+              <img src="https://cdn-s3.vtconline.vn/ioe-resource-02/filePublish/NewsImages/EOlympic/news/2024/1/image(6).png" alt="Kết quả thi cấp trường" style="width:100%;max-width:600px;height:400px">
+            </a>
+          </li>
+        </ul>
+        <br> <!-- Dòng trống để ngăn cách giữa hai danh sách -->
+        Đối với tài khoản giáo viên:
+        <ul>
+          <li>Bước 1: Thầy/cô đăng nhập vào tài khoản Quản trị trường, chọn mục “Quản lý thi IOE”.</li>
+          <li>Bước 2: Thầy/cô lựa chọn mục “Tra cứu kết quả thi” trong tính năng Quản lý thi IOE.</li>
+          <li>Bước 3: Thầy/cô lựa chọn vòng thi chính thức cần tra cứu để xem Kết quả thi của các học sinh đã dự thi của nhà trường.</li>
+          Hệ thống sẽ trả ra toàn bộ kết quả thi tại kỳ thi chính thức mà Thầy/Cô lựa chọn trong năm học đó.
+        </ul>
+        
+
+  utter_nop_bien_ban_thi:
+    - text: |
+        Hướng dẫn nộp biên bản thi:
+        1. Đối với tài khoản Giáo viên quản trị nhà trường, chi tiết xem tại: <a href = "https://ioe.vn/huong-dan/faqdetails/105/44-32" target="_blank">Nhà trường nộp biên bản thi.</a>
+        2. Đối với tài khoản Giáo viên quản lý Phòng, Sở chi tiết xem tại: <a href = "https://ioe.vn/huong-dan/faqdetails/176/45-32" target="_blank">Phòng/Sở nộp biên bản thi.</a>
+  
+
+  utter_dang_ky_thi_cap_tinh:
+    - text: |
+        Hướng dẫn đăng ký danh sách học sinh thi cấp Tỉnh/Thành phố:
+          <b>Bước 1:</b> Thầy cô đăng nhập tài khoản giáo viên quản trị Trường, vào mục <b>Quản lý thi IOE</b>, chọn <b>Thi các cấp</b> rồi chọn <b>Quản lý thi</b>.
+            Tại mục <b>Đủ điều kiện thi</b> thầy cô có thể xem danh sách học sinh đã đủ điều kiện dự thi.
+          <b>Bước 2:</b> Để đăng ký danh sách dự thi, Thầy/Cô lựa chọn học sinh bằng cách tích chọn từng học sinh sau đó nhâp vào nút <b>Đăng ký</b> hoặc nhấp vào <b>Đăng ký tất cả</b> để chọn toàn bộ danh sách.
+          <b>Bước 3:</b> Thầy/Cô kiểm tra lại danh sách đã đăng ký bằng cách nhấp vào mục <b>Đã đăng ký thi</b>. Thầy/cô có thể Hủy đăng ký thi của học sinh bằng cách bấm vào nút <b style="color:red;">Hủy</b>. 
+            Thầy/cô có thể kiểm tra danh sách học sinh chưa đủ điều kiện thi bằng cách nhấp vào mục “Chưa đủ điều kiện thi”.
+        Tham khảo chi tiết tại: <a href="https://ioe.vn/huong-dan/faqdetails/88/44-32" target="_blank">Đăng ký danh sách thi các cấp.</a>
+        
+
+  utter_dieu_kien_thi_cap_tinh:
+    - text: |
+        Điều kiện để học sinh dự thi IOE cấp Tỉnh/Thành phố năm học 2024-2025:
+          - Tài khoản học sinh đã hoàn thành vòng tự luyện 25 và <b>ở trạng thái xác thực</b>.
+          - Tài khoản được giáo viên quản trị <b>đăng ký thi thành công</b> trong thời gian mở đăng ký của BTC.
+        Ngoài ra, các Hội đồng thi có thể tự đưa ra các tiêu chí lựa chọn danh sách dự thi của đơn vị mình mà không trái với các điều kiện từ BTC.
+
+  utter_thoi_han_dang_ky_cap_tinh:
+    - text: |
+        Hiện tại chưa có thông tin về thời hạn đăng ký thi cấp tỉnh!
+        
+
+  utter_xem_ma_ca_thi:
+    - text: |
+        Mã ca thi trong tài khoản Giáo viên quản trị được hiển thị sau khi đăng ký danh sách dự thi thành công.
+        Thầy/Cô đăng nhập tài khoản -> chọn Thi các cấp -> chọn Mã số ca thi để xem chi tiết danh sách mã số ca thi.
+        <br>
+        Mã số thi cần được bảo mật. 
+        Để đảm bảo tính công bằng và nghiêm túc của cuộc thi, Ban tổ chức đề nghị giáo viên tuyệt đối <b style="color:red,">KHÔNG cấp mã số thi cho học sinh thi tự do tại nhà</b>.
+
+      buttons:
+        - title: Sử dụng mã ca thi
+          payload: /su_dung_ma_ca_thi
+
+        - title: Đăng ký danh sách dự thi
+          payload: /dang_ky_thi_cap_tinh
+
+  utter_su_dung_ma_ca_thi:
+    - text: |
+        Hướng dẫn giáo viên sử dụng mã ca thi:
+          - Sau khi có danh sách mã ca thi, giáo viên cung cấp mã ca thi cho học sinh đúng theo Hội đồng thi đã đăng ký ( Thi theo hội đồng thi <b>nhà trường</b> sử dụng mã ca thi hiển thị trong tài khoản <b>giáo viên của nhà trường</b>; thi theo hội đồng thi <b>Phòng/Sở</b> sử dụng mã ca thi hiển thị trong <b>tài khoản của Quản lý Phòng /Sở</b>).
+          - Những học sinh không có trong danh sách đăng ký dự thi không thể truy cập vào đề thi, kể cả khi có mã số thi.
+          - Mã số ca thi cần được bảo mật!
+
+  utter_khoi_lop_thi_quoc_gia:
+    - text: |
+        Vòng thi cấp Quốc gia Olympic tiếng Anh trên Internet dành cho học sinh phổ thông năm học 2023-2024 được tổ chức cho các khối lớp gồm Lớp 4, lớp 5, lớp 8, lớp 9 và lớp 11.
+
+  utter_dieu_kien_thi_quoc_gia:
+    - text: |
+        Theo quy định của BTC, các tài khoản học sinh thuộc khối 4-5-8-9-11 thỏa mãn các điều kiện sau sẽ được dự thi vòng thi IOE cấp quốc gia:
+          - Đã tham gia dự thi vòng thi tỉnh/thành phố và đạt tối thiểu 1000 điểm.
+          - Hoàn thành vòng tự luyện 30 và ở trạng thái xác thực.
+          - Được GV quản trị đăng ký thành công trong thời gian BTC quy định.
+  
+        Ngoài ra, các Hội đồng thi có thể tự đưa ra các tiêu chí lựa chọn danh sách dự thi của đơn vị mình mà không trái với các điều kiện từ BTC.
+        <b>Lưu ý:</b> Học sinh thuộc các đơn vị không nộp BBT cấp Tỉnh/Thành phố vẫn có thể được đăng ký dự thi IOE cấp Quốc gia  nếu đáp ứng đủ các điều kiện khác từ BTC và Hội đồng thi.
+
+  utter_thoi_han_dang_ky_thi_cac_cap:
+    - text: |
+        Thời hạn đăng ký danh sách học sinh thi IOE các cấp sẽ được BTC cập nhật chi tiết trên trang chủ <a href="https://ioe.vn/trang-chu" target="_blank">ioe.vn</a>.
+        Bạn theo dõi nhé!
+
+  utter_truong_khong_to_chuc_thi:
+    - text: |
+        Theo quy chế thi của BTC, các cuộc thi chính thức học sinh phải thi theo hội đồng thi do các đơn vị giáo dục tổ chức ( Nhà trường/Phòng/Sở).
+        Thí sinh thuộc đơn vị không tổ chức thi sẽ <b style="color:red;">không được</b> tham gia thi tại đơn vị khác.
+        Do vậy các học sinh, phụ huynh yêu thích chương trình IOE và có nhu cầu tham gia thi các vòng thi chính thức cần liên hệ với giáo viên nhà trường đề nghị tổ chức.
+        
+
+  utter_phongGD_khong_to_chuc_thi:
+    - text: |
+        Trong trường hợp Sở/Phòng GD&ĐT, nhà trường có thể tự đăng ký tổ chức thi IOE hoặc liên kết các trường trong cùng tỉnh/thành phố tổ chức cụm thi IOE.
+        
+
+  utter_giai_thuong_cac_ky_thi:
+    - text: |
+        Cơ cấu giải thưởng của IOE được quy định trong văn bản Hướng dẫn trước mỗi vòng thi chính thức các cấp.
+        Bạn vui lòng theo dõi các kênh chính thức của IOE để cập nhật thông tin!
+  #có thể thêm buttons ở đây để liên hệ CSKH
+
+  utter_lam_bai_tu_luyen_o_dau:
+    - text: |
+        Để tham gia bài "TỰ LUYỆN IOE", bạn cần phải "Đăng Nhập" tài khoản IOE, sau khi đăng nhập màn hình sẽ hiển lên như sau:
+        Bạn có thể chọn vào <b>"TỰ LUYỆN"</b> ở menu trên cùng theo mũi tên hướng dẫn.
+        Bạn vui lòng tham khảo thêm tại: <a href="https://ioe.vn/huong-dan/faqdetails/127/53-30" target="_blank">https://ioe.vn/huong-dan/faqdetails/127/53-30.</a>
+      image: https://cdn-s3.vtconline.vn/ioe-resource-02/filePublish/NewsImages/EOlympic/news/2023/8/TL%203.jpg
+
+  utter_lam_bai_so_5:
+    - text: |
+        Hướng dẫn làm bài thi số 5, bạn tham khảo tại: <a href="https://ioe.vn/huong-dan/faqdetails/242/51-30" target="_blank">https://ioe.vn/huong-dan/faqdetails/242/51-30.</a>
+
+
+  utter_tao_phieu_yeu_cau:
+    - text: |
+        Hướng dẫn tạo phiếu yêu cầu gửi về BTC: 
+          Bước 1: Truy câập trang <a href="https://hotro.go.vn/edu/IOE/home/" target="_blank">hotroIOE</a>.
+          Bước 2: Tra cứu FAQ.
+          Bước 3: Kéo xuống cuối trang click "Tạo phiếu" để tạo phiếu yêu cầu.
+          Bước 4: Gửi phiếu và theo dõi phiếu để nhận kết quả trả lời.
+        Ngoài ra, tôi có thể hỗ trợ bạn tạo phiếu yêu cầu ngay lập tức tại đây.
+        Bạn có muốn tạo phiếu ngay?
+#      buttons:
+#        - title: Tạo phiếu yêu cầu
+#          payload: /request_form_by_bot
+
+        
+
+actions:
+- utter_hello
+- utter_change_sdt
+- utter_sign_up
 - action_greet_user
 - action_fallback
+
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

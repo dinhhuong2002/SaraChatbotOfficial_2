@@ -318,3 +318,85 @@ rules:
       - intent: what_is_ruby
       - action: utter_what_is_ruby
 
+  - rule: hướng dẫn đăng ký tham dự k thi các cấp
+    steps:
+      - intent: dang_ky_du_thi_cac_cap
+      - action: utter_dang_ky_du_thi_cac_cap
+
+  - rule: giáo viên xem danh sách học sinh hoàn thành vòng tự luyện
+    steps:
+      - intent: xem_danh_sach_hoc_sinh_hoan_thanh_tu_luyen
+      - action: utter_xem_danh_sach_hoc_sinh_hoan_thanh_tu_luyen
+
+  - rule: hướng dẫn xem kết quả thi cấp trường
+    steps:
+      - intent: ket_qua_cap_truong
+      - action: utter_ket_qua_cap_truong
+
+  - rule: hướng dẫn xem kết quả thi cấp huyện
+    steps:
+      - intent: ket_qua_thi_cap_huyen
+      - action: utter_ket_qua_thi_cap_huyen
+
+  - rule: hướng dẫn tổ chứ kỳ thi cấp huyện cho phòng/sở giáo dục
+    steps:
+      - intent: trien_khai_thi_cap_huyen
+      - action: utter_trien_khai_thi_cap_huyen
+
+  - rule: nộp biên bản thi
+    steps:
+      - intent: nop_bien_ban_thi
+      - action: utter_nop_bien_ban_thi
+
+  - rule: xem mã ca thi
+    steps:
+      - intent: xem_ma_ca_thi
+      - action: utter_xem_ma_ca_thi
+
+  - rule: hướng dẫn sử dụng mã ca thi
+    steps:
+      - intent: su_dung_ma_ca_thi
+      - action: utter_su_dung_ma_ca_thi
+
+  - rule: các khối lớp có thể tham gia kỳ thi quốc gia
+    steps:
+      - intent: khoi_lop_thi_quoc_gia
+      - action: utter_khoi_lop_thi_quoc_gia
+
+  - rule: trả lời về thời hạn đăng ký thi các cấp
+    steps:
+      - intent: thoi_han_dang_ky_thi_cac_cap
+      - action: utter_thoi_han_dang_ky_thi_cac_cap
+
+  - rule: trường không tổ chức thi thì không thể thi tự do cũng như không thể tham gia thi tại trường khác
+    steps:
+      - intent: truong_khong_to_chuc_thi
+      - action: utter_truong_khong_to_chuc_thi
+
+  - rule: phòng sở giáo dục không tổ chức kì thi thì trường có thể tự tổ chức
+    steps:
+      - intent: phongGD_khong_to_chuc_thi
+      - action: utter_phongGD_khong_to_chuc_thi
+
+  - rule: các giải thưởng trong các kì thi
+    steps:
+      - intent: giai_thuong_cac_ky_thi
+      - action: utter_giai_thuong_cac_ky_thi
+
+  - rule: làm bài thi tự luyện ở đâu
+    steps:
+      - intent: lam_bai_tu_luyen_o_dau
+      - action: utter_lam_bai_tu_luyen_o_dau
+
+  - rule: hướng dẫn làm bài thi số 5
+    steps:
+      - intent: lam_bai_tu_luyen_o_dau
+      - action: utter_lam_bai_tu_luyen_o_dau
+
+  - rule: hướng dẫn tạo phiếu yêu cầu
+    steps:
+      - intent: tao_phieu_yeu_cau
+      - action: utter_tao_phieu_yeu_cau
+
+
+

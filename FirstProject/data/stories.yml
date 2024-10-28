@@ -10,7 +10,7 @@ stories:
 
   - story: chào hỏi với tên người dùng
     steps:
-      - action: utter_ask_name
+      - action: utter_ask_user_name
       - intent: answer_name
         entities:
           - name: "An"
@@ -54,6 +54,14 @@ stories:
       - action: utter_bot_oke
       - intent: bot_nice
       - action: utter_bot_nice
+
+  - story: bot tốt không? bot có thể giúp gì cho tôi?
+    steps:
+      - intent: bot_oke
+      - action: utter_bot_oke
+      - intent: bot_can_do
+      - action: utter_bot_can_do
+
 
   - story: 01_hỏi lại bot rằng câu trẻ lời của bot có đúng không? is_that_true
     steps:
@@ -202,12 +210,40 @@ stories:
       - action: utter_sign_up_school
       - intent: sign_up_Education_Department
       - action: utter_sign_up_Education_Department
-  #  - story: nạp GO bằng thẻ game
-#    steps:
-#      - intent: add_GO
-#      - action: utter_add_GO
-#      - intent: add_GO_the_game
-#      - action: utter_add_GO_the_game
+  - story: nạp GO bằng thẻ game
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_the_game
+      - action: utter_add_GO_the_game
+
+  - story: 01_bạn phải xác thực tài khoản để thực hiện thao tác Đổi gói dịch vụ
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_the_game
+      - action: utter_add_GO_the_game
+      - intent: verify_acc
+      - action: utter_verify_acc
+
+  - story: 02_bạn phải xác thực tài khoản để thực hiện thao tác Đổi gói dịch vụ
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_chuyen_khoan
+      - action: utter_add_GO_chuyen_khoan
+      - intent: verify_acc
+      - action: utter_verify_acc
+
+  - story: 03_bạn phải xác thực tài khoản để thực hiện thao tác Đổi gói dịch vụ
+    steps:
+      - intent: add_GO
+      - action: utter_add_GO
+      - intent: add_GO_vi_dien_tu
+      - action: utter_add_GO_vi_dien_tu
+      - intent: verify_acc
+      - action: utter_verify_acc
+
   - story: 01_nạp go có bắt buộc không? --> tôi muốn nạp GO
     steps:
       - intent: GO_bat_buoc_khong
@@ -364,6 +400,15 @@ stories:
       - intent: forget_MKC2
       - action: utter_forget_MKC2
 
+  - story: thay đổi số điện thoại xác thực tài khoản -> hủy liên kết số điện thoại -> đăng ký sdt xác thực tài khoản mới
+    steps:
+      - intent: change_sdt
+      - action: utter_change_sdt
+      - intent: huy_lien_ket_sdt
+      - action: utter_huy_lien_ket_sdt
+      - intent: verify_acc
+      - action: utter_verify_acc
+
   - story: 01_hỏi cách tìm id tài khoản, các tài khoản
     steps:
       - intent: what_is_ID
@@ -428,9 +473,147 @@ stories:
       - intent: thi_tu_do
       - action: utter_thi_tu_do
 
+  - story: hướng dẫn đăng ký, thời hạn đăng ký thi cấp trường,
+    steps:
+      - intent: dang_ky_danh_sach_cap_truong
+      - action: utter_dang_ky_danh_sach_cap_truong
+      - intent: thoi_han_dang_ky_cap_truong
+      - action: utter_thoi_han_dang_ky_cap_truong
 
-#nội dung ngoài lề
+
+  - story: 01_hướng dẫn đăng ký, thời hạn đăng ký thi cấp huyện
+    steps:
+      - intent: dang_ky_danh_sach_cap_huyen
+      - action: utter_dang_ky_danh_sach_cap_huyen
+      - intent: thoi_han_dang_ky_cap_huyen
+      - action: utter_thoi_han_dang_ky_cap_huyen
+
+  - story: 02_hướng dẫn đăng ký, điều kiện thi cấp huyện, thời hạn đăng ký thi cấp huyện
+    steps:
+      - intent: dang_ky_danh_sach_cap_huyen
+      - action: utter_dang_ky_danh_sach_cap_huyen
+      - intent: dieu_kien_thi_cap_huyen
+      - action: utter_dieu_kien_thi_cap_huyen
+      - intent: thoi_han_dang_ky_cap_huyen
+      - action: utter_thoi_han_dang_ky_cap_huyen
+
+  - story: 03_hướng dẫn đăng ký, tổ chúc thi cấp huyện và nộp biên bản thi
+    steps:
+      - intent: dang_ky_danh_sach_cap_huyen
+      - action: utter_dang_ky_danh_sach_cap_huyen
+      - intent: dieu_kien_thi_cap_huyen
+      - action: utter_dieu_kien_thi_cap_huyen
+      - intent: trien_khai_thi_cap_huyen
+      - action: utter_trien_khai_thi_cap_huyen
+      - intent: nop_bien_ban_thi
+      - action: utter_nop_bien_ban_thi
+
+  - story: 04_hướng dẫn tổ chúc thi cấp huyện, xem mã ca thi và nộp biên bản thi
+    steps:
+      - intent: trien_khai_thi_cap_huyen
+      - action: utter_trien_khai_thi_cap_huyen
+      - intent: xem_ma_ca_thi
+      - action: utter_xem_ma_ca_thi
+      - intent: nop_bien_ban_thi
+      - action: utter_nop_bien_ban_thi
+
+  - story: 05_hướng dẫn tổ chúc thi cấp huyện, xem mã ca thi và nộp biên bản thi, sử dụng mã ca thi
+    steps:
+      - intent: trien_khai_thi_cap_huyen
+      - action: utter_trien_khai_thi_cap_huyen
+      - intent: xem_ma_ca_thi
+      - action: utter_xem_ma_ca_thi
+      - intent: su_dung_ma_ca_thi
+      - action: utter_su_dung_ma_ca_thi
+
+  - story: 01_hướng dẫn đăng ký, thời hạn đăng ký thi các cấp điều kiện thi cấp tỉnh
+    steps:
+      - intent: dang_ky_thi_cap_tinh
+      - action: utter_dang_ky_thi_cap_tinh
+      - intent: thoi_han_dang_ky_thi_cac_cap
+      - action: utter_thoi_han_dang_ky_thi_cac_cap
+      - intent: dieu_kien_thi_cap_tinh
+      - action: utter_dieu_kien_thi_cap_tinh
+
+  - story: 02_hướng dẫn đăng ký, điều kiện thi cấp tỉnh, hỏi về thời hạn đăng ký thi cấp tỉnh
+    steps:
+      - intent: dang_ky_thi_cap_tinh
+      - action: utter_dang_ky_thi_cap_tinh
+      - intent: thoi_han_dang_ky_cap_tinh
+      - action: utter_thoi_han_dang_ky_cap_tinh
+      - intent: dieu_kien_thi_cap_tinh
+      - action: utter_dieu_kien_thi_cap_tinh
+
+  - story: 03_hướng dẫn đăng ký, thời hạn đăng ký thi cấp tỉnh
+    steps:
+      - intent: dang_ky_thi_cap_tinh
+      - action: utter_dang_ky_thi_cap_tinh
+      - intent: thoi_han_dang_ky_cap_tinh
+      - action: utter_thoi_han_dang_ky_cap_tinh
+
+  - story: 01_các khối lớp thi quốc gia-> điều kiện để tham gia thi quốc gia?
+    steps:
+      - intent: khoi_lop_thi_quoc_gia
+      - action: utter_khoi_lop_thi_quoc_gia
+      - intent: dieu_kien_thi_quoc_gia
+      - action: utter_dieu_kien_thi_quoc_gia
+
+
+  - story: 01_hướng dẫn giáo viên xem mã ca thi và sử dụng mã ca thi
+    steps:
+      - intent: xem_ma_ca_thi
+      - action: utter_xem_ma_ca_thi
+      - intent: su_dung_ma_ca_thi
+      - action: utter_su_dung_ma_ca_thi
+
+  - story: 02_hướng dẫn giáo viên xem mã ca thi, sau đó chọn button "Đăng ký danh sách tham dự".
+    steps:
+      - intent: xem_ma_ca_thi
+      - action: utter_xem_ma_ca_thi
+      - intent: dang_ky_du_thi_cac_cap
+      - action: utter_dang_ky_du_thi_cac_cap
+
+
+  - story: hướng dẫn vào làm bài tụ luyện -> hướng dẫn làm bài thi số 5
+    steps:
+      - intent: lam_bai_tu_luyen_o_dau
+      - action: utter_lam_bai_tu_luyen_o_dau
+      - intent: lam_bai_so_5
+      - action: utter_lam_bai_so_5
+
+
+  - story: user liên hệ ban tổ chức -> tạo phiếu yêu cầu
+    steps:
+      - intent: help_ioe
+      - action: utter_help_ioe
+      - intent: tao_phieu_yeu_cau
+      - action: utter_tao_phieu_yeu_cau
+
+
+
+
+
+
+  #nội dung sau khi tinh chỉnh bằng rasa interactive
 #  - story: tel about the weather
 #    steps:
 #      - user: "the weather today?"
 #      - action: utter_weather
+
+  - story: interactive_story_1
+    steps:
+    - intent: hello
+    - action: utter_hello
+    - intent: sign_up
+    - action: utter_sign_up
+    - intent: change_sdt
+    - action: utter_change_sdt
+    - intent: hello
+    - action: utter_hello
+    - intent: sign_up
+    - action: utter_sign_up
+    - intent: verify_acc
+    - action: utter_verify_acc
+    - intent: change_sdt
+    - action: utter_change_sdt
+
